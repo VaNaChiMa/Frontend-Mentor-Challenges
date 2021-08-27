@@ -1,8 +1,292 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;900&display=swap');
 
+
+     /*   General   */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    color: #fff;
-    background-color: teal;
     font-family: 'Poppins', sans-serif;
 }
+
+     /*   Header   */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    background-color: #1565c0;
+    position: relative;
+    color: #fff;
+}
+
+.fa-chess {
+    position: absolute;
+    top: -1px;
+    left: -30px;
+    font-size: 2rem;
+}
+
+.logoSide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-left: 70px;
+    transition: .3s;
+    font-size: 1.5rem;
+}
+
+.logoSide:hover {
+    transform: scale(1.1);
+}
+
+.logoSide h3 {
+    margin-left: 15px;
+}
+
+.rightSide {
+    margin-right: 70px;
+}
+
+.rightSide a {
+    outline: none;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+        /*   Main   */
+
+.headLine {
+    width: 100%;
+    margin: 70px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}    
+
+.headLine h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.headLine h3 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #f1f3f4;
+    padding: 50px 20px;
+    margin-bottom: 70px;
+}
+
+.card {
+    width: 350px;
+    background-color: #cacaca;
+    height: 250px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.20);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: scale(1.5);
+}
+
+.card img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card p {
+    text-align: center;
+    color: #333;
+}
+
+     /*   Footer   */
+
+footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.footerBgWave {
+    width: 100%;
+    height: 300px;
+    background-image: url('/img/Wave\ footer.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+.footerBg {
+    background-color: #1565c0;
+    width: 100%;
+    height: 100px;
+}
+
+.quote {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.quote q {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.quote p {
+    font-size: 1rem;
+    font-weight: 300;
+    display: inline-block;
+    margin: 20px 0 0 50%;
+}
+
+.lastRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0a0a0a;
+    width: 100%;
+    text-align: center;
+    height: 60px;
+}
+
+.fa-heart {
+    margin: 0 5px;
+    color: red;
+}
+
+/*   Media Queries   */
+
+@media (max-width: 480px) {
+    .logoSide {
+        margin-left: 50px;
+    }
+    .logoSide h3 {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .fa-chess {
+        font-size: 1.2rem;
+    }
+
+    .rightSide {
+        margin-right: 30px;
+    }
+
+    .rightSide a {
+        font-size: .9rem;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 100%;
+        padding: 50px 10px;
+        margin-bottom: 40px;
+        flex-wrap: nowrap;
+    }
+    
+    .card {
+        width: 300px;
+        background-color: #cacaca;
+        height: 200px;
+        margin: 10px 10px 20px 10px;
+    }
+    
+    .card img {
+        width: 300px;
+        height: 200px;
+    }
+    .card p {
+        font-size: .8rem;
+    }
+
+    .headLine {
+        margin: 40px auto;
+    }
+
+    .headLine h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        line-height: 1;
+    }
+    
+    .headLine h3 {
+        font-size: .9rem;
+        font-weight: 300;
+        line-height: 1.6;
+    }
+
+    .footerBgWave {
+        height: 200px;
+    }
+
+    .quote {
+        width: 90%;
+    }
+
+    .quote q {
+        font-size: 1.2rem;
+    }
+    .quote p {
+        font-size: .7rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .headLine h1 {
+        line-height: 1;
+        margin-bottom: 20px;
+    }
+
+    .headLine h3 {
+        line-height: 1.2;
+    }
+    .quote {
+        width: 80%;
+    }
+    .quote q {
+        font-size: 1.7rem;
+    }
+    .quote p {
+        font-size: 1rem;
+    }
+}
+

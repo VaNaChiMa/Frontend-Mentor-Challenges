@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 12px;
+}
+
+body {
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+}
+
+main {
+    max-width: 1440px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 920px;
+    height: 510px;
+    background-color: #fff;
+    border-radius: 20px;
+    background-image: url("images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: 1250% 68%;
+}
+
+.artImage {
+   width: 50%;
+   position: relative;
+   margin-top: -10px;
+}
+
+.innerImg {
+    overflow: hidden;
+}
+
+.innerImg picture {
+    margin-left: -83px;
+}
+
+.outerImg {
+    position: absolute;
+    top: 135px;
+    left: -93px;
+}
+
+.accordionSection {
+   width: 50%;
+   height: 510px;
+   margin-top: -20px;
+}
+
+h1 {
+    color: hsl(238, 29%, 16%);
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    margin-top: 70px;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+button {
+    color: hsl(237, 12%, 33%);
+    border: 0;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    width: 350px;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.125rem;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 400;
+    transition: .2s ease-in;
+}
+
+button:hover {
+    color: hsl(14, 88%, 65%);
+}
+
+button::after{
+    content: url("images/icon-arrow-down.svg");
+    position: absolute;
+    right: 15px;
+    transform: scale(1.2);
+    transition: .2s ease;
+}
+
+.accordionItem {
+    border-bottom: 1px solid #e7e7e9;
+    width: 350px;
+
+}
+
+.panel {
+    color: hsl(240, 6%, 50%);
+    margin-bottom: 20px;
+    max-width: 350px;
+    display: none;
+}
+
+.panel p {
+    margin-right: 30px;
+    font-size: 1rem;
+}
+
+.active {
+    display: block;
+    transition: .2s ease-in;
+    font-weight: 700;
+}
+
+.active::after{
+    content: url("images/icon-arrow-down.svg");
+    position: absolute;
+    right: 15px;
+    transform: scale(1.2) rotate(180deg);
+}
+
+
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+        min-width: 330px;
+        height: 535px;
+        background-image: url("images/bg-pattern-mobile.svg");
+        background-repeat: no-repeat;
+        background-position: center 0;
+        margin: 145px 25px 85px 25px;
+        height: 100%;
+    }
+
+    .artImage {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+     }
+     
+     .innerImg {
+         width: 100%;
+         overflow: visible;
+     }
+     
+     .innerImg picture {
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin: 0 auto;
+         margin-top: -107px;
+         margin-left: -15px;
+     }
+
+     
+     .outerImg {
+         display: none;
+     }
+
+
+
+    .accordionSection {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 25px;
+    }
+
+    h1 {
+        margin-top: 0;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .accordionItem {
+        width: 280px;
+        margin: 0 auto;
+    }  
+    .accordion {
+        width: 280px;
+        margin: 0 auto 20px auto;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .accordionItem {
+        width: 280px;
+}
+    .accordion {
+        width: 280px;
+    }
+}

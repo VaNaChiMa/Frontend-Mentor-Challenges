@@ -89,8 +89,9 @@ body {
     margin-left: 20px;
 }
 
-.annualPlan h3 {
+.annualPlan h2 {
     font-weight: 900;
+    font-size: 1.125rem;
     color: hsl(223, 47%, 23%);
 }
 
@@ -134,7 +135,7 @@ button:hover {
     cursor: pointer;
 }
 
-.summary h5 {
+.summary h4 {
     text-align: center;
     color: hsl(223, 47%, 23%);
     font-weight: 700;
@@ -143,7 +144,7 @@ button:hover {
     margin-bottom: 50px;
 }
 
-.summary h5:hover {
+.summary h4:hover {
     opacity: 1;
     cursor: pointer;
 
@@ -174,7 +175,7 @@ button:hover {
         height: 405px;
     }
 
-    .summary h5 {
+    .summary h4 {
         margin-bottom: 35px;
     }
 
@@ -198,7 +199,7 @@ button:hover {
         font-size: .9rem;
     }
 
-    .annualPlan h3 {
+    .annualPlan h2 {
         font-size: .9rem;
     }
 

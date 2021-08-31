@@ -97,10 +97,13 @@ body {
 .annualPlanBox a {
     font-weight: 700;
     transition: .25s ease;
+    color: hsl(245, 75%, 52%);
 }
 .annualPlanBox a:hover {
     font-weight: 700;
     text-decoration: none;
+    color: hsl(245, 75%, 52%);
+    opacity: .7;
 }
 
 .price {

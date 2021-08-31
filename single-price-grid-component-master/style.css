@@ -149,15 +149,6 @@ ul li {
         flex-direction: column;
     }
 
-    /* .whyUs {
-        border-radius: 0 0 8px 8px; 
-    }
-
-    .singUp {
-        border-radius: 0;
-        
-    } */
-
     .card {
         width: 320px;
         padding: 25px;
@@ -181,12 +172,28 @@ ul li {
 @media (max-width: 480px) {
     .container {
         width: 310px;
+        margin: 70px 15px;
     }
     .join {
         width: 310px;  
     }
     .card {
         width: 310px;
+    }
+
+    
+}
+
+@media (max-width: 320px) {
+    .container {
+        width: 300px;
+        margin: 70px 10px;
+    }
+    .join {
+        width: 300px;  
+    }
+    .card {
+        width: 300px;
     }
 
     

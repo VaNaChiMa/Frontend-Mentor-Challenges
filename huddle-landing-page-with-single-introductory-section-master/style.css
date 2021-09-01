@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1440px;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url("images/bg-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: hsl(257, 40%, 49%);
+    min-height: 100vh;
+}
+
+nav img {
+    margin: 60px auto 100px 65px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    margin: auto;
+    margin: 0 92px 0 72px;
+}
+
+.imageSection {
+    width: 700px;
+    height: auto;
+}
+
+.imageSection img {
+    width: 100%;
+    height: auto;
+}
+
+.registerSection {
+    margin-top: 45px;
+    margin-left: 60px;
+    color: #fff;
+    width: 510px;
+    position: relative;
+}
+.registerSection h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.registerSection p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.03rem;
+    opacity: .8;
+    margin-bottom: 25px;
+}
+
+.registerBtn {
+    display: block;
+    padding: 15px 50px;
+    background-color: #fff;
+    border-radius: 33px;
+    width: 200px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: hsl(257, 40%, 49%);
+    transition: .3s ease;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.registerBtn:hover {
+    background-color: hsl(300, 69%, 71%);
+    color: #fff;
+}
+
+.social {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 180px;
+    margin-bottom: 40px;
+    margin-right: 0;
+}
+
+.social ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social ul li {
+    margin-right: 20px;
+}
+
+ .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    width: 45px;
+    height: 45px;
+    margin: auto auto;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.circle:hover {
+    color: #fe52c0;
+    border: 2px solid #fe52c0;
+}
+
+@media (max-width: 1024px) {
+    .registerSection h1 {
+        font-size: 1.8rem;
+    }
+    .social {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 750px) {
+    body {
+        max-width: 750px;
+        background-image: url("images/bg-mobile.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: hsl(257, 40%, 49%);
+    }
+
+    nav img {
+        margin: 75px auto 135px 65px;
+    }
+
+    .container {
+        max-width: 595px;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+
+    .imageSection {
+        width: 595px;
+    }
+
+    .imageSection img {
+        width: 100%;
+    }
+
+    .registerSection {
+        margin: 140px auto 80px auto;
+        color: #fff;
+        width: 510px;
+        position: relative;
+    }
+
+    .registerSection h1 {
+        font-size: 2.9rem;
+        text-align: center;
+        margin-bottom: 55px;
+    }
+
+    .registerSection p {
+        font-size: 1.7rem;
+        opacity: .9;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .registerBtn {
+        width: 400px;
+        height: 80px;
+        border-radius: 50px;
+        font-size: 1.5rem;
+        margin: 0 auto;
+        padding: 25px;
+    }
+    .social {
+        margin: 125px auto 0 auto;
+        justify-content: center;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    nav img {
+        margin: 75px auto 135px 65px;
+    }
+
+    .container {
+        max-width: 595px;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+
+    .imageSection {
+        width: 470px;
+    }
+
+    .imageSection img {
+        width: 100%;
+    }
+
+    .registerSection {
+        margin: 100px auto 80px auto;
+        color: #fff;
+        width: 470px;
+        position: relative;
+    }
+
+    .registerSection h1 {
+        font-size: 2.5rem;
+    }
+
+    .registerSection p {
+        font-size: 1.3rem;
+    }
+
+    .registerBtn {
+        width: 400px;
+        height: 80px;
+        border-radius: 50px;
+        font-size: 1.5rem;
+        margin: 0 auto;
+        padding: 25px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 440px;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+
+    .imageSection {
+        width: 360px;
+    }
+
+    .registerSection {
+        margin: 80px auto;
+        color: #fff;
+        width: 360px;
+        position: relative;
+    }
+
+    .registerSection h1 {
+        font-size: 2rem;
+    }
+
+    .registerSection p {
+        font-size: 1rem;
+    }
+
+    .registerBtn {
+        width: 300px;
+        height: 60px;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    nav img {
+        margin: 55px auto 100px auto;
+    }
+
+    .container {
+        max-width: 360px;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+
+    .imageSection {
+        width: 340px;
+    }
+
+    .registerSection {
+        margin: 60px auto;
+        color: #fff;
+        width: 340px;
+        position: relative;
+    }
+
+    .registerSection h1 {
+        font-size: 1.7rem;
+    }
+
+    .registerSection p {
+        font-size: .9rem;
+    }
+
+    .registerBtn {
+        width: 250px;
+        height: 50px;
+        border-radius: 33px;
+        font-size: 1rem;
+        margin: 0 auto;
+        padding: 15px;
+    }
+}
+
+

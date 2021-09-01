@@ -15,7 +15,7 @@ body {
     max-width: 1440px;
     min-height: 100vh;
     background-color: hsl(225, 100%, 94%);
-    background-image: url("/images/pattern-background-desktop.svg");
+    background-image: url("images/pattern-background-desktop.svg");
     background-repeat: no-repeat;
     background-size: 100% 435px;
     display: flex;
@@ -31,6 +31,7 @@ body {
     background-color: #fff;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     overflow: hidden;
 }
@@ -113,8 +114,9 @@ body {
     opacity: .7;
 }
 
-button {
+.btn {
     display: block;
+    text-decoration: none;
     border: none;
     border-radius: 10px;
     margin: 0 auto;
@@ -130,12 +132,12 @@ button {
     box-shadow: 0 10px 20px rgba(0,0,0,0.07), 0 6px 6px rgba(0,0,0,0.1);
 }
 
-button:hover {
+.btn:hover {
     background-color: #766cf1;
-    cursor: pointer;
 }
 
-.summary h3 {
+.cancel {
+    display: block;
     text-align: center;
     color: hsl(223, 47%, 23%);
     font-weight: 700;
@@ -143,9 +145,10 @@ button:hover {
     transition: .25s ease;
     margin-bottom: 50px;
     font-size: 1rem;
+    text-decoration: none;
 }
 
-.summary h3:hover {
+.cancel:hover {
     opacity: 1;
     cursor: pointer;
 
@@ -156,9 +159,9 @@ button:hover {
         min-width: 375px;
         min-height: 100vh;
         background-color: hsl(225, 100%, 94%);
-        background-image: url("/images/pattern-background-mobile.svg");
+        background-image: url("images/pattern-background-mobile.svg");
         background-repeat: no-repeat;
-        background-size: auto auto;
+        background-size: 100% auto;
     }
 
     .container {
@@ -166,6 +169,7 @@ button:hover {
         height: 570px;
         margin: auto;
         margin: 70px 25px;
+        justify-content: unset;
     }
 
     .imageSection {
@@ -210,9 +214,12 @@ button:hover {
         font-size: .925rem;
     }
 
-    button {
+    .btn {
         width: 275px;
         margin-bottom: 25px;
         font-size: .9rem;
     }
 }
+
+
+ 

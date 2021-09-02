@@ -18,14 +18,13 @@ body {
 }
 
 nav img {
-    margin: 60px auto 100px 65px;
+    margin: 45px auto 75px 65px;
 }
 
 .container {
     display: flex;
     justify-content: center;
     max-width: 100%;
-    margin: auto;
     margin: 0 92px 0 72px;
 }
 
@@ -100,6 +99,17 @@ nav img {
 
 .social ul li {
     margin-right: 20px;
+}
+
+.socialSecret {
+    border: 0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
 
  .circle {

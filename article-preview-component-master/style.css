@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+}
+
+body {
+    max-width: 1440px;
+    margin: auto;
+    background-color: hsl(210, 46%, 95%);
+}
+
+main {
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    max-width: 730px;
+    max-height: 280px;
+    background-color: #fff;
+}
+
+.imageSide {
+    width: 40%;
+    margin-left: auto;
+    border-radius: 20px 0 0 20px;
+    overflow: hidden;
+}
+
+.imageSide img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left 100%;
+}
+
+.textSide {
+    width: 60%;
+    padding: 35px;
+    height: auto;
+}
+
+.textSide h1 {
+    font-weight: 700;
+    font-size: 1.625rem;
+    color: hsl(217, 19%, 35%);
+}
+
+.everText {
+    margin: 20px 0;
+    color: hsl(214, 17%, 51%);
+    font-weight: 500;
+}
+
+.userPanel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.userInfo {
+    padding-right: 155px;
+}
+
+.userInfo span {
+    font-weight: 700;
+    font-style: 1rem;
+    color: hsl(217, 19%, 35%);
+}
+
+.userInfo p {
+    color: hsl(212, 23%, 69%);
+    margin-top: 5px;
+}
+
+.michelle {
+    border-radius: 50%;
+    width: 40px;
+}
+
+.shareBtn {
+    border-radius: 50%;
+    background-color: hsl(210, 46%, 95%);
+    width: 33px;
+    height: 33px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 7px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.shareBtn img {
+    margin-bottom: 2px;
+}
+
+.shareSection {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -72px;
+    right: -100px;
+    background-color: hsl(217, 19%, 35%);
+    width: 250px;
+    height: 55px;
+    border-radius: 10px;
+}
+
+.showShareSection {
+    display: flex;
+}
+
+.shareSection p {
+    color: hsl(212, 23%, 69%);
+    letter-spacing: 7px;
+    margin-right: 15px;
+}
+
+.social img {
+    margin-right: 10px;
+}
+
+.social {
+    position: relative;
+}
+
+.triangle {
+    position: absolute;
+    top: 25px;
+    left: -20px; 
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 25px 0 25px;
+    border-color: #48556a transparent transparent transparent;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        justify-content: start;
+        max-width: 330px;
+        align-items: center;
+        min-height: 510px;
+        margin: auto;
+        border-radius: 10px;
+    }
+
+    .imageSide {
+        width: 100%;
+        max-height: 200px;
+        margin: 0 auto;
+        border-radius: 10px 10px 0 0;
+        overflow: hidden;
+    }
+    
+    .imageSide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+    
+    .textSide {
+        width: 100%;
+        padding: 35px 30px 20px 30px;
+        height: auto;
+    }
+
+    .textSide h1 {
+        font-size: 1.25rem;
+    }
+
+    .userInfo {
+        padding-right: 20px;
+    }
+
+    .everText {
+        margin: 20px 0 35px 0;
+        font-size: 1.1rem;
+    }
+
+    .shareSection {
+        top: -2px;
+        right: -30px;
+        width: 330px;
+        height: 71px;
+        border-radius: 0 0 10px 10px;
+        margin-bottom: 0;
+    }
+
+    .shareBtn {
+        z-index: 2;
+        margin-top: 16px;
+        background-color:  rgb(236, 242, 248);
+    }
+
+    .social {
+        margin-right: 45px;
+    }
+
+    .triangle {
+        top: -10px;
+        display: none;
+        opacity: 0;
+    }
+
+}

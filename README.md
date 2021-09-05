@@ -9,4 +9,5 @@
 5. Huddle landing page with a single introductory section (Html, Css, Flexbox, Responsive)
 6. Article preview component (Html, Css, Flexbox, Responsive, JS)
 7. 3-column preview card component (Html, Css, Flexbox, Responsive)
+8. Base Apparel coming soon page (Html, Css, Flexbox, Responsive, JS)
 

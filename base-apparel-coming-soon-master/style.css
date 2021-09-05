@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    font-size: 16px;
+}
+
+main {
+    max-width: 1440px;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.newsLetters {
+    display: flex;
+    flex-direction: column;
+    width: 58%;
+    background-image: url('images/bg-pattern-desktop.svg');
+    background-size: cover;
+    padding: 0 40px;
+}
+
+.imageSide {
+    width: 42%; 
+}
+
+.imageBg {
+    background-image: url("images/hero-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.logoBase {
+    margin-top: 60px;
+    margin-bottom: 120px;
+}
+
+.heading {
+    max-width: 100%;
+    margin-bottom: 35px;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: hsl(0, 6%, 24%);
+    letter-spacing: 10px;
+}
+
+.specialText {
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+    display: block;
+}
+
+
+.textBox {
+    max-width: 450px;
+    margin-bottom: 35px;
+}
+
+.textBox p {
+    color: hsl(0, 36%, 70%);
+    line-height: 25px;
+    font-size: .975rem;
+    font-weight: 600;
+}
+
+.subscribe input {
+    width: 450px;
+    border-radius: 50px;
+    padding: 20px;
+    outline: none;
+    border: 2px solid green;
+}
+
+.imageSide img {
+    width: 100%;
+    height: auto;
+}

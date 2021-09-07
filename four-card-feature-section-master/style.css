@@ -18,7 +18,7 @@ body {
     margin: 70px auto;
 }
 
-.cards {
+main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -100,7 +100,7 @@ h1 span {
     .inLine {
         transform: translateY(0);
     }
-    .cards {
+    main {
         margin-top: 40px;
     }
     .card {

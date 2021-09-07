@@ -17,7 +17,7 @@ main {
 }
 
 .container {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
 }
 
@@ -41,28 +41,35 @@ main {
     display: flex;
     flex-direction: column;
     width: 58%;
-    background-image: url('images/bg-pattern-desktop.svg');
+    background-image: url('images/bg-pattern-desktop.svg'),
+    linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%)),
+    linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     background-size: cover;
-    padding: 0 40px;
+    padding: 60px 15% 8% 11%;
 }
 
 .logoBase {
-    margin-top: 60px;
     margin-bottom: 120px;
 }
 
+.bg-mobile {
+    display: none;
+}
+
 .heading {
-    max-width: 100%;
+    max-width: 360px;
     margin-bottom: 35px;
 }
 
 h1 {
     font-weight: 600;
-    font-size: 4rem;
+    font-size: 3.8rem;
     text-transform: uppercase;
     color: hsl(0, 6%, 24%);
-    letter-spacing: 10px;
+    letter-spacing: 15px;
     line-height: 1.1;
+    transform: translateX(-150%);
+    animation: fromLeft .5s ease forwards;
 }
 
 .specialText {
@@ -82,14 +89,15 @@ h1 {
     line-height: 25px;
     font-size: .975rem;
     font-weight: 600;
+    transform: translateX(80%);
+    opacity: 0;
+    animation: fromRight .5s ease forwards;
 }
 
 .subscribe {
     position: relative;
-}
-
-.subscribe.error {
-
+    transform: translateX(-150%);
+    animation: fromLeft .5s ease forwards;
 }
 
 .subscribe input {
@@ -100,6 +108,17 @@ h1 {
     border: 1px solid hsl(0, 36%, 70%);
     font-size: 1rem;
     height: 55px;
+    transition: .2s ease;
+}
+
+.subscribe input::placeholder {
+    color: hsl(0, 36%, 70%);
+    opacity: .8;
+}
+
+.subscribe input:focus {
+    outline: none;
+    border-width: 2px;
 }
 
 .subscribe.error input {
@@ -121,7 +140,7 @@ h1 {
 }
 
 .subscribe button:hover {
-    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    background-image: linear-gradient(135deg, hsl(0, 57%, 92%), hsl(0, 75%, 82%));
  }
 
 .error-icon {
@@ -144,6 +163,84 @@ small {
 
 form.error small {
     display: block;
+}
+
+/*   Animations   */
+
+@keyframes fromLeft {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fromRight {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/*   MEDIA   */
+
+@media (max-width: 768px) {
+    .container {
+        height: auto;
+        background-image: linear-gradient(135deg, hsl(0, 57%, 92%), hsl(0, 75%, 82%));;
+    }
+
+    .newsLetters {
+        background-image:
+        linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%)),
+        linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+        width: 100%;
+        padding: 30px;
+        padding-bottom: 70px;
+        height: auto;
+    }
+    .imageSide {
+        display: none;
+    }
+
+    .bg-mobile {
+        display: block;
+        width: calc(100% + 80px);
+        margin: 0;
+        margin-right: -40px;
+        margin-left: -40px;
+    }
+
+    .bg-mobile img {
+        width: 100%;
+    }
+
+    .logoBase {
+        width: 100px;
+        margin: 0 0 25px 0;
+    }
+
+    .logoBase img {
+       width: 100%;
+    }
+
+    .textBox {
+        margin: 0 auto 35px auto;
+    }
+
+    .textBox p {
+        text-align: center;
+        font-size: .875rem;
+    }
+
+    .heading {
+        margin: 50px auto 25px auto;
+    }
+
+    .heading h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+       
 }
 
 

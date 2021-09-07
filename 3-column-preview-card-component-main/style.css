@@ -42,7 +42,7 @@ main {
     font-family: 'Big Shoulders Display', sans-serif;
     font-size: 2.5rem;
     letter-spacing: 1px;
-    opacity: .8;
+    opacity: .9;
 }
 
 .card p {
@@ -51,7 +51,7 @@ main {
     font-family: 'Lexend Deca', sans-serif;
     font-size: 1.1rem;
     line-height: 25px;
-    opacity: .8;
+    opacity: .9;
 }
 
 button {

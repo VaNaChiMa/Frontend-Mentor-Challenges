@@ -14,10 +14,11 @@ body {
     max-width: 1440px;
     background-color: #fff;
     color: hsl(209, 33%, 12%);
+    margin: 0 auto;
 }
 
 header {
-    margin: 10% auto 5% auto;
+    margin: 80px auto 5% auto;
 }
 
 header img {

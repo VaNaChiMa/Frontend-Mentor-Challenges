@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    max-width: 1440px;
+    background-color: #fff;
+    color: hsl(209, 33%, 12%);
+}
+
+header {
+    margin: 10% auto 5% auto;
+}
+
+header img {
+    display: block;
+    height: auto;
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    margin-bottom: 40px;
+}
+
+.heading h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.heading h1 span {
+    font-weight: 300;
+    color: hsl(0, 0%, 59%);
+}
+
+.heading p {
+    text-align: center;
+}
+
+.subscribe {
+    width: 45%;
+    margin-bottom: 8%;
+    position: relative;
+}
+
+.notifyMe {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.subscribe input {
+    width: 64%;
+    padding: 15px 30px;
+    background-color: transparent;
+    border: 1px solid hsl(223, 100%, 88%);
+    border-radius: 50px;
+    margin-right: 15px;
+    height: 55px;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.subscribe input:focus {
+    outline: none;
+}
+
+.subscribe input::placeholder {
+    color: hsl(0, 0%, 59%);
+    opacity: .7;
+}
+
+.subscribe.error input {
+    border-color: hsl(354, 100%, 66%);
+ }
+
+.subscribe button {
+    width: 31%;
+    border: none;
+    border-radius: 50px;
+    padding: 15px;
+    text-align: center;
+    background-color: hsl(223, 87%, 63%);
+    color: #fff;
+    font-weight: 600;
+    font-size: .8rem;
+    font-family: 'Libre Franklin', sans-serif;
+    height: 55px;
+    box-shadow: 0 10px 20px rgba(79, 125, 243, 0.1), 0 6px 6px rgba(79, 125, 243, 0.23);
+    cursor: pointer;
+}
+
+.subscribe button:hover {
+    opacity: .8;
+}
+
+form small {
+    position: absolute;
+    display: none;
+    top: 55px;
+    left: 7px;
+    margin-top: 7px;
+    margin-left: 30px;
+    color: hsl(354, 100%, 66%);
+    font-size: .7rem;
+    font-style: italic;
+}
+
+.subscribe.error small {
+    display: block;
+}
+
+.mainImage {
+    max-width: 45%;
+    margin: auto;
+    margin-bottom: 7%;
+}
+
+.mainImage img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.social ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social ul li {
+    margin-right: 15px;
+}
+
+.socialSecret {
+    border: 0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+ .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    margin: auto auto;
+    border-radius: 50%;
+    border: 1px solid hsl(0, 0%, 59%);
+    font-size: .8rem;
+    font-weight: 300;
+    color: hsl(223, 87%, 63%);
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+.circle:hover {
+    color: #fff;
+    border: 2px solid hsl(223, 87%, 63%);
+    background-color: hsl(223, 87%, 63%);
+}
+
+.copyright p {
+    color: hsl(0, 0%, 59%);
+    font-weight: 300;
+    font-size: .6rem;
+}
+
+
+/*   MEDIA   */
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 75%;
+        margin: 0 auto;
+    }
+
+    header {
+        margin-top: 18%;
+    }
+
+    .heading {
+        margin-bottom: 60px;
+    }
+
+    .heading h1 {
+        margin-bottom: 40px;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .subscribe {
+        width: 100%;
+        margin-bottom: 135px;
+        position: relative;
+    }
+    
+    .notifyMe {
+        flex-direction: column;
+    }
+    
+    .subscribe input {
+        width: 100%;
+        padding: 15px 30px;
+        border-radius: 50px;
+        margin: 0 auto 20px auto;
+        height: 70px;
+    }
+
+    .subscribe input::placeholder {
+        font-size: 1rem;
+    }
+    
+    .subscribe button {
+        width: 100%;
+        padding: 15px;
+        font-weight: 600;
+        font-size: 1rem;
+        height: 70px;
+        
+    }
+
+    .mainImage {
+        max-width: 100%;
+        margin: auto;
+        margin-bottom: 230px;
+    }
+
+    form small {
+        position: absolute;
+        display: none;
+        top: 55px;
+        left: -10px;
+        width: 90%;
+        margin-top: 22px;
+        text-align: center;
+        color: hsl(354, 100%, 66%);
+        font-size: .7rem;
+        font-style: italic;
+    }
+
+    footer {
+        margin-bottom: 70px;
+    }
+
+    .social {
+        margin-bottom: 50px;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        max-width: 375px;
+        margin: 0 30px;
+    }
+
+    .heading h1 {
+        font-size: 1.5rem;
+    }
+}

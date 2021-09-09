@@ -61,6 +61,21 @@ main {
     margin-bottom: 20px;
 }
 
+.user .user__details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user .user__name {
+    font-size: 1rem;
+    opacity: .9;
+}
+
+.user .user__stat {
+    font-size: .825rem;
+    opacity: .5;
+}
+
 .user span {
     font-size: 1rem;
     opacity: .9;

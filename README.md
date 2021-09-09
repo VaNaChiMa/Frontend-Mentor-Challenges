@@ -11,5 +11,7 @@
 7. 3-column preview card component (Html, Css, Flexbox, Responsive)
 8. Base Apparel coming soon page (Html, Css, Flexbox, Responsive, JS)
 9. Ping single column coming soon page (Html, Css, Flexbox, Responsive, JS)
-10. Intro component with sign-up form ==> soon
+10. Testimonials grid section (Html, Css, Flexbox, Responsive)
+    Tip calculator app (Html, Css, Flexbox, Responsive, JS)
+    Intro component with sign-up form ==> soon
 

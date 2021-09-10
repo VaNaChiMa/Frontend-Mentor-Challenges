@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  
+</head>
+<body>
+
+  <main>
+    
+    <div class="container">
+      <div class="container__title">
+        <img src="images/logo.svg" alt="logo">
+      </div>
+
+      <div class="container__calculator">
+        <div class="container__calculation">
+          <div class="bill">
+            <label for="bill">Bill</label>
+            <input type="number" name="bill" id="bill" value="0">
+          </div>
+          
+          <div class="selectTip">
+            <span>Select Tip %</span>
+            <div class="buttons">
+              <button id="tip5">5%</button>
+              <button id="tip10">10%</button>
+              <button id="tip15">15%</button>
+              <button id="tip25">25%</button>
+              <button id="tip50">50%</button>
+              <button id="tipCustom">Custom</button>
+            </div>
+          </div>
+          <div class="nrOfPeople">
+            <label for="people">Number of People</label>
+            <input type="number" name="people" id="nrOfPeople" value="0">
+          </div>         
+        </div>
+
+        <div class="container__result">
+          <div class="tipAmount">
+            <div class="tipAmount__text">
+              <span class="result_name">Tip Amount</span>
+              <span class="result_person">/ person</span>
+            </div>
+            <div class="tipAmount__sum">
+              <span>$0.00</span>
+            </div>        
+          </div>
+
+          <div class="total">
+            <div class="total__text">
+              <span class="result_name">Total</span>
+              <span class="result_person">/ person</span>
+            </div>
+            <div class="total__sum">
+              <span>$0.00</span>
+            </div>           
+          </div>
+          <button>Reset</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  
+
+  
+
+ 
+  
+  <script src="script.js"></script>
+</body>
+</html>

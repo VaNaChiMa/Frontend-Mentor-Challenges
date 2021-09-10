@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 24px;
+    font-family: 'Space Mono', sans-serif;
+}
+
+body {
+    max-width: 1440px;
+    min-height: 100vh;
+    background-color: hsl(185, 41%, 84%);
+}
+
+main {
+    display: flex;
+    height: 100vh;
+}
+
+.container__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 920px;
+}
+
+.container__calculator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    max-height: 485px;
+}
+
+.container__calculation {
+    max-width: 475px;
+    padding: 45px;
+}
+
+.container__result {
+    width: 445px;
+    height: 425px;
+    margin: 30px 30px 30px 0;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.bill, .nrOfPeople, .selectTip {
+    display: flex;
+    flex-direction: column;
+}
+
+.selectTip {
+    margin: 45px 0;
+}
+
+.bill input, .nrOfPeople input {
+    width: 100%;
+    max-width: 375px;
+    height: 45px;
+    background-color: hsl(180, 37%, 97%);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bill label, .nrOfPeople label, .selectTip span{
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    font-size: .7rem;
+}
+
+.bill label, .nrOfPeople label {
+    margin-bottom: 10px;
+}
+
+.bill input{
+    position: relative;
+}
+
+.bill input {
+    background-image: url('images/icon-dollar.svg');
+    background-repeat: no-repeat;
+    background-size: 12px auto;
+    background-position: 15px center;
+}
+
+.nrOfPeople input {
+    background-image: url('images/icon-person.svg');
+    background-repeat: no-repeat;
+    background-size: 12px auto;
+    background-position: 15px center;
+}
+
+.bill input[type=number], .nrOfPeople input[type=number] {
+    text-align: right;
+    color: hsl(184, 14%, 56%);
+    font-size: .875rem;
+    font-weight: 700;
+    font-family: 'Space Mono', sans-serif;
+    border: 2px solid transparent;
+    padding-right: 20px;
+}
+
+.bill input[type=number]:default, .nrOfPeople input[type=number]:default {
+    color: hsl(184, 14%, 56%);
+}
+
+.bill input[type=number]:focus, .nrOfPeople input[type=number]:focus,
+.bill input[type=number]:active, .nrOfPeople input[type=number]:active,
+.bill input[type=number]:hover, .nrOfPeople input[type=number]:hover {
+    border: 2px solid hsl(172, 67%, 45%);
+    outline: none;
+    color: hsl(183, 100%, 15%);
+}
+
+.container__calculation input::-webkit-outer-spin-button,
+.container__calculation input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.buttons button {
+    border-radius: 5px;
+    width: 115px;
+    height: 48px;
+    background-color: hsl(183, 100%, 15%);
+    color: #fff;
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 700;
+    font-size: .85rem;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.buttons button:hover, .buttons button:active, 
+.container__result button:hover, .container__result button:active {
+    background-color: #9fe8df;
+    color: hsl(183, 100%, 15%);
+} 
+
+.tipAmount, .total {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tipAmount__text, .total__text {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.result_name {
+    font-size: .7rem;
+}
+
+.result_person {
+    font-size: .5rem;
+    opacity: .6;
+}
+
+.tipAmount__sum, .total__sum {
+    color: hsl(172, 67%, 45%);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.tipAmount {
+    margin-bottom: 30px;
+}
+
+.container__result button {
+    width: 100%;
+    height: 50px;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .8rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 120px;
+    cursor: pointer;
+}
+

@@ -29,23 +29,27 @@
         <div class="container__calculation">
           <div class="bill">
             <label for="bill">Bill</label>
-            <input type="number" name="bill" id="bill" value="0">
+            <input type="number" name="bill" id="bill" placeholder="0">
           </div>
           
           <div class="selectTip">
             <span>Select Tip %</span>
             <div class="buttons">
-              <button id="tip5">5%</button>
-              <button id="tip10">10%</button>
-              <button id="tip15">15%</button>
-              <button id="tip25">25%</button>
-              <button id="tip50">50%</button>
-              <button id="tipCustom">Custom</button>
+              <button class="yourRate" id="tip5">5%</button>
+              <button class="yourRate" id="tip10">10%</button>
+              <button class="yourRate" id="tip15">15%</button>
+              <button class="yourRate" id="tip25">25%</button>
+              <button class="yourRate" id="tip50">50%</button>
+              <button class="yourRate" id="custom">Custom</button>
+              <input class="yourRate" type="number" id="manualTip" >
             </div>
           </div>
-          <div class="nrOfPeople">
-            <label for="people">Number of People</label>
-            <input type="number" name="people" id="nrOfPeople" value="0">
+          <div class="people">
+            <div class="people__text">
+              <label for="people">Number of People</label>
+              <p>Can't be 0</p>
+            </div>
+            <input type="number" name="people" id="nrOfPeople" placeholder="0">
           </div>         
         </div>
 
@@ -56,7 +60,7 @@
               <span class="result_person">/ person</span>
             </div>
             <div class="tipAmount__sum">
-              <span>$0.00</span>
+              <span>$<span class="tipAmount__sum_display">0.00</span></span>
             </div>        
           </div>
 
@@ -66,10 +70,10 @@
               <span class="result_person">/ person</span>
             </div>
             <div class="total__sum">
-              <span>$0.00</span>
+              <span>$<span class="total__sum_display">0.00</span></span>
             </div>           
           </div>
-          <button>Reset</button>
+          <button class="reset">Reset</button>
         </div>
       </div>
     </div>

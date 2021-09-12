@@ -41,6 +41,7 @@ main {
     background-color: #fff;
     border-radius: 20px;
     max-height: 485px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .container__calculation {
@@ -50,14 +51,15 @@ main {
 
 .container__result {
     width: 445px;
-    height: 425px;
+    /* height: 425px; */
     margin: 30px 30px 30px 0;
     background-color: hsl(183, 100%, 15%);
     border-radius: 10px;
     padding: 40px;
+    position: relative;
 }
 
-.bill, .nrOfPeople, .selectTip {
+.bill, .people, .selectTip {
     display: flex;
     flex-direction: column;
 }
@@ -66,7 +68,7 @@ main {
     margin: 45px 0;
 }
 
-.bill input, .nrOfPeople input {
+.bill input, .people input {
     width: 100%;
     max-width: 375px;
     height: 45px;
@@ -76,13 +78,30 @@ main {
     cursor: pointer;
 }
 
-.bill label, .nrOfPeople label, .selectTip span{
+.bill label, .people label, 
+.selectTip span{
     color: hsl(183, 100%, 15%);
     font-weight: 700;
     font-size: .7rem;
 }
 
-.bill label, .nrOfPeople label {
+.people .people__text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.people__text p {
+    display: none;
+}
+
+.people__text p.errorMsg {
+    display: block;
+    color: red;
+    font-weight: 700;
+    font-size: .7rem;
+}
+
+.bill label, .people label {
     margin-bottom: 10px;
 }
 
@@ -97,16 +116,16 @@ main {
     background-position: 15px center;
 }
 
-.nrOfPeople input {
+.people input {
     background-image: url('images/icon-person.svg');
     background-repeat: no-repeat;
     background-size: 12px auto;
     background-position: 15px center;
 }
 
-.bill input[type=number], .nrOfPeople input[type=number] {
+.bill input[type=number], .people input[type=number] {
     text-align: right;
-    color: hsl(184, 14%, 56%);
+    color: hsl(183, 100%, 15%);
     font-size: .875rem;
     font-weight: 700;
     font-family: 'Space Mono', sans-serif;
@@ -114,13 +133,17 @@ main {
     padding-right: 20px;
 }
 
-.bill input[type=number]:default, .nrOfPeople input[type=number]:default {
+.people input[type=number].errorBorder {
+    border-color: red;
+}
+
+.bill input[type=number]::placeholder, .people input[type=number]::placeholder {
     color: hsl(184, 14%, 56%);
 }
 
-.bill input[type=number]:focus, .nrOfPeople input[type=number]:focus,
-.bill input[type=number]:active, .nrOfPeople input[type=number]:active,
-.bill input[type=number]:hover, .nrOfPeople input[type=number]:hover {
+.bill input[type=number]:focus, .people input[type=number]:focus,
+.bill input[type=number]:active, .people input[type=number]:active,
+.bill input[type=number]:hover, .people input[type=number]:hover {
     border: 2px solid hsl(172, 67%, 45%);
     outline: none;
     color: hsl(183, 100%, 15%);
@@ -132,7 +155,7 @@ main {
     margin: 0;
 }
 
-.buttons button {
+.buttons .yourRate {
     border-radius: 5px;
     width: 115px;
     height: 48px;
@@ -151,6 +174,15 @@ main {
     background-color: #9fe8df;
     color: hsl(183, 100%, 15%);
 } 
+
+#custom {
+    background-color: hsl(180, 37%, 97%);
+    color: hsl(183, 100%, 15%);
+}
+
+#manualTip {
+    display: none;
+}
 
 .tipAmount, .total {
     display: flex;
@@ -176,12 +208,13 @@ main {
 
 .tipAmount__sum, .total__sum {
     color: hsl(172, 67%, 45%);
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
 .tipAmount {
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 40px;
 }
 
 .container__result button {
@@ -194,7 +227,6 @@ main {
     font-size: .8rem;
     border: none;
     border-radius: 5px;
-    margin-top: 120px;
+    margin-top: 130px;
     cursor: pointer;
 }
-

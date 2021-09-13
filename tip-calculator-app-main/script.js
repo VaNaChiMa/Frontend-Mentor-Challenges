@@ -5,8 +5,9 @@ const tip10 = document.querySelector('#tip10');
 const tip15 = document.querySelector('#tip15');
 const tip25 = document.querySelector('#tip25');
 const tip50 = document.querySelector('#tip50');
-const tipManual = document.querySelector('#tipCustom');
+const tipCustom = document.querySelector('#custom');
 const errorMsg = document.querySelector('.people__text p');
+const setManual = document.querySelector('.setManual');
 
 const tipAmount = document.querySelector('.tipAmount__sum_display');
 const total = document.querySelector('.total__sum_display');
@@ -21,8 +22,9 @@ reset.addEventListener('click', function() {
     total.innerHTML = "0.00";
     errorMsg.classList.remove('errorMsg');
     nrOfPeople.classList.remove('errorBorder');
+    setManual.style.display = "none";
+    tipCustom.style.display = "inline";
 })
-
 
 tip5.addEventListener('click', function() {
     let tip = (5/100) * (Number(bill.value) / Number(nrOfPeople.value));
@@ -78,3 +80,15 @@ function faceControl() {
     
 }
 
+tipCustom.addEventListener('click', function() {
+    tipCustom.style.display = "none";
+    setManual.style.display = "inline";
+})
+
+setManual.addEventListener('input', function() {
+    let tip = (Number(setManual.value)/100) * (Number(bill.value) / Number(nrOfPeople.value));
+    let totalBill = (Number(bill.value) / Number(nrOfPeople.value) + tip);
+    tipAmount.innerHTML = Math.round((tip + Number.EPSILON) * 100) / 100;
+    total.innerHTML = Math.round((totalBill + Number.EPSILON) * 100) / 100;
+    faceControl()
+})

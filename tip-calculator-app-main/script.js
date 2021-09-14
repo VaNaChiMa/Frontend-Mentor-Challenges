@@ -24,38 +24,37 @@ reset.addEventListener('click', function() {
     setManual.style.display = "none";
     tipCustom.style.display = "inline";
     setManual.value = "";
+    changeColor.bind(null)();
 })
 
-tip5.addEventListener('click', function() {
-    onTipPercentChange.bind(null, 5);
-    changeColor();
+for (const tip of [tip5, tip10, tip15, tip25, tip50]) {
+    tip.addEventListener('click', function() {
+            onTipPercentChange.bind(null, parseInt(tip.innerHTML))();
+            tipCustom.style.display = "inline";
+            setManual.style.display = "none";
+            changeColor.bind(tip)();     
+        }
+    );
 }
 
-);
-
-// tip5.addEventListener('click', () => {
-//     tip5.classList.add('activate');
-// })
-tip10.addEventListener('click', onTipPercentChange.bind(null, 10));
-tip15.addEventListener('click', onTipPercentChange.bind(null, 15));
-tip25.addEventListener('click', onTipPercentChange.bind(null, 25));
-tip50.addEventListener('click', onTipPercentChange.bind(null, 50));
-
+window.lastButtonClick = null;
 function changeColor() {
-    tips.forEach((item) => {
-        item.addEventListener('click', (e) => {
-            e.currentTarget.style.backgroundColor = "#9fe8df";
-            e.currentTarget.style.color = "hsl(183, 100%, 15%)";
-            setTimeout(() => {
-                item.currentTarget.style.backgroundColor = 'hsl(183, 100%, 15%)'
-                item.currentTarget.style.color = 'white'
-            }, 2000) 
-        })
-    })
+    if (window.lastButtonClick) {
+        window.lastButtonClick.classList.remove("activate")
+    }
+    if(window == this) {
+        window.lastButtonClick = null;
+    } else {
+        window.lastButtonClick = this;
+    }
+    if (window.lastButtonClick) {
+    window.lastButtonClick.classList.add("activate");
+    }
 }
 
 setManual.addEventListener('input', function() {
     onTipPercentChange(setManual.value);
+    changeColor.bind(null)();
 })
 
 function faceControl() {
@@ -75,6 +74,7 @@ function faceControl() {
 tipCustom.addEventListener('click', function() {
     tipCustom.style.display = "none";
     setManual.style.display = "inline";
+    changeColor.bind(null)();
 })
 
 function onTipPercentChange(tipPercent) {

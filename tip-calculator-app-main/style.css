@@ -170,11 +170,6 @@ main {
     cursor: pointer;
 }
 
-.activate {
-    background-color: #9fe8df;
-    color: hsl(183, 100%, 15%);
-}
-
 .buttons button:hover, .buttons button:active, 
 .container__result button:hover, .container__result button:active {
     background-color: #9fe8df;
@@ -246,4 +241,9 @@ main {
     border-radius: 5px;
     margin-top: 130px;
     cursor: pointer;
+}
+
+.buttons .activate {
+    background-color: #9fe8df;
+    color: hsl(183, 100%, 15%);
 }

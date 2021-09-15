@@ -52,7 +52,6 @@ main {
 
 .container__result {
     width: 445px;
-    /* height: 425px; */
     margin: 30px 30px 30px 0;
     background-color: hsl(183, 100%, 15%);
     border-radius: 10px;
@@ -246,4 +245,86 @@ main {
 .buttons .activate {
     background-color: #9fe8df;
     color: hsl(183, 100%, 15%);
+}
+
+@media screen and (max-width: 768px) {
+    .container__title {
+        margin-bottom: 40px;
+    }
+    
+    .container {
+        margin: 50px auto 0 auto;
+        max-width: 480px;
+    }
+    
+    .container__calculator {
+        flex-direction: column;
+        height: auto;
+        max-height: none;
+    }
+
+    .container__calculation {
+        width: 420px;
+        margin: 30px auto 0 auto;
+        padding: 0;
+    }
+
+    .container__result {
+        width: 430px;
+        margin: 30px 25px;
+        padding: 40px 20px 20px 20px;
+    }
+
+    .container__result button {
+        margin-top: 70px;
+    }
+
+    .selectTip {
+        margin: 45px auto;
+    }
+
+    .bill input, .people input {
+        max-width: none;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .buttons .yourRate {
+        min-width: 47.5%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        margin: 50px auto 0 auto;
+        max-width: 375px;
+    }
+    
+    .container__calculator {
+        flex-direction: column;
+        height: auto;
+        max-height: none;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .container__calculation {
+        width: 315px;
+        margin: 30px auto 0 auto;
+        padding: 0;
+    }
+
+    .container__result {
+        width: 325px;
+        margin: 30px 25px;
+        padding: 40px 20px 20px 20px;
+    }
+
+    .container__result button {
+        margin-top: 35px;
+    }
 }

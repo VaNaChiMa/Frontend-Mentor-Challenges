@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+main {
+    max-width: 1440px;
+    min-height: 100vh;
+    background-image: url("images/bg-intro-desktop.png");
+    background-size: cover;
+    background-position: top center;
+    background-color: hsl(0, 100%, 74%);
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 1200px;
+    padding: 40px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.textSection {
+    color: #fff;
+    padding-right: 70px;
+    flex: 1;
+}
+
+.textSection h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 55px;
+    margin-bottom: 25px;
+}
+
+.textSection p {
+    opacity: .9;
+}
+
+.formSection {
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    flex: 1;
+}
+
+.free_7_days {
+    background-color: hsl(248, 32%, 49%);
+    color: #fff;
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    opacity: .9;
+    box-shadow: 0 7px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.freeTrial {
+    width: 100%;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 7px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+.form-control {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.freeTrial input {
+    width: 100%;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid hsl(246, 25%, 77%);
+}
+
+.freeTrial input:focus {
+    border-color: hsl(249, 10%, 26%);
+    outline: none;
+}
+
+.freeTrial button {
+    display: block;
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color:#fff;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: hsl(154, 59%, 51%);
+    padding: 15px 25px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    box-shadow: 0 3px hsl(154, 59%, 45%);
+}
+
+.freeTrial button:hover {
+    background-color: #77e2b4;
+}
+
+.freeTrial button:active {
+    box-shadow: 0 0 hsl(154, 59%, 45%);
+    transform: translateY(3px);
+}
+
+.form-control small {
+    color: hsl(0, 100%, 74%);
+    position: absolute;
+    right: 0;
+    bottom: -25px;
+    text-align: right;
+    opacity: 0;
+    font-weight: 600;
+    font-size: .7rem;
+}
+
+.form-control img {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+}
+
+.form-control.error img {
+    opacity: 1;
+}
+
+.form-control.error input {
+    border-color: hsl(0, 100%, 74%);
+    color: hsl(0, 100%, 74%);
+}
+
+.form-control.error input::placeholder {
+    color: hsl(0, 100%, 74%);
+}
+
+.form-control.error small {
+    opacity: 1;
+}
+
+
+.termsServices {
+    display: block;
+    color: hsl(246, 25%, 77%);
+    font-size: .675rem;
+    text-align: center;
+}
+
+.termsServices a {
+    color: hsl(0, 100%, 74%);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/*   MEDIA   */
+
+@media screen and (max-width: 768px) { 
+    .container {
+        flex-direction: column;
+        height: auto;
+        max-width: 600px;
+        padding: 100px 25px 60px 25px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+    
+    .textSection {
+        color: #fff;
+        padding: 0;
+        flex: 1;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    .formSection {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) { 
+    .container {
+        max-width: 375px;
+    }
+
+    .textSection h1 {
+        font-size: 2rem;
+        line-height: normal;
+    } 
+}

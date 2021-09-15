@@ -13,5 +13,5 @@
 9. Ping single column coming soon page (Html, Css, Flexbox, Responsive, JS)
 10. Testimonials grid section (Html, Css, Flexbox, Responsive)
 11. Tip calculator app (Html, Css, Flexbox, Responsive, JS)
-    Intro component with sign-up form ==> soon
+12. Intro component with sign-up form (Html, Css, Flexbox, Responsive, JS)
 

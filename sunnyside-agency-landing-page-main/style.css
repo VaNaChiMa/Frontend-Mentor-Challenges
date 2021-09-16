@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+}
+
+main {
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: auto;
+}
+
+header {
+    height: 100vh;
+    background-image: url('images/desktop/image-header.jpg');
+    background-size: cover;
+    background-position: top center;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 40px 0 40px;
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav li {
+    margin-right: 50px;  
+}
+
+nav li:last-child{
+    margin-right: 0;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Barlow', sans-serif;
+}
+
+nav .btn {
+    border-radius: 33px;
+    background-color: #fff;
+    padding: 15px 30px;
+    color: hsl(212, 27%, 19%);
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    margin-right: 0;
+    transition: .2s ease;
+}
+
+nav .btn:hover {
+color: #fff;
+background-color: rgba(255, 255, 255, .5);
+}
+header h1 {
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 120px auto 100px auto;
+}
+
+.arrow-down {
+    display: block;
+    margin: 0 auto;
+}
+
+.brand, .audience, .photoGraphic {
+    display: flex;
+    align-items: center;
+}
+
+.textAudience, .textBrand {
+    max-width: 440px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.textBrand h2, .textAudience h2 {
+    margin-bottom: 50px;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 2.3rem;
+    color: hsl(212, 27%, 19%);
+}
+
+.textBrand p, .textAudience p {
+    margin-bottom: 50px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: .975rem;
+    line-height: 30px;
+    color: hsl(213, 9%, 39%);
+}
+
+.textBrand a, .textAudience a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: .8rem;
+    color: hsl(212, 27%, 19%);
+}
+
+.textBrand a {
+    position: relative;
+    z-index: 1;
+}
+
+.textBrand a::after {
+    content: '';
+    width: 115%;
+    height: 8px;
+    background-color: hsl(51, 100%, 49%);
+    opacity: .5;
+    position: absolute;
+    top: 12px;
+    left: -7px;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.textAudience a {
+    position: relative;
+    z-index: 1;
+}
+
+.textAudience a::after {
+    content: '';
+    width: 115%;
+    height: 8px;
+    background-color: hsl(7, 99%, 70%);
+    opacity: .5;
+    position: absolute;
+    top: 12px;
+    left: -7px;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.audienceImage, .eggImage {
+    width: 50%;
+}
+
+.audienceImage img, .eggImage img {
+    width: 100%;
+    display: block;
+}
+
+.photoGraphic {
+    display: flex;
+    width: 100%;
+    height: 600px;
+}
+
+.green {
+    width: 50%;
+    height: 100%;
+    background-image: url('images/desktop/image-graphic-design.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+.green h2 {
+    margin-bottom: 30px;
+    color: hsl(167, 40%, 24%);
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 1.725rem;
+}
+
+.green p {
+    color: hsl(167, 40%, 24%);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: .9rem;
+    text-align: center;
+    max-width: 340px;
+    line-height: 25px;
+}
+
+.orange {
+    width: 50%;
+    height: 100%;
+    background-image: url('images/desktop/image-photography.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+.orange h2 {
+    margin-bottom: 30px;
+    color: hsl(198, 62%, 26%);
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 1.725rem;
+}
+
+.orange p {
+    color: hsl(198, 62%, 26%);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: .9rem;
+    text-align: center;
+    max-width: 340px;
+    line-height: 25px;
+}
+
+.testimonialsSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 150px auto;
+}
+
+.testimonialsSection h2 {
+    margin-bottom: 70px;
+    color: hsl(210, 4%, 67%);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.clients {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 76%;
+    height: auto;
+}
+
+.client {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    margin-right: 40px;
+}
+
+.client:last-child {
+    margin-right: 0;
+}
+
+.client img {
+    width: 75px;
+    border-radius: 50%;
+    margin: 0 auto 50px auto;
+}
+
+.client p {
+    margin-bottom: 60px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: .975rem;
+    line-height: 30px;
+    color: hsl(213, 9%, 39%);
+    text-align: center;  
+}
+
+.client .story {
+    min-height: 150px;
+}
+
+.client .state {
+    color: hsl(210, 4%, 67%);
+}
+
+.clientData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.clientData h3 {
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 1.125rem;
+    margin-bottom: 15px;
+}
+
+.clientData {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: .8rem;
+    color: hsl(213, 9%, 39%);
+}
+
+.orizontalImagesSection {
+    display: flex;
+}
+
+.orizontalImagesSection img {
+    width: 25%;
+    height: auto;
+}
+
+footer {
+    background-color: rgb(144, 212, 197);
+    /* background-color: hsl(168, 34%, 41%); */
+    color: hsl(167, 40%, 24%);
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.footerLogo {
+    margin-bottom: 40px;
+}
+
+.footerLogo img {
+    height: 35px;
+}
+
+.footerLinks a {
+    text-decoration: none;
+    color: hsl(168, 34%, 41%);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-right: 50px;
+    transition: .2s ease;
+}
+
+.footerLinks a:last-child {
+    margin-right: 0;
+}
+
+.footerLinks {
+    margin-bottom: 80px;
+}
+
+.footerLinks a:hover {
+    color: #fff;
+}
+
+.social {
+    display: flex;
+}
+
+.social img {
+margin-right: 25px;
+}
+
+.social .social__icon:hover {
+color: #fff;
+}

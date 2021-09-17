@@ -388,39 +388,79 @@ margin-right: 25px;
 /*     MEDIA     */
 
 @media screen and (max-width: 1024px) {
+    .textBrand h2, .textAudience h2 {
+        margin: 0 auto 40px auto;
+        text-align: center;
+        font-size: 1.5rem;
+    }
 
+    .textBrand p, .textAudience p {
+        margin-bottom: 40px;
+        text-align: center;
+        font-size: .8rem;
+        line-height: 25px;
+    }
+
+    .textBrand h3, .textAudience h3 {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 768px) {
     nav {
         position: relative;
+        padding: 30px 20px 0 20px;
+    }
+
+    nav li {
+        margin-right: 0;
     }
 
     .nav-links {
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
         position: absolute;
         top: 100px;
-        right: 20px;
-        width: 330px;
-        height: 305px;
+        margin: 0 21px;
+        right: 0;
+        width: 90%;
+        height: 330px;
         padding: 45px 0 40px 0;
         background-color: #fff;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links::before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 30px solid transparent;
+        border-bottom: 30px solid #fff;
+        position: absolute;
+        top: -30px;
+        right: 0;
     }
 
     .nav-links li {
         margin-bottom: 40px;
     }
 
+    nav li:last-child{
+        margin: auto;
+    }
+
     .nav-links a {
         color: hsl(213, 9%, 39%);
+        font-size: .9rem;
     }
 
     li .btn {
         color: hsl(212, 27%, 19%);
         background-color: hsl(51, 100%, 49%);
-        margin-bottom: 40px;
     }
 
     li .btn:hover {
@@ -429,8 +469,52 @@ margin-right: 25px;
     }
 
     .hamburger {
-        display: none;
+        display: block;
+        cursor: pointer;
     }
+
+    header h1 {
+        margin: 95px auto 55px auto;
+    }
+
+    .brand {
+        flex-direction: column-reverse;
+    }
+
+    .audience {
+        flex-direction: column;
+    }
+
+    .photoGraphic {
+        flex-direction: column;
+    }
+
+    .textBrand, .eggImage, .audienceImage, .textAudience, .orange, .green {
+        width: 100%;
+    }
+
+    .textBrand, .textAudience {
+        padding: 0 30px;
+        margin: 70px auto;
+    }
+
+    .textBrand h2, .textAudience h2 {
+        margin: 0 auto 40px auto;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    .textBrand p, .textAudience p {
+        margin-bottom: 40px;
+        text-align: center;
+        line-height: 30px;
+        font-size: .975rem;
+    }
+
+    .textBrand h3, .textAudience h3 {
+        text-align: center;
+    }
+
 }
 
 @media screen and (max-width: 480px) {

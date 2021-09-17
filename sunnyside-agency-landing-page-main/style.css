@@ -29,7 +29,7 @@ nav {
     width: 100%;
 }
 
-ul {
+.nav-links {
     display: flex;
     list-style-type: none;
 }
@@ -63,6 +63,11 @@ nav .btn:hover {
 color: #fff;
 background-color: rgba(255, 255, 255, .5);
 }
+
+.hamburger {
+display: none;
+}
+
 header h1 {
     text-align: center;
     font-family: 'Fraunces', serif;
@@ -324,7 +329,6 @@ header h1 {
 
 footer {
     background-color: rgb(144, 212, 197);
-    /* background-color: hsl(168, 34%, 41%); */
     color: hsl(167, 40%, 24%);
     padding: 70px;
     display: flex;
@@ -368,10 +372,167 @@ footer {
     display: flex;
 }
 
-.social img {
+.social a {
 margin-right: 25px;
 }
 
-.social .social__icon:hover {
-color: #fff;
+.socialIcon {
+    color: hsl(167, 40%, 24%);
+    transition: .2s ease;
+}
+
+.socialIcon:hover {
+    color: #fff;
+}
+
+/*     MEDIA     */
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        position: relative;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 100px;
+        right: 20px;
+        width: 330px;
+        height: 305px;
+        padding: 45px 0 40px 0;
+        background-color: #fff;
+    }
+
+    .nav-links li {
+        margin-bottom: 40px;
+    }
+
+    .nav-links a {
+        color: hsl(213, 9%, 39%);
+    }
+
+    li .btn {
+        color: hsl(212, 27%, 19%);
+        background-color: hsl(51, 100%, 49%);
+        margin-bottom: 40px;
+    }
+
+    li .btn:hover {
+        background-color: hsl(198, 62%, 26%);
+        color: #fff;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        background-image: url('images/mobile/image-header.jpg');
+    }
+
+    header h1 {
+        margin: 95px auto 55px auto;
+    }
+
+    .brand {
+        flex-direction: column-reverse;
+    }
+
+    .audience {
+        flex-direction: column;
+    }
+
+    .photoGraphic {
+        flex-direction: column;
+    }
+
+    .textBrand, .eggImage, .audienceImage, .textAudience, .orange, .green {
+        width: 100%;
+    }
+
+    .textBrand, .textAudience {
+        padding: 0 30px;
+        margin: 70px auto;
+    }
+
+    .textBrand h2, .textAudience h2 {
+        margin: 0 auto 40px auto;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    .textBrand p, .textAudience p {
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .textBrand h3, .textAudience h3 {
+        text-align: center;
+    }
+
+    .photoGraphic {
+        height: auto;
+    }
+    
+    .green {
+        background-image: url('images/mobile/image-graphic-design.jpg');
+        height: 100vh;
+    }
+    .orange {
+        background-image: url('images/mobile/image-photography.jpg');
+        height: 100vh;
+    }
+
+    .testimonialsSection {
+        margin: 70px auto 90px auto;
+    }
+
+    .clients {
+        flex-direction: column;
+    }
+
+    .client {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 60px;
+    }
+
+    .testimonialsSection h2 {
+        margin-bottom: 60px;
+        font-size: .875rem;
+    }
+
+    .client .story {
+        min-height: auto;
+        margin-bottom: 40px;
+    }
+
+    .client img {
+    margin-bottom: 40px;
+    }
+
+    .clientData p {
+        margin-bottom: 0;
+    }
+
+    .orizontalImagesSection {
+        flex-wrap: wrap;
+    }
+
+    .orizontalImagesSection img {
+        width: 50%;
+        height: 185px;
+    }
+
+    footer {
+        padding: 60px 35px 80px 35px;
+    }
 }

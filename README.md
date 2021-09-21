@@ -15,4 +15,5 @@
 11. Tip calculator app (Html, Css, Flexbox, Responsive, JS)
 12. Intro component with sign-up form (Html, Css, Flexbox, Responsive, JS)
 13. Sunnyside agency landing page (Html, Css, Flexbox, Responsive, JS)
+14. Pricing component with toggle (Html, Css, JS)
 

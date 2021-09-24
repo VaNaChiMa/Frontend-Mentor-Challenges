@@ -7,4 +7,173 @@
 body {
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
+    background-color: hsl(240, 80%, 98%);
+    background-image: url('images/bg-bottom.svg'), url('images/bg-top.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom left, top right;
+}
+
+main {
+    max-width: 1440px;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    margin-bottom: 40px;
+    color: hsl(233, 13%, 49%);
+}
+
+.switch {
+    margin-bottom: 80px;
+}
+
+.switch input {
+    margin: 0 20px;
+}
+
+.switch span {
+    color: hsl(234, 14%, 74%);
+}
+
+.plans {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.basic_plan, .professional_plan, .master_plan {
+    width: 350px;
+    min-height: 476px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    color: hsl(232, 13%, 33%);
+}
+
+.basic_plan {
+    border-radius: 10px 0 0 10px;
+}
+
+.master_plan {
+    border-radius: 0 10px 10px 0;
+}
+
+.professional_plan {
+    background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: #fff;
+    height: calc(476px + 40px);
+    padding: 50px 30px 30px 30px;
+    border-radius: 10px;
+}
+
+.basic_plan_name,
+.master_plan_name {
+    color: hsl(233, 13%, 49%);
+    margin: 0 auto 35px auto;
+}
+
+.professional_plan_name {
+    color: #fff;
+    margin: 0 auto 35px auto;
+}
+
+.basic_plan_price_monthly, .basic_plan_price_annual,
+.professional_plan_price_monthly, .professional_plan_price_annual,
+.master_plan_price_monthly, .master_plan_price_annual {
+    font-weight: 700;
+    font-size: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basic_plan_price_monthly small, .basic_plan_price_annual small,
+.professional_plan_price_monthly small, .professional_plan_price_annual small,
+.master_plan_price_monthly small, .master_plan_price_annual small {
+    font-size: 2.5rem;
+    margin-right: 5px;
+}
+
+.basic_plan_price,
+.professional_plan_price,
+.master_plan_price {
+    margin-bottom: 35px;
+}
+
+.basic_plan_price_annual,
+.professional_plan_price_annual, 
+.master_plan_price_annual {
+    display: none;
+}
+
+.basic_plan_benefits p,
+.professional_plan_benefits p,
+.master_plan_benefits p {
+    padding: 20px;
+    border-top: 1px solid hsl(234, 14%, 74%);
+}
+
+.basic_plan_benefits p:last-child,
+.professional_plan_benefits p:last-child,
+.master_plan_benefits p:last-child {
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+
+.basic_plan_benefits,
+.professional_plan_benefits,
+.master_plan_benefits {
+    margin-bottom: 30px;
+}
+
+.basic_btn button,
+.master_btn button {
+    width: 100%;
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    padding: 15px 30px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 7px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.basic_btn button:hover,
+.master_btn button:hover {
+    background: transparent;
+    border-color: hsl(237, 63%, 64%);
+    color: hsl(237, 63%, 64%);
+}
+
+.professional_btn button {
+    width: 100%;
+    background: #fff;
+    padding: 15px 30px;
+    color: hsl(237, 63%, 64%);
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 7px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.professional_btn button:hover {
+    border-color: #fff;
+    background: transparent;
+    color: #fff;
 }

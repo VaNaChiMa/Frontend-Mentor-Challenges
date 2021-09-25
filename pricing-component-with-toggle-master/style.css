@@ -36,14 +36,44 @@ h1 {
 
 .switch {
     margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .switch input {
-    margin: 0 20px;
+    position: absolute;
+    right: 9999px;
 }
 
 .switch span {
     color: hsl(234, 14%, 74%);
+}
+
+.switch label {
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border-radius: 50px;
+    display: inline-block;
+    position: relative;
+    height: 33px;
+    width: 60px;
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+.switch label .circle {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    height: 25px;
+    width: 25px;
+    transition: transform .3s ease;
+}
+
+.switch input:checked + label .circle {
+    transform: translateX(27px);
 }
 
 .plans {
@@ -90,9 +120,7 @@ h1 {
     margin: 0 auto 35px auto;
 }
 
-.basic_plan_price_monthly, .basic_plan_price_annual,
-.professional_plan_price_monthly, .professional_plan_price_annual,
-.master_plan_price_monthly, .master_plan_price_annual {
+.monthly, .annually {
     font-weight: 700;
     font-size: 3.5rem;
     display: flex;
@@ -100,9 +128,7 @@ h1 {
     align-items: center;
 }
 
-.basic_plan_price_monthly small, .basic_plan_price_annual small,
-.professional_plan_price_monthly small, .professional_plan_price_annual small,
-.master_plan_price_monthly small, .master_plan_price_annual small {
+.monthly small, .annually small {
     font-size: 2.5rem;
     margin-right: 5px;
 }
@@ -113,9 +139,15 @@ h1 {
     margin-bottom: 35px;
 }
 
-.basic_plan_price_annual,
-.professional_plan_price_annual, 
-.master_plan_price_annual {
+.monthly {
+    display: none;
+}
+
+.show-annually .monthly {
+    display: block;
+}
+
+.show-annually .annually {
     display: none;
 }
 
@@ -149,7 +181,7 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;
-    border: 1px solid transparent;
+    border: 1px solid #fff;
 }
 
 .basic_btn button:hover,
@@ -177,3 +209,35 @@ h1 {
     background: transparent;
     color: #fff;
 }
+
+@media screen and (max-width: 1024px) {
+    .basic_plan, .professional_plan, .master_plan {
+        width: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 70px 25px 40px 25px;
+    }
+
+    .plans {
+        flex-direction: column;
+    }
+
+    .basic_plan, .professional_plan, .master_plan {
+        min-width: 350px;
+        border-radius: 20px;
+        margin-bottom: 30px;
+    }
+
+    .professional_plan {
+        height: 476px;
+        padding-top: 30px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .basic_plan, .professional_plan, .master_plan {
+        min-width: 325px;
+}
+

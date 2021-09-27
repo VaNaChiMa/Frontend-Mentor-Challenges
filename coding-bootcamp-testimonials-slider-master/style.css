@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 32px;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-image: url('images/pattern-curve.svg');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
+
+main {
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: auto;
+}
+
+.container {
+    margin: auto;
+    background-image: url('images/pattern-bg.svg');
+    background-repeat: no-repeat;
+    background-position: right 70px center;
+}
+
+.slider_1, .slider_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 78%;
+    height: 100vh;
+    min-height: 540px;
+    margin: auto;
+    position: relative;
+}
+
+.slider_1.active {
+    display: flex;
+} 
+
+.slider_2 { 
+    display: none;
+} 
+
+.slider_2.active {
+    display: flex;
+}
+
+
+.slider_1__image {
+    border-radius: 10px;
+    background-image: url('images/image-tanya.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 540px;
+    width: 46%;
+    position: absolute;
+    margin-top: 10px;
+    right: 0;
+    box-shadow: 0 10px 20px rgba(32, 32, 70, 0.1);
+}
+
+.slider_2__image {
+    border-radius: 10px;
+    background-image: url('images/image-john.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 540px;
+    width: 46%;
+    position: absolute;
+    margin-top: 10px;
+    right: 0;
+    box-shadow: 0 10px 20px rgba(32, 32, 70, 0.1);
+}
+
+.controls {
+    width: 116px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 11%;
+    right: 33%;
+    box-shadow: 0 10px 20px rgba(32, 32, 70, 0.2);
+    z-index: 10;
+}
+
+.controls .left-arrow {
+    background-color: #fff;
+    height: 55px;
+    width: 50%;
+    border-radius: 50px 0 0 50px;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls .right-arrow {
+    background-color: #fff;
+    height: 55px;
+    width: 50%;
+    border-radius: 0 50px 50px 0;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider_1__text, .slider_2__text {
+    width: 60%;
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    margin-top: 20px;
+    height: 540px;
+    padding-top: 150px;
+}
+
+.slider_1__text {
+    background-image: url('images/pattern-quotes.svg');
+    background-repeat: no-repeat;
+    background-position: top 19%  left 20%;
+}
+
+.slider_2__text {
+    background-image: url('images/pattern-quotes.svg');
+    background-repeat: no-repeat;
+    background-position: top 19%  left 20%;
+}
+
+.slider_1__text p, .slider_2__text p {
+    font-weight: 300;
+    line-height: 40px;
+    margin-bottom: 50px;
+    font-size: 1rem;
+}
+
+.slider_1__text strong, .slider_2__text strong {
+    font-weight: 700;
+    margin-right: 10px;
+    font-size: .65rem;
+}
+
+.slider_1__text span, .slider_2__text span {
+    font-weight: 500;
+    color: hsl(240, 18%, 77%);
+    font-size: .625rem;
+}
+

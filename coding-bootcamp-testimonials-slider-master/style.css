@@ -51,7 +51,6 @@ main {
     display: flex;
 }
 
-
 .slider_1__image {
     border-radius: 10px;
     background-image: url('images/image-tanya.jpg');
@@ -156,3 +155,110 @@ main {
     font-size: .625rem;
 }
 
+/*     MEDIA     */
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        max-width: 375px;
+        margin: 25px auto 70px auto;
+        background-image: url('images/pattern-bg.svg');
+        background-repeat: no-repeat;
+        background-size: 325px 307px;
+        background-position: center top;
+    }
+    .slider_1, .slider_2 {
+        flex-direction: column-reverse;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .slider_1__text, .slider_2__text {
+        position: static;
+    }
+
+    .slider_1__image, .slider_2__image {
+        position: static;
+        border-radius: 5px;
+    }
+
+    .slider_1__image {
+        background-image: url('images/image-tanya.jpg');
+        background-repeat: no-repeat, no-repeat;
+        background-position: center center;
+        background-size: 255px;
+        width: 255px;
+        height: 255px;
+        margin-top: 30px;
+    }
+
+    .slider_2__image {
+        background-image: url('images/image-john.jpg');
+        background-repeat: no-repeat, no-repeat;
+        background-position: center center;
+        background-size: 255px;
+        width: 255px;
+        height: 255px;
+        margin-top: 30px;
+    }
+
+    .slider_1__text, .slider_2__text {
+        width: 100%;
+        background-position: top 30px center;
+        background-size: 20%;
+        height: fit-content;
+        padding-top: 60px;
+    }
+
+    .slider_1__text p, .slider_2__text p {
+        font-size: 0.575rem;
+        line-height: 25px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .slider_1__text p:last-child {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slider_2__text p:last-child {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slider_1__text strong, .slider_2__text strong {
+        font-size: 0.475rem;
+    }
+
+    .slider_1__text span, .slider_2__text span{
+        font-size: 0.525rem;
+    }
+
+    .controls {
+        width: 82px;
+        height: 40px;
+        bottom: 44%;
+        right: calc(50% - 41px);
+    }
+
+    .controls .left-arrow {
+        height: 40px;
+    }
+
+    .controls .right-arrow {
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        background-position: bottom center;
+        background-size: 100%;
+    }
+
+    .container {
+        max-width: 375px;
+        margin: 25px 25px 70px 25px;
+    }
+}

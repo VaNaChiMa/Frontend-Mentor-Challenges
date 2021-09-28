@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    background-image: url('images/bg-pattern.svg');
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+main {
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-image: url('images/pattern-circles.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-bottom: 90px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricingCard {
+    background-color: #fff;
+    width: 540px;
+    border-radius: 10px;
+    padding: 50px 40px 30px 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07), 0 10px 20px rgba(0, 0, 0, 0.1);;
+}
+
+.rangeSlider {
+    width: 100%;
+    cursor: pointer;
+}
+
+#range {
+    width: 100%;
+}
+
+.billingInfo  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trialSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn .trial {
+    padding: 12px 40px;
+    border-radius: 33px;
+    border: 0;
+    background-color: hsl(227, 35%, 25%);
+    color: hsl(226, 100%, 87%);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn .trial:active {
+    transform: scale(0.97);
+}

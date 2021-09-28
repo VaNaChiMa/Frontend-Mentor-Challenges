@@ -17,3 +17,4 @@
 13. Sunnyside agency landing page (Html, Css, Flexbox, Responsive, JS)
 14. Pricing component with toggle (Html, Css, JS)
 15. Coding bootcamp testimonials slider (Html, Css, JS)
+16. Interactive pricing component (Html, Css, JS)

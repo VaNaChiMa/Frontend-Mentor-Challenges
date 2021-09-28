@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+</head>
+<body>
+  <main>
+    <div class="container">
+
+      <header>
+        <h1>Simple, traffic-based pricing</h1>
+        <p>Sign-up for our 30-day trial. No credit card required. </p>
+      </header>
+      
+      <div class="pricingCard">
+
+        <div class="displayInfo">
+          <span>100K Pageviews</span>
+          <span class="price">$16.00</span>
+          <span>/month</span>
+        </div>
+        <div class="rangeSlider">
+          <input type="range" name="range" id="range" min="1" max="100" value="50">
+        </div>
+        <div class="billingInfo">
+          <p>Monthly Billing</p>
+          <p>Yearly Billing</p>
+          <small>25% discount</small>
+        </div>
+
+        <hr>
+
+        <div class="trialSection">
+          <div class="features">
+            <p>Unlimited websites</p>
+            <p>100% data ownership</p>
+            <p>Email reports</p>
+          </div>
+          <div class="btn">
+            <button class="trial">Start my trial</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </main>
+  
+  
+  <script src="script.js"></script>
+</body>
+</html>

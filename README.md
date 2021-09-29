@@ -18,3 +18,4 @@
 14. Pricing component with toggle (Html, Css, JS)
 15. Coding bootcamp testimonials slider (Html, Css, JS)
 16. Interactive pricing component (Html, Css, JS)
+17. Social media dashboard with theme switcher (Html, Css, JS)

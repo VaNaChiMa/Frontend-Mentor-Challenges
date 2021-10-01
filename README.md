@@ -20,3 +20,4 @@
 16. Interactive pricing component (Html, Css, JS)
 17. Social media dashboard with theme switcher (Html, Css, JS)
 18. Time tracking dashboard (Html, Css, JS)
+19. Blogr landing page (Html, Css, JS)

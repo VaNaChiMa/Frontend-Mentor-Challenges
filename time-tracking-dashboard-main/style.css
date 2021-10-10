@@ -10,6 +10,7 @@ html {
 
 body {
     font-family: 'Kubik', sans-serif;
+    background-color: hsl(226, 43%, 10%);
 }
 
 main {
@@ -18,4 +19,15 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 255px 255px 255px 255px;
+    gap: 25px;
+}
+
+.activity {
+    background-color: hsl(235, 46%, 20%);
+    color: #fff;
 }

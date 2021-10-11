@@ -23,8 +23,36 @@ main {
 
 .container {
     display: grid;
-    grid-template-columns: 255px 255px 255px 255px;
+    grid-template-columns: repeat(4, minmax(255px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "user work play study"
+    "user exercise social self-care";
     gap: 25px;
+}
+
+.user-card {
+    grid-area: user;
+}
+
+.work {
+    grid-area: work;
+}
+
+.play {
+    grid-area: play;
+}
+
+.study {
+    grid-area: study;
+}
+
+.exercise {
+    grid-area: exercise;
+}
+
+.social {
+    grid-area: social;
 }
 
 .activity {

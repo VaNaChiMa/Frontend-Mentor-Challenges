@@ -14,3 +14,17 @@ main {
     min-height: 100vh;
     margin: auto;
 }
+
+.container {
+
+}
+
+.overview_board {
+    display: grid;
+    grid-template-columns: repeat(4, 255px);
+    grid-template-rows: repeat(3, 125px);
+}
+
+.overview {
+    background-color: hsl(228, 34%, 66%);
+}

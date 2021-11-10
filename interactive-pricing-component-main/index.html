@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,10 +11,11 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  
+
   <title>Frontend Mentor | Interactive pricing component</title>
 
 </head>
+
 <body>
   <main>
     <div class="container">
@@ -22,41 +24,53 @@
         <h1>Simple, traffic-based pricing</h1>
         <p>Sign-up for our 30-day trial. No credit card required. </p>
       </header>
-      
+
       <div class="pricingCard">
 
         <div class="displayInfo">
-          <span>100K Pageviews</span>
-          <span class="price">$16.00</span>
-          <span>/month</span>
+          <div class="views">
+            <span>100K Pageviews</span>
+          </div>
+          <div class="pricePer">
+            <span class="price">$16.00</span>
+            <span>/ month</span>
+          </div>
         </div>
         <div class="rangeSlider">
           <input type="range" name="range" id="range" min="1" max="100" value="50">
         </div>
         <div class="billingInfo">
           <p>Monthly Billing</p>
+          <div class="toggler">
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="label">
+              <div class="ball"></div>
+            </label>
+          </div>
+          
           <p>Yearly Billing</p>
           <small>25% discount</small>
         </div>
 
-        <hr>
+        <hr class="line">
 
         <div class="trialSection">
           <div class="features">
-            <p>Unlimited websites</p>
-            <p>100% data ownership</p>
-            <p>Email reports</p>
+            <p><span>&#10004</span>Unlimited websites</p>
+            <p><span>&#10004</span>100% data ownership</p>
+            <p><span>&#10004</span>Email reports</p>
           </div>
           <div class="btn">
             <button class="trial">Start my trial</button>
           </div>
         </div>
-        
+
       </div>
     </div>
   </main>
-  
-  
+
+
   <script src="script.js"></script>
 </body>
+
 </html>

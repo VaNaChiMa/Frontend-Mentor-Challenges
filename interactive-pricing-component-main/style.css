@@ -10,15 +10,16 @@ html {
 }
 
 body {
-    background-image: url('images/bg-pattern.svg');
-    background-repeat: no-repeat;
-    background-position: center top;
+    background-color: hsl(230, 100%, 99%);
 }
 
 main {
     max-width: 1440px;
     min-height: 100vh;
     margin: auto;
+    background-image: url('images/bg-pattern.svg');
+    background-repeat: no-repeat;
+    background-position: center top;
 }
 
 .container {
@@ -34,7 +35,7 @@ header {
     background-image: url('images/pattern-circles.svg');
     background-repeat: no-repeat;
     background-position: center center;
-    margin-bottom: 90px;
+    margin-bottom: 50px;
     min-height: 150px;
     display: flex;
     flex-direction: column;
@@ -42,12 +43,53 @@ header {
     justify-content: center;
 }
 
+header h1 {
+    color: hsl(227, 35%, 25%);
+}
+
+header p {
+    color: hsl(225, 20%, 60%);
+}
+
 .pricingCard {
     background-color: #fff;
     width: 540px;
     border-radius: 10px;
-    padding: 50px 40px 30px 40px;
+    padding: 50px 0 30px 0;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07), 0 10px 20px rgba(0, 0, 0, 0.1);;
+}
+
+.pricingCard .displayInfo, 
+.pricingCard .rangeSlider,
+.pricingCard .billingInfo,
+.pricingCard .trialSection {
+    padding: 0 40px;
+}
+
+.displayInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.views span {
+    color: hsl(225, 20%, 60%);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-right: 5px;
+    color: hsl(227, 35%, 25%);
+}
+
+.pricePer {
+    display: flex;
+    align-items: center;
+    color: hsl(225, 20%, 60%);
 }
 
 .rangeSlider {
@@ -59,16 +101,86 @@ header {
     width: 100%;
 }
 
-.billingInfo  {
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    position: relative;
+    width: 45px;
+    height: 25px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 5px;
+    background: hsl(223, 50%, 87%);
+    border-radius: 50px;
+    margin: 0 15px;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.label:hover {
+    background-color: hsl(174, 86%, 45%);
+}
+
+.ball {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.checkbox:checked + .label  .ball {
+    transform: translateX(20px);
+}
+
+
+.line {
+    width: 100%;
+    margin: 30px 0;
+    background-color: hsl(224, 65%, 95%);
+    height: 1px;
+    border: none;
+}
+
+.billingInfo  {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 40px 15px 40px;
+    color: hsl(225, 20%, 60%);
+}
+
+.billingInfo small {
+    margin-left: 10px;
+    background-color: hsl(14, 92%, 95%);
+    color: hsl(15, 100%, 70%);
+    font-weight: 600;
+    border-radius: 50px;
+    padding: 2px 5px;
 }
 
 .trialSection {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.features p {
+    margin-bottom: 15px;
+    color: hsl(225, 20%, 60%);
+}
+
+.features p span {
+    color: hsl(174, 86%, 45%);
+    margin-right: 15px;
 }
 
 .btn .trial {
@@ -81,6 +193,10 @@ header {
     font-weight: 600;
     cursor: pointer;
     transition: 0.2s ease;
+}
+
+.btn .trial:hover {
+    color: #fff;
 }
 
 .btn .trial:active {

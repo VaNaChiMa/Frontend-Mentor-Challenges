@@ -19,7 +19,7 @@ The designs were created to the following widths:
 
 ### Neutral
 
-- White (Pricing Component Background): hsl (0, 0%, 100%)
+- White (Pricing Component Background): hsl(0, 0%, 100%)
 - Very Pale Blue (Main Background): hsl(230, 100%, 99%)
 - Light Grayish Blue (Empty Slider Bar): hsl(224, 65%, 95%)
 - Light Grayish Blue (Toggle Background): hsl(223, 50%, 87%)

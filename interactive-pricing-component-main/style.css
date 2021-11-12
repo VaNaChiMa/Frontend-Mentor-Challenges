@@ -92,14 +92,65 @@ header p {
     color: hsl(225, 20%, 60%);
 }
 
+/*    Range Slider   */
+
 .rangeSlider {
     width: 100%;
     cursor: pointer;
 }
 
-#range {
+input[type='range'] {
+    -webkit-appearance: none;
     width: 100%;
 }
+
+input[type='range']:focus {
+    outline: none;
+  }
+
+input[type='range']::-webkit-slider-runnable-track {
+    background-color: hsl(224, 65%, 95%);
+    border-radius: 25px;
+    width: 100%;
+    cursor: pointer;
+    height: 8px;
+    margin-bottom: 10px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 40px;
+    height: 40px;
+    background-color: hsl(174, 77%, 80%);
+    background-image: url('images/icon-slider.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    margin-top: -16px;
+    box-shadow: 0 5px 15px hsl(175, 89%, 93%), 0 15px 25px hsl(175, 89%, 93%);
+    cursor: pointer;
+    position: relative;
+}
+
+input[type='range']::-webkit-slider-thumb:active {
+    background-color: hsl(174, 86%, 45%);
+}
+
+/* input[type='range']::-webkit-slider-thumb::after{
+    content: "";
+    background-image: url('images/icon-slider.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+} */
+
+
+/*     Toggle    */
 
 .checkbox {
     opacity: 0;
@@ -108,8 +159,8 @@ header p {
 
 .label {
     position: relative;
-    width: 45px;
-    height: 25px;
+    width: 44px;
+    height: 23px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -127,8 +178,8 @@ header p {
 
 .ball {
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 4px;
+    left: 4px;
     border-radius: 50%;
     width: 15px;
     height: 15px;
@@ -138,7 +189,7 @@ header p {
 }
 
 .checkbox:checked + .label  .ball {
-    transform: translateX(20px);
+    transform: translateX(22px);
 }
 
 
@@ -164,7 +215,7 @@ header p {
     color: hsl(15, 100%, 70%);
     font-weight: 600;
     border-radius: 50px;
-    padding: 2px 5px;
+    padding: 2px 7px;
 }
 
 .trialSection {
@@ -178,8 +229,11 @@ header p {
     color: hsl(225, 20%, 60%);
 }
 
-.features p span {
-    color: hsl(174, 86%, 45%);
+.features p:last-child {
+    margin-bottom: 0;
+}
+
+.features p img {
     margin-right: 15px;
 }
 

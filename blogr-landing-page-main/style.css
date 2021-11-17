@@ -1,36 +1,169 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .container {
-    max-width: 1440px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  max-width: 1440px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 
 header {
-    background-color: hsl(355, 100%, 74%);
-    background-image: url('images/bg-pattern-intro.svg');
-    background-size: 150%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 100vh;
-    width: 100%;
-    border-radius: 0 0 0 90px;
+  background-color: #ff7a85;
+  background-image: url("images/bg-pattern-intro.svg");
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  width: 100%;
+  border-radius: 0 0 0 90px;
+}
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  padding-top: 50px;
+}
+header .navbar .nav-links {
+  display: flex;
+}
+header .navbar .dropdown div {
+  display: none;
+}
+header .hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 100px);
+}
+header .hero-section .hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header .hero-section .hero-text h1 {
+  color: #fff;
+  font-family: "Overpass", sans-serif;
+  font-size: 4rem;
+  font-weight: 600;
+}
+header .hero-section .hero-text p {
+  color: #fff;
 }
 
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 50px;
+.infrastructure {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  background-color: #2c2d3f;
+  background-image: url("images/bg-pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: center left;
+  border-radius: 0 100px 0 100px;
 }
+.infrastructure .infrastructure-image {
+  width: 100%;
+  height: auto;
+}
+.infrastructure .infrastructure-text {
+  max-width: 530px;
+  margin-left: 60px;
+}
+.infrastructure .infrastructure-text h3 {
+  font-family: "Overpass", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  padding-bottom: 30px;
+}
+.infrastructure .infrastructure-text p {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.7;
+  letter-spacing: 0.025rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  margin: 60px auto 120px auto;
+  align-items: center;
+}
+.features .features-image {
+  margin-left: -215px;
+}
+.features .features-image img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
+}
+.features .features-text {
+  max-width: 530px;
+  margin-left: 60px;
+}
+.features .features-text h4 {
+  font-family: "Overpass", sans-serif;
+  font-size: 1.575rem;
+  font-weight: 600;
+  color: #1f3f5b;
+  padding-bottom: 30px;
+}
+.features .features-text p {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #4b5862;
+  line-height: 1.7;
+  letter-spacing: 0.025rem;
+}
+.features .features-text p:nth-child(2) {
+  padding-bottom: 80px;
+}
+
+footer {
+  width: 100%;
+  background-color: #25252d;
+  border-radius: 0 100px 0 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 70px 140px 70px 160px;
+}
+footer div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+footer h5 {
+  color: white;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  font-family: "Overpass", sans-serif;
+}
+footer a {
+  text-decoration: none;
+  color: #c8c8cb;
+  font-family: "Overpass", sans-serif;
+  padding-bottom: 15px;
+  transition: 0.2s ease;
+}
+footer a:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=style.css.map */

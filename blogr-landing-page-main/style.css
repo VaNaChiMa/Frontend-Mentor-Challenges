@@ -29,17 +29,102 @@ header {
   border-radius: 0 0 0 90px;
 }
 header .navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 50px 160px 0 160px;
+}
+header .navbar .logo_and_links {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
-  padding-top: 50px;
 }
-header .navbar .nav-links {
+header .navbar .logo_and_links .logo {
+  margin-right: 60px;
+}
+header .navbar .logo_and_links .nav-links {
   display: flex;
 }
-header .navbar .dropdown div {
+header .navbar .logo_and_links .nav-links .dropdown {
+  position: relative;
+  margin-right: 30px;
+  background-color: inherit;
+}
+header .navbar .logo_and_links .nav-links .dropdown .dropbtn {
+  background-color: inherit;
+  border: none;
+  color: #fff;
+  opacity: 0.9;
+  cursor: pointer;
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: 0.3px;
+}
+header .navbar .logo_and_links .nav-links .dropdown .dropbtn img {
+  margin-left: 5px;
+}
+header .navbar .logo_and_links .nav-links .dropdown:last-child {
+  margin-right: 0;
+}
+header .navbar .logo_and_links .nav-links .dropdown:hover .dropdown_content {
+  display: flex;
+}
+header .navbar .logo_and_links .nav-links .dropdown_content {
   display: none;
+  position: absolute;
+  left: -30px;
+  background-color: #fff;
+  min-width: 170px;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 30px 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 7px 10px rgba(0, 0, 0, 0.15);
+  transition: 0.2s ease;
+}
+header .navbar .logo_and_links .nav-links .dropdown_content a {
+  padding-bottom: 20px;
+  color: #000;
+  text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  transition: 0.2s ease;
+}
+header .navbar .logo_and_links .nav-links .dropdown_content a:hover {
+  font-weight: 700;
+}
+header .navbar .logo_and_links .nav-links .dropdown_content a:last-child {
+  padding-bottom: 0;
+}
+header .navbar .authentication .login_link {
+  color: #fff;
+  margin-right: 30px;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: 0.2s ease;
+}
+header .navbar .authentication .login_link:hover {
+  text-decoration: underline;
+}
+header .navbar .authentication .sign_up {
+  background-color: #fff;
+  color: #ff525d;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  padding: 15px 35px 13px 35px;
+  border-radius: 50px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+header .navbar .authentication .sign_up:hover {
+  background-color: #ff7a85;
+  color: #fff;
 }
 header .hero-section {
   display: flex;
@@ -59,12 +144,57 @@ header .hero-section .hero-text h1 {
   font-family: "Overpass", sans-serif;
   font-size: 4rem;
   font-weight: 600;
+  margin-bottom: 10px;
 }
 header .hero-section .hero-text p {
   color: #fff;
+  font-family: "Overpass", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+header .hero-section .hero-buttons .start {
+  background-color: #fff;
+  color: #ff525d;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  padding: 13px 20px 11px 20px;
+  border-radius: 33px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
+  margin-right: 15px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+header .hero-section .hero-buttons .start:hover {
+  background-color: #ff7a85;
+  color: #fff;
+}
+header .hero-section .hero-buttons .learn {
+  background-color: #ff525d;
+  color: #fff;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  padding: 13px 20px 11px 20px;
+  border: 1px solid #fff;
+  border-radius: 33px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+header .hero-section .hero-buttons .learn:hover {
+  background-color: #fff;
+  color: #ff525d;
+  border: 1px solid transparent;
 }
 
 .infrastructure {
+  height: 400px;
   display: grid;
   grid-template-columns: 40% 60%;
   align-items: center;
@@ -73,8 +203,14 @@ header .hero-section .hero-text p {
   background-repeat: no-repeat;
   background-position: center left;
   border-radius: 0 100px 0 100px;
+  position: relative;
 }
 .infrastructure .infrastructure-image {
+  position: absolute;
+  top: -70px;
+  left: 120px;
+}
+.infrastructure .infrastructure-image .infrastructure-image img {
   width: 100%;
   height: auto;
 }

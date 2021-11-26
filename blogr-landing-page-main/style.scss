@@ -29,19 +29,123 @@ header {
     border-radius: 0 0 0 90px;
 
     .navbar {
+        width: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         height: 100px;
-        padding-top: 50px;
+        padding: 50px 160px 0 160px;
 
-        .nav-links {
+
+        .logo_and_links {
             display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .logo {
+                margin-right: 60px;
+            }
+    
+            .nav-links {
+                display: flex;
+    
+                .dropdown {
+                    position: relative;
+                    margin-right: 30px;
+                    background-color: inherit;
+        
+                    .dropbtn {
+                        background-color: inherit;
+                        border: none;
+                        color: #fff;
+                        opacity: 0.9;
+                        cursor: pointer;
+                        font-family: 'Ubuntu', sans-serif;;
+                        letter-spacing: 0.3px;
+    
+                        img {
+                            margin-left: 5px;
+                        }
+                    }
+                }
+    
+                .dropdown:last-child {
+                    margin-right: 0;
+                }
+    
+                .dropdown:hover .dropdown_content {
+                    display: flex;
+                }
+        
+                .dropdown_content {
+                    display: none;
+                    position: absolute;
+                    left: -30px;
+                    background-color: #fff;
+                    min-width: 170px;
+                    flex-direction: column;
+                    border-radius: 5px;
+                    padding: 30px 20px;
+                    box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 7px 10px rgba(0,0,0,0.15);
+                    transition: 0.2s ease;
+    
+                    a {
+                        padding-bottom: 20px;
+                        color: #000;
+                        text-decoration: none;
+                        font-family: 'Ubuntu', sans-serif;
+                        font-weight: 400;
+                        transition: 0.2s ease;
+                    }
+    
+                    a:hover {
+                        font-weight: 700;
+                    }
+    
+                    a:last-child {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+
         }
 
-        .dropdown div {
-            display: none;
+        .authentication {
+            .login_link {
+                color: #fff;
+                margin-right: 30px;
+                font-family: 'Overpass', sans-serif;
+                font-weight: 700;
+                font-size: 0.85rem;
+                text-decoration: none;
+                opacity: 0.9;
+                transition: 0.2s ease;
+            }
+
+            .login_link:hover {
+                text-decoration: underline;
+            }
+
+            .sign_up {
+                background-color: #fff;
+                color: hsl(356, 100%, 66%);
+                font-family: 'Overpass', sans-serif;
+                font-weight: 700;
+                font-size: 1rem;
+                border: none;
+                padding: 15px 35px 13px 35px;
+                border-radius: 50px;
+                box-shadow: 0 1px 2px rgba(0,0,0,0.1), 0 1px 1px rgba(0,0,0,0.15);
+                cursor: pointer;
+                transition: 0.2s ease;
+            }
+
+            .sign_up:hover {
+                background-color: hsl(355, 100%, 74%);
+                color: #fff;
+            }
         }
+        
     }
 
     .hero-section {
@@ -59,13 +163,63 @@ header {
 
             h1 {
                 color: #fff;
-                font-family: 'Overpass', sans-serif;;
+                font-family: 'Overpass', sans-serif;
                 font-size: 4rem;
                 font-weight: 600;
+                margin-bottom: 10px;
             }
 
             p {
                 color: #fff;
+                font-family: 'Overpass', sans-serif;
+                font-size: 1.25rem;
+                font-weight: 500;
+                margin-bottom: 40px;
+                letter-spacing: 1px;
+                opacity: 0.9;
+            }
+        }
+
+        .hero-buttons {
+            .start {
+                background-color: #fff;
+                color: hsl(356, 100%, 66%);
+                font-family: 'Overpass', sans-serif;
+                font-weight: 700;
+                font-size: 1rem;
+                border: none;
+                padding: 13px 20px 11px 20px;
+                border-radius: 33px;
+                box-shadow: 0 1px 2px rgba(0,0,0,0.1), 0 1px 1px rgba(0,0,0,0.15);
+                margin-right: 15px;
+                cursor: pointer;
+                transition: 0.2s ease;
+            }
+
+            .start:hover {
+                background-color: hsl(355, 100%, 74%);
+                color: #fff;
+            }
+
+            .learn {
+                background-color: hsl(356, 100%, 66%);
+                color: #fff;
+                font-family: 'Overpass', sans-serif;
+                font-weight: 700;
+                font-size: 1rem;
+                border: none;
+                padding: 13px 20px 11px 20px;
+                border: 1px solid #fff;
+                border-radius: 33px;
+                box-shadow: 0 1px 2px rgba(0,0,0,0.1), 0 1px 1px rgba(0,0,0,0.15);
+                cursor: pointer;
+                transition: 0.2s ease;
+            }
+
+            .learn:hover {
+                background-color: #fff;
+                color: hsl(356, 100%, 66%);
+                border: 1px solid transparent;
             }
         }
     }
@@ -73,6 +227,7 @@ header {
 }
 
 .infrastructure {
+    height: 400px;
     display: grid;
     grid-template-columns: 40% 60%;
     align-items: center;
@@ -81,13 +236,21 @@ header {
     background-repeat: no-repeat;
     background-position: center left;
     border-radius: 0 100px 0 100px;
+    position: relative;
+
+    .infrastructure-image{
+        position: absolute;
+        top: -70px;
+        left: 120px;
 
 
-
-    .infrastructure-image {
-    width: 100%;
-    height: auto;
+        .infrastructure-image img {
+            width: 100%;
+            height: auto;
+            }
     }
+
+    
 
     .infrastructure-text {
         max-width: 530px;

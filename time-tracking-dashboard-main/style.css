@@ -83,55 +83,79 @@ main {
 .work {
     grid-area: work;
     border-radius: 15px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
     background-color: hsl(15, 100%, 70%);
     position: relative;
     height: 245px;
-    overflow: hidden;  
+    background-image: url('images/icon-work.svg');
+    background-position: top -10px right 20px;
+    background-repeat: no-repeat;
 }
 
 .play {
     grid-area: play;
     border-radius: 15px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
     background-color: hsl(195, 74%, 62%);
     position: relative;
     height: 245px;  
-    overflow: hidden;
+    background-image: url('images/icon-play.svg');
+    background-position: top -10px right 20px;
+    background-repeat: no-repeat;
 }
 
 .study {
     grid-area: study;
     border-radius: 15px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
     background-color: hsl(348, 100%, 68%);
     position: relative;
     height: 245px;  
-    overflow: hidden;
+    background-image: url('images/icon-study.svg');
+    background-position: top -10px right 20px;
+    background-repeat: no-repeat;
 }
 
 .exercise {
     grid-area: exercise;
     border-radius: 15px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
     background-color: hsl(145, 58%, 55%);
     position: relative;
     height: 245px;  
-    overflow: hidden;
+    background-image: url('images/icon-exercise.svg');
+    background-position: top right 20px;
+    background-repeat: no-repeat;
 }
 
 .social {
     grid-area: social;
     border-radius: 15px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
     background-color: hsl(264, 64%, 52%);
     position: relative;
     height: 245px;  
-    overflow: hidden;
+    background-image: url('images/icon-social.svg');
+    background-position: top right 20px;
+    background-repeat: no-repeat;
 }
 
 .self_care {
     grid-area: self_care;
     border-radius: 15px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
     background-color: hsl(43, 84%, 65%);
     position: relative;
     height: 245px;  
-    overflow: hidden;
+    background-image: url('images/icon-self-care.svg');
+    background-position: top -10px right 20px;
+    background-repeat: no-repeat;
 }
 
 .work .section_icon, .play .section_icon, .study .section_icon {
@@ -157,6 +181,7 @@ main {
     left: 0;
     transition: all 0.2s ease;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .activity:hover {

@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: hsl(226, 43%, 10%);
+}
+
+main {
+    max-width: 1440px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-height: 520px;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 255px));
+    /* grid-template-rows: repeat(2, 245px); */
+    grid-template-areas:
+        "user work play study"
+        "user exercise social self_care";
+    gap: 30px;
+}
+
+.user-card {
+    grid-area: user;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px;
+}
+
+.jeremy_robson_card {
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 15px;
+    padding: 30px 25px 85px 25px;
+}
+
+.jeremy_robson_card img {
+    width: 85px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-bottom: 40px;
+}
+
+.jeremy_robson_card p {
+    color: hsl(235, 45%, 61%);
+    font-weight: 400;
+}
+
+.jeremy_robson_card h1 {
+    font-weight: 300;
+    font-size: 2.2rem;
+    color: #fff;
+}
+
+.period_of_time {
+    padding: 25px 25px 5px 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.period_of_time a {
+    margin-bottom: 20px;
+    color: hsl(235, 45%, 61%);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+a.weekly {
+    color: #fff;
+}
+
+a.daily:hover,
+a.weekly:hover,
+a.monthly:hover {
+    color: #fff;
+}
+
+.work {
+    grid-area: work;
+    border-radius: 15px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    background-color: hsl(15, 100%, 70%);
+    position: relative;
+    height: 245px;
+    background-image: url('images/icon-work.svg');
+    background-position: top -10px right 20px;
+    background-repeat: no-repeat;
+}
+
+.play {
+    grid-area: play;
+    border-radius: 15px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    background-color: hsl(195, 74%, 62%);
+    position: relative;
+    height: 245px;
+    background-image: url('images/icon-play.svg');
+    background-position: top -10px right 20px;
+    background-repeat: no-repeat;
+}
+
+.study {
+    grid-area: study;
+    border-radius: 15px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    background-color: hsl(348, 100%, 68%);
+    position: relative;
+    height: 245px;
+    background-image: url('images/icon-study.svg');
+    background-position: top -10px right 20px;
+    background-repeat: no-repeat;
+}
+
+.exercise {
+    grid-area: exercise;
+    border-radius: 15px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    background-color: hsl(145, 58%, 55%);
+    position: relative;
+    height: 245px;
+    background-image: url('images/icon-exercise.svg');
+    background-position: top right 20px;
+    background-repeat: no-repeat;
+}
+
+.social {
+    grid-area: social;
+    border-radius: 15px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    background-color: hsl(264, 64%, 52%);
+    position: relative;
+    height: 245px;
+    background-image: url('images/icon-social.svg');
+    background-position: top right 20px;
+    background-repeat: no-repeat;
+}
+
+.self_care {
+    grid-area: self_care;
+    border-radius: 15px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    background-color: hsl(43, 84%, 65%);
+    position: relative;
+    height: 245px;
+    background-image: url('images/icon-self-care.svg');
+    background-position: top -10px right 20px;
+    background-repeat: no-repeat;
+}
+
+.work .section_icon,
+.play .section_icon,
+.study .section_icon {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+}
+
+.exercise .section_icon,
+.social .section_icon,
+.self_care .section_icon {
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+
+.activity {
+    background-color: hsl(235, 46%, 20%);
+    color: #fff;
+    border-radius: 15px;
+    height: 200px;
+    width: 100%;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.activity:hover {
+    background-color: #323a79;
+}
+
+.work_card_title,
+.play_card_title,
+.study_card_title,
+.exercise_card_title,
+.social_card_title,
+.self_care_card_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 35px;
+}
+
+.work_card_title p,
+.play_card_title p,
+.study_card_title p,
+.exercise_card_title p,
+.social_card_title p,
+.self_care_card_title p {
+    font-weight: 500;
+}
+
+.current_day,
+.current_week,
+.current_month {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.previous_day,
+.previous_week,
+.previous_month {
+    font-size: 0.725rem;
+    display: inline-block;
+    color: hsl(236, 100%, 87%);
+}
+
+svg:hover path {
+    fill: #fff;
+}
+
+.current_day,
+.previous_day,
+.current_week,
+.previous_week,
+.current_month,
+.previous_month {
+    display: none;
+}
+
+.current_day.show,
+.previous_day.show,
+.current_week.show,
+.previous_week.show,
+.current_month.show,
+.previous_month.show {
+    display: block;
+}

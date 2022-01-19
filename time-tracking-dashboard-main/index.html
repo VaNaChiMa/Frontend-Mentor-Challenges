@@ -1,166 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="style.css">
-  
-  <title>Frontend Mentor | Time tracking dashboard</title>
+    <link rel="stylesheet" href="style.css" />
 
-  
-</head>
-<body>
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="user-card">
+          <div class="jeremy_robson_card">
+            <img src="images/image-jeremy.png" alt="jeremy" />
+            <div class="user-info">
+              <p>Report for</p>
+              <h1>Jeremy Robson</h1>
+            </div>
+            
+          </div>
 
-  <main>
-    <div class="container">
-      <div class="user-card">
-        <div class="jeremy_robson_card">
-          <img src="images/image-jeremy.png" alt="jeremy">
-          <p>Report for</p>
-          <h1>Jeremy Robson</h1>
+          <div class="period_of_time">
+            <a href="#" class="daily timeBtn">Daily</a>
+            <a href="#" class="weekly timeBtn">Weekly</a>
+            <a href="#" class="monthly timeBtn">Monthly</a>
+          </div>
         </div>
-        
-        <div class="period_of_time">
-          <a href="#" class="daily">Daily</a>
-          <a href="#" class="weekly">Weekly</a>
-          <a href="#" class="monthly">Monthly</a>
+
+        <div class="work">
+          <div class="activity work_card">
+            <div class="work_card_title">
+              <p>Work</p>
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+
+            <div class="day">
+              <span class="current_day">5hrs<!-- daily --></span>
+              <span class="previous_day">Yesterday - 7hrs<!-- daily --></span>
+            </div>
+            <div class="week">
+              <span class="current_week show">32hrs<!-- weekly --></span>
+              <span class="previous_week show"
+                >Last Week - 36hrs<!-- weekly --></span
+              >
+            </div>
+            <div class="month">
+              <span class="current_month">103hrs<!-- monthly --></span>
+              <span class="previous_month"
+                >Last Month - 128hrs<!-- monthly --></span
+              >
+            </div>
+            
+          </div>
         </div>
-      </div>
+
+        <div class="play">
+          <div class="activity play_card">
+            <div class="play_card_title">
+              <p>Play</p>
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="day">
+              <span class="current_day">1hr<!-- daily --></span>
+              <span class="previous_day">Yesterday - 2hrs<!-- daily --></span>
+            </div>
+            <div class="week">
+              <span class="current_week show">10hrs<!-- weekly --></span>
+              <span class="previous_week show"
+                >Last Week - 8hrs<!-- weekly --></span
+              >
+            </div>
+            <div class="month">
+              <span class="current_month">23hrs<!-- monthly --></span>
+              <span class="previous_month">Last Month - 29hrs<!-- monthly --><span>
+
+            </div>
       
-      <div class="work">
-        <div class="activity work_card">
-          <div class="work_card_title">
-            <p>Work</p>
-            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
           </div>
-          <!-- 5hrs -- daily 
-          Previous - 7hrs daily -->
-          <span class="current_day">5hrs<!-- daily --></span>
-          <span class="previous_day">Last Week - 7hrs<!-- daily --></span>
-          <span class="current_week show">32hrs<!-- weekly --></span>
-          <span class="previous_week show">Last Week - 36hrs<!-- weekly --></span>
-          <span class="current_month">103hrs<!-- monthly --></span>
-          <span class="previous_month">Last Week - 128hrs<!-- monthly --></span> 
-          <!-- 103hrs -- monthly 
-          Previous - 128hrs monthly -->
+        </div>
+
+        <div class="study">
+          <div class="activity study_card">
+            <div class="study_card_title">
+              <p>Study</p>
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="day">
+              <span class="current_day">0hrs<!-- daily --></span>
+              <span class="previous_day">Yesterday - 1hr<!-- daily --></span>
+            </div>
+            <div class="week">
+              <span class="current_week show">4hrs<!-- weekly --></span>
+              <span class="previous_week show"
+                >Last Week - 7hrs<!-- weekly --></span
+              >
+            </div>
+            <div class="month">
+              <span class="current_month">13hrs<!-- monthly --></span>
+              <span class="previous_month"
+              >Last Month - 19hrs<!-- monthly --></span
+            >
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise">
+          <div class="activity exercise_card">
+            <div class="exercise_card_title">
+              <p>Exercise</p>
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+
+            <div class="day">
+              <span class="current_day">1hr<!-- daily --></span>
+              <span class="previous_day">Yesterday - 1hr<!-- daily --></span>
+            </div>
+            <div class="week">
+              <span class="current_week show">4hrs<!-- weekly --></span>
+              <span class="previous_week show"
+                >Last Week - 5hrs<!-- weekly --></span
+              >
+            </div>
+            <div class="month"><span class="current_month">11hrs<!-- monthly --></span>
+              <span class="previous_month"
+                >Last Month - 18hrs<!-- monthly --></span
+              ></div>
+            
+          </div>
+        </div>
+
+        <div class="social">
+          <div class="activity social_card">
+            <div class="social_card_title">
+              <p>Social</p>
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+
+            <div class="day">
+              <span class="current_day">1hr<!-- daily --></span>
+              <span class="previous_day">Yesterday - 3hrs<!-- daily --></span>
+            </div>
+            <div class="week">
+              <span class="current_week show">5hrs<!-- weekly --></span>
+              <span class="previous_week show"
+                >Last Week - 10hrs<!-- weekly --></span
+              >
+            </div>
+            <div class="month">
+              <span class="current_month">21hrs<!-- monthly --></span>
+              <span class="previous_month"
+              >Last Month - 23hrs<!-- monthly --></span
+            >
+            </div>
+            
+          </div>
+        </div>
+        <div class="self_care">
+          <div class="activity self_care_card">
+            <div class="self_care_card_title">
+              <p>Self Care</p>
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+
+            <div class="day">
+              <span class="current_day">0hrs<!-- daily --></span>
+              <span class="previous_day">Yesterday - 1hr<!-- daily --></span>
+            </div>
+            <div class="week">
+              <span class="current_week show">2hrs<!-- weekly --></span>
+              <span class="previous_week show"
+                >Last Week - 2hrs<!-- weekly --></span
+              >
+            </div>
+            <div class="month">
+              <span class="current_month">7hrs<!-- monthly --></span>
+              <span class="previous_month"
+                >Last Month - 11hrs<!-- monthly --></span
+              >
+            </div>   
+
+          </div>
         </div>
       </div>
+    </main>
 
-      <div class="play">
-        <div class="activity play_card">
-          <div class="play_card_title">
-            <p>Play</p>
-            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
-          </div>
-          <!--1hr  -- daily
-          Previous - 2hrs <!-- daily -->
-          <span class="current_day">1hr<!-- daily --></span>
-          <span class="previous_day">Last Day - 2hrs<!-- daily --></span>
-          <span class="current_week show">10hrs<!-- weekly --></span>
-          <span class="previous_week show">Last Week - 8hrs<!-- weekly --></span>
-          <span class="current_month">23hrs<!-- monthly --></span>
-          <span class="previous_month">Last Month - 29hrs<!-- monthly --></span> 
-          
-          <!-- 23hrs -- monthly 
-          Previous - 29hrs <!-- monthly -->
-        </div>
-      </div>
-
-      <div class="study">
-        <div class="activity study_card">
-          <div class="study_card_title">
-            <p>Study</p>
-            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
-          </div>
-
-          <span class="current_day">0hrs<!-- daily --></span>
-          <span class="previous_day">Last Day - 1hr<!-- daily --></span>
-          <span class="current_week show">4hrs<!-- weekly --></span>
-          <span class="previous_week show">Last Week - 7hrs<!-- weekly --></span>
-          <span class="current_month">13hrs<!-- monthly --></span>
-          <span class="previous_month">Last Month - 19hrs<!-- monthly --></span>
-          <!-- 0hrs  -- daily 
-          Previous - 1hr <!-- daily --
-          -- Previous - 7hrs  weekly --
-          13hrs -- monthly 
-          Previous - 19hrs -- monthly -->
-        </div>
-      </div>
-
-      <div class="exercise">
-        <div class="activity exercise_card">
-          <div class="exercise_card_title">
-            <p>Exercise</p>
-            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
-          </div>
-          <span class="current_day">1hr<!-- daily --></span>
-          <span class="previous_day">Last Day - 1hr<!-- daily --></span>
-          <span class="current_week show">4hrs<!-- weekly --></span>
-          <span class="previous_week show">Last Week - 5hrs<!-- weekly --></span>
-          <span class="current_month">11hrs<!-- monthly --></span>
-          <span class="previous_month">Last Month - 18hrs<!-- monthly --></span>
-          <!-- 1hr -- daily 
-          Previous - 1hr -- daily 
-          4hrs -- weekly --
-          Previous - 5hrs -- weekly 
-          11hrs -- monthly --
-          Previous - 18hrs -- monthly -->
-        </div>
-      </div>
-
-      <div class="social">
-        <div class="activity social_card">
-          <div class="social_card_title">
-            <p>Social</p>
-            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
-          </div>
-          <span class="current_day">1hr<!-- daily --></span>
-          <span class="previous_day">Last Day - 3hrs<!-- daily --></span>
-          <span class="current_week show">5hrs<!-- weekly --></span>
-          <span class="previous_week show">Last Week - 10hrs<!-- weekly --></span>
-          <span class="current_month">21hrs<!-- monthly --></span>
-          <span class="previous_month">Last Month - 23hrs<!-- monthly --></span>
-          
-          <!-- 1hr  daily --
-          Previous - 3hrs -- daily --
-          5hrs <!-- weekly --
-          Previous - 10hrs -- weekly --
-          21hrs -- monthly --
-          Previous - 23hrs -- monthly -->
-        </div>
-      </div>
-      <div class="self_care">
-        <div class="activity self_care_card">
-          <div class="self_care_card_title">
-            <p>Self Care</p>
-            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
-          </div>
-          <span class="current_day">0hrs<!-- daily --></span>
-          <span class="previous_day">Last Day - 1hr<!-- daily --></span>
-          <span class="current_week show">2hrs<!-- weekly --></span>
-          <span class="previous_week show">Last Week - 2hrs<!-- weekly --></span>
-          <span class="current_month">7hrs<!-- monthly --></span>
-          <span class="previous_month">Last Month - 11hrs<!-- monthly --></span>
-          
-          <!--0hrs  daily --
-          Previous - 1hr -- daily --
-          2hrs -- weekly --
-          Previous - 2hrs -- weekly --
-          7hrs -- monthly --
-          Previous - 11hrs -- monthly -->
-        </div>
-      </div>
-    </div>
-  </main>
-
-  
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

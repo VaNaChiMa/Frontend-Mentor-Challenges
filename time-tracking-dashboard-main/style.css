@@ -27,9 +27,9 @@ main {
     display: grid;
     grid-template-columns: repeat(4, minmax(200px, 255px));
     /* grid-template-rows: repeat(2, 245px); */
-    grid-template-areas: 
-    "user work play study"
-    "user exercise social self_care";
+    grid-template-areas:
+        "user work play study"
+        "user exercise social self_care";
     gap: 30px;
 }
 
@@ -76,7 +76,27 @@ main {
     transition: all 0.2s ease;
 }
 
-.period_of_time a:hover {
+a.daily:focus,
+a.weekly:focus,
+a.monthly:focus {
+    color: #fff;
+}
+
+a.daily:hover,
+a.weekly:hover,
+a.monthly:hover {
+    color: #fff;
+}
+
+a.daily:active,
+a.weekly:active,
+a.monthly:active {
+    color: #fff;
+}
+
+.daily.active,
+.weekly.active,
+.monthly.active {
     color: #fff;
 }
 
@@ -100,7 +120,7 @@ main {
     border-bottom-left-radius: 18px;
     background-color: hsl(195, 74%, 62%);
     position: relative;
-    height: 245px;  
+    height: 245px;
     background-image: url('images/icon-play.svg');
     background-position: top -10px right 20px;
     background-repeat: no-repeat;
@@ -113,7 +133,7 @@ main {
     border-bottom-left-radius: 18px;
     background-color: hsl(348, 100%, 68%);
     position: relative;
-    height: 245px;  
+    height: 245px;
     background-image: url('images/icon-study.svg');
     background-position: top -10px right 20px;
     background-repeat: no-repeat;
@@ -126,7 +146,7 @@ main {
     border-bottom-left-radius: 18px;
     background-color: hsl(145, 58%, 55%);
     position: relative;
-    height: 245px;  
+    height: 245px;
     background-image: url('images/icon-exercise.svg');
     background-position: top right 20px;
     background-repeat: no-repeat;
@@ -139,7 +159,7 @@ main {
     border-bottom-left-radius: 18px;
     background-color: hsl(264, 64%, 52%);
     position: relative;
-    height: 245px;  
+    height: 245px;
     background-image: url('images/icon-social.svg');
     background-position: top right 20px;
     background-repeat: no-repeat;
@@ -152,19 +172,23 @@ main {
     border-bottom-left-radius: 18px;
     background-color: hsl(43, 84%, 65%);
     position: relative;
-    height: 245px;  
+    height: 245px;
     background-image: url('images/icon-self-care.svg');
     background-position: top -10px right 20px;
     background-repeat: no-repeat;
 }
 
-.work .section_icon, .play .section_icon, .study .section_icon {
+.work .section_icon,
+.play .section_icon,
+.study .section_icon {
     position: absolute;
     top: -10px;
     right: 20px;
 }
 
-.exercise .section_icon, .social .section_icon, .self_care .section_icon {
+.exercise .section_icon,
+.social .section_icon,
+.self_care .section_icon {
     position: absolute;
     top: 0;
     right: 20px;
@@ -175,6 +199,7 @@ main {
     color: #fff;
     border-radius: 15px;
     height: 200px;
+    width: 100%;
     padding: 30px;
     position: absolute;
     bottom: 0;
@@ -188,28 +213,40 @@ main {
     background-color: #323a79;
 }
 
-.work_card_title, .play_card_title, .study_card_title,
-.exercise_card_title, .social_card_title, .self_care_card_title {
+.work_card_title,
+.play_card_title,
+.study_card_title,
+.exercise_card_title,
+.social_card_title,
+.self_care_card_title {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 35px;
 }
 
-.work_card_title p, .play_card_title p, .study_card_title p,
-.exercise_card_title p, .social_card_title p, .self_care_card_title p {
+.work_card_title p,
+.play_card_title p,
+.study_card_title p,
+.exercise_card_title p,
+.social_card_title p,
+.self_care_card_title p {
     font-weight: 500;
 }
 
-.current_day, .current_week, .current_month {
-    font-size: 2.5rem;
+.current_day,
+.current_week,
+.current_month {
+    font-size: 2.475rem;
     letter-spacing: 1px;
     font-weight: 300;
     display: inline-block;
     margin-bottom: 15px;
 }
 
-.previous_day, .previous_week, .previous_month {
+.previous_day,
+.previous_week,
+.previous_month {
     font-size: 0.725rem;
     display: inline-block;
     color: hsl(236, 100%, 87%);
@@ -219,14 +256,161 @@ svg:hover path {
     fill: #fff;
 }
 
-.current_day, .previous_day,
-/* .current_week, .previous_week, */
-.current_month, .previous_month {
+.current_day,
+.previous_day,
+.current_week,
+.previous_week,
+.current_month,
+.previous_month {
     display: none;
 }
 
-.current_day.show, .previous_day.show,
-.current_week.show, .previous_week.show,
-.current_month.show, .previous_month.show {
-    display: inline-block;
+.current_day.show,
+.previous_day.show,
+.current_week.show,
+.previous_week.show,
+.current_month.show,
+.previous_month.show {
+    display: block;
+}
+
+/* Media Queries   */
+
+@media screen and (max-width: 992px) {
+    .container {
+        grid-template-columns: repeat(4, minmax(150px, 255px));
+        grid-template-rows: repeat(2, 245px);
+        grid-template-areas:
+            "user work play study"
+            "user exercise social self_care";
+        gap: 15px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-height: 100%;
+        margin: 80px 25px;
+        grid-template-columns: repeat(3, minmax(150px, 200px));
+        grid-template-rows: repeat(3, 245px);
+        grid-template-areas:
+            "user work play "
+            "user study exercise "
+            ". social self_care";
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 375px;
+        grid-template-rows: 200px 160px 160px 160px 160px 160px 160px;
+        grid-template-areas:
+            "user"
+            "work"
+            "play"
+            "study"
+            "exercise"
+            "social"
+            "self_care";
+        row-gap: 25px;
+    }
+
+    .user-card {
+        height: 200px;
+    }
+
+    .user-info {
+        margin-left: 15px;
+    }
+
+    .jeremy_robson_card {
+        display: flex;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .jeremy_robson_card img {
+        width: 70px;
+        margin-bottom: 0px;
+    }
+
+    .jeremy_robson_card h1 {
+        font-size: 1.4rem;
+    }
+
+    .jeremy_robson_card p {
+        font-size: 0.925rem;
+    }
+
+    .period_of_time {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 25px;
+    }
+
+    .work {
+        height: 160px;
+    }
+
+    .play {
+        height: 160px;
+    }
+
+    .study {
+        height: 160px;
+    }
+
+    .exercise {
+        height: 160px;
+    }
+
+    .social {
+        height: 160px;
+    }
+
+    .self_care {
+        height: 160px;
+    }
+
+    .activity {
+        height: 120px;
+    }
+
+    .work_card_title,
+    .play_card_title,
+    .study_card_title,
+    .exercise_card_title,
+    .social_card_title,
+    .self_care_card_title {
+        margin-bottom: 5px;
+        font-size: 0.925rem;
+    }
+
+    .day,
+    .week,
+    .month {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .current_day,
+    .current_week,
+    .current_month {
+        font-size: 1.8rem;
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        grid-template-columns: 325px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        grid-template-columns: 300px;
+    }
 }

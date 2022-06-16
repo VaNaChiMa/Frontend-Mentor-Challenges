@@ -1,4 +1,5 @@
 # Frontend Mentor Challenges
+[All projects in one page](https://happy-swanson-6b9ae4.netlify.app/)
 
 ## List of challenges:
 

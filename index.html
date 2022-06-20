@@ -1,135 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
     <title>Frontend Mentor Projects</title>
-
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="logoSide">
-                <i class="fas fa-chess"></i>
-                <h3>VANACHIMA</h3>
-            </div>
-            <div class="rightSide">
-                <a href="#">About</a>
-            </div>
-        </nav>
-
+      <nav>
+        <div class="logoSide">
+          <i class="fas fa-chess"></i>
+          <h3>VANACHIMA</h3>
+        </div>
+      </nav>
     </header>
 
-    <main>
-        <div class="headLine">
-            <h1>Vanachima VS Frontend Mentor</h1>
-            <h3>My solutions for the challenges of the Frontend Mentor</h3>
+    <button class="modalBtn"><i class="fa fa-user"></i>About me</button>
+    <div class="modal">
+      <div class="modal-content">
+        <span class="closeBtn">&times;</span>
+        <div class="aboutMe">
+          <div class="about-img">
+            <img
+              class="bike-time"
+              src="img/Vadim time for bike.jpg"
+              alt="bike time"
+            />
+          </div>
+          <div class="about-text">
+            <h2>About Me</h2>
+            <p>
+              Hi there! My name is
+              <a class="link-to-github" href="https://github.com/VaNaChiMa"
+                >Vadim</a
+              >. I'm a Frontend developer from Moldova. I enjoy creating things
+              for the web. These projects are my solutions for the challenges of
+              the
+              <a
+                class="link-to-frontendmentor"
+                href="https://www.frontendmentor.io/"
+                >Frontend Mentor</a
+              >.
+            </p>
+          </div>
         </div>
-    <div class="container">
-        <div class="card">
-            <a href="/four-card-feature-section-master/index.html"><img src="img/four-card-feature.jpg" alt="four card"></a>
-            <p>Four card feature section</p>
-        </div>
-        <div class="card">
-            <a href="/single-price-grid-component-master/index.html"><img src="img/single-price-grid.jpg" alt="single price grid"></a>
-            <p>Single price grid component</p>
-        </div>
-        <div class="card">
-            <a href="/faq-accordion-card-main/index.html"><img src="img/faq-accordion-card.jpg" alt="FAQ accordion card"></a>
-            <p>FAQ accordion card</p>
-        </div>
-        <div class="card">
-            <a href="/order-summary-component-main/index.html"><img src="img/Order summary component.jpg" alt="Order summary component"></a>
-            <p>Order summary component</p>
-        </div>
-        <div class="card">
-            <a href="/huddle-landing-page-with-single-introductory-section-master/index.html"><img src="img/huddle-landing-page-pre.jpg" alt="Huddle landing page with a single introductory section"></a>
-            <p>Huddle landing page</p>
-        </div>
-        <div class="card">
-            <a href="/article-preview-component-master/index.html"><img src="img/article-preview-component.jpg" alt="Article preview component"></a>
-            <p>Article preview component</p></div>
-        <div class="card">
-            <a href="/3-column-preview-card-component-main/index.html"><img src="img/3-column preview card component.jpg" alt="3-column-preview"></a>
-            <p>3-column preview card component</p>
-        </div>
-        <div class="card">
-            <a href="/base-apparel-coming-soon-master/index.html"><img src="img/Base Apparel coming soon page.jpg" alt="Base Apparel coming soon page"></a>
-            <p>Base Apparel coming soon page</p>
-        </div>
-        <div class="card">
-            <a href="/ping-coming-soon-page-master/index.html"><img src="img/Ping single column coming soon page.jpg" alt="Ping single column coming soon page"></a>
-            <p>Ping single column coming soon page</p>
-        </div>
-        <div class="card">
-            <a href="/testimonials-grid-section-main/index.html"><img src="img/Testimonials grid section.jpg" alt="Ping single column coming soon page"></a>
-            <p>Testimonials grid section</p>
-        </div>
-        <div class="card">
-            <a href="/tip-calculator-app-main/index.html"><img src="img/Tip calculator app.jpg" alt="Tip calculator app"></a>
-            <p>Tip calculator app</p>
-        </div>
-        <div class="card">
-            <a href="/intro-component-with-signup-form-master/index.html"><img src="img/Intro component with sign-up form.jpg" alt="Intro component with sign-up form"></a>
-            <p>Intro component with sign-up form</p>
-        </div>
-        <div class="card">
-            <a href="/sunnyside-agency-landing-page-main/index.html"><img src="img/Sunnyside agency landing page.jpg" alt="Sunnyside agency landing page"></a>
-            <p>Sunnyside agency landing page</p>
-        </div>
-        <div class="card">
-            <a href="/pricing-component-with-toggle-master/index.html"><img src="img/Pricing component with toggle.jpg" alt="Pricing component with toggle"></a>
-            <p>Pricing component with toggle</p>
-        </div>
-        <div class="card">
-            <a href="/coding-bootcamp-testimonials-slider-master/index.html"><img src="img/Coding bootcamp testimonials slider.jpg" alt="Coding bootcamp testimonials slider"></a>
-            <p>Coding bootcamp testimonials slider</p>
-        </div>
-        <div class="card">
-            <a href="/interactive-pricing-component-main/index.html"><img src="img/Interactive pricing component.jpg" alt="Interactive pricing component"></a>
-            <p>Interactive pricing component</p>
-        </div>
-        <div class="card">
-            <a href="/social-media-dashboard-with-theme-switcher-master/index.html"><img src="img/Social media dashboard with theme switcher.jpg" alt="Social media dashboard with theme switcher"></a>
-            <p>Social media dashboard with theme switcher</p>
-        </div>
-        <div class="card">
-            <a href="/time-tracking-dashboard-main/index.html"><img src="img/Time tracking dashboard.jpg" alt="Time tracking dashboard"></a>
-            <p>Time tracking dashboard</p>
-        </div>
-        <div class="card">
-            <a href="/blogr-landing-page-main/index.html"><img src="img/Blogr landing page.jpg" alt="Blogr landing page"></a>
-            <p>Blogr landing page</p>
-        </div>
-        <div class="card"></div>
-        <div class="card"></div>
+      </div>
     </div>
 
+    <main>
+      <div class="headLine">
+        <h1>Vanachima VS Frontend Mentor</h1>
+        <h3>My solutions for the challenges of the Frontend Mentor</h3>
+      </div>
+      <div class="container">
+        <div class="card">
+          <a href="/four-card-feature-section-master/index.html"
+            ><img src="img/four-card-feature.jpg" alt="four card"
+          /></a>
+          <p>Four card feature section</p>
+        </div>
+        <div class="card">
+          <a href="/single-price-grid-component-master/index.html"
+            ><img src="img/single-price-grid.jpg" alt="single price grid"
+          /></a>
+          <p>Single price grid component</p>
+        </div>
+        <div class="card">
+          <a href="/faq-accordion-card-main/index.html"
+            ><img src="img/faq-accordion-card.jpg" alt="FAQ accordion card"
+          /></a>
+          <p>FAQ accordion card</p>
+        </div>
+        <div class="card">
+          <a href="/order-summary-component-main/index.html"
+            ><img
+              src="img/Order summary component.jpg"
+              alt="Order summary component"
+          /></a>
+          <p>Order summary component</p>
+        </div>
+        <div class="card">
+          <a
+            href="/huddle-landing-page-with-single-introductory-section-master/index.html"
+            ><img
+              src="img/huddle-landing-page-pre.jpg"
+              alt="Huddle landing page with a single introductory section"
+          /></a>
+          <p>Huddle landing page</p>
+        </div>
+        <div class="card">
+          <a href="/article-preview-component-master/index.html"
+            ><img
+              src="img/article-preview-component.jpg"
+              alt="Article preview component"
+          /></a>
+          <p>Article preview component</p>
+        </div>
+        <div class="card">
+          <a href="/3-column-preview-card-component-main/index.html"
+            ><img
+              src="img/3-column preview card component.jpg"
+              alt="3-column-preview"
+          /></a>
+          <p>3-column preview card component</p>
+        </div>
+        <div class="card">
+          <a href="/base-apparel-coming-soon-master/index.html"
+            ><img
+              src="img/Base Apparel coming soon page.jpg"
+              alt="Base Apparel coming soon page"
+          /></a>
+          <p>Base Apparel coming soon page</p>
+        </div>
+        <div class="card">
+          <a href="/ping-coming-soon-page-master/index.html"
+            ><img
+              src="img/Ping single column coming soon page.jpg"
+              alt="Ping single column coming soon page"
+          /></a>
+          <p>Ping single column coming soon page</p>
+        </div>
+        <div class="card">
+          <a href="/testimonials-grid-section-main/index.html"
+            ><img
+              src="img/Testimonials grid section.jpg"
+              alt="Ping single column coming soon page"
+          /></a>
+          <p>Testimonials grid section</p>
+        </div>
+        <div class="card">
+          <a href="/tip-calculator-app-main/index.html"
+            ><img src="img/Tip calculator app.jpg" alt="Tip calculator app"
+          /></a>
+          <p>Tip calculator app</p>
+        </div>
+        <div class="card">
+          <a href="/intro-component-with-signup-form-master/index.html"
+            ><img
+              src="img/Intro component with sign-up form.jpg"
+              alt="Intro component with sign-up form"
+          /></a>
+          <p>Intro component with sign-up form</p>
+        </div>
+        <div class="card">
+          <a href="/sunnyside-agency-landing-page-main/index.html"
+            ><img
+              src="img/Sunnyside agency landing page.jpg"
+              alt="Sunnyside agency landing page"
+          /></a>
+          <p>Sunnyside agency landing page</p>
+        </div>
+        <div class="card">
+          <a href="/pricing-component-with-toggle-master/index.html"
+            ><img
+              src="img/Pricing component with toggle.jpg"
+              alt="Pricing component with toggle"
+          /></a>
+          <p>Pricing component with toggle</p>
+        </div>
+        <div class="card">
+          <a href="/coding-bootcamp-testimonials-slider-master/index.html"
+            ><img
+              src="img/Coding bootcamp testimonials slider.jpg"
+              alt="Coding bootcamp testimonials slider"
+          /></a>
+          <p>Coding bootcamp testimonials slider</p>
+        </div>
+        <!-- <div class="card">
+            <a href="/interactive-pricing-component-main/index.html"><img src="img/Interactive pricing component.jpg" alt="Interactive pricing component"></a>
+            <p>Interactive pricing component</p>
+        </div> -->
+        <!-- <div class="card">
+            <a href="/social-media-dashboard-with-theme-switcher-master/index.html"><img src="img/Social media dashboard with theme switcher.jpg" alt="Social media dashboard with theme switcher"></a>
+            <p>Social media dashboard with theme switcher</p>
+        </div> -->
+        <div class="card">
+          <a href="/time-tracking-dashboard-main/index.html"
+            ><img
+              src="img/Time tracking dashboard.jpg"
+              alt="Time tracking dashboard"
+          /></a>
+          <p>Time tracking dashboard</p>
+        </div>
+        <div class="card">
+          <a href="/blogr-landing-page-main/index.html"
+            ><img src="img/Blogr landing page.jpg" alt="Blogr landing page"
+          /></a>
+          <p>Blogr landing page</p>
+        </div>
+        <!-- <div class="card"></div>
+        <div class="card"></div> -->
+      </div>
     </main>
 
     <footer>
-        <div class="footerBgWave"></div>
-            <div class="footerBg">
-                <div class="quote">
-                    <q>Victory belongs to the most persevering.</q>
-                    <p>- Napoleon Bonaparte</p>
-                </div>
-            </div>
-        
-        <div class="lastRow">
-            <p>Made with<i class="fas fa-heart"></i>in Chisinau</p>
+      <div class="footerBgWave"></div>
+      <div class="footerBg">
+        <div class="quote">
+          <q>Victory belongs to the most persevering.</q>
+          <p>- Napoleon Bonaparte</p>
         </div>
+      </div>
+
+      <div class="lastRow">
+        <p>Made with<i class="fas fa-heart"></i>in Chisinau</p>
+      </div>
     </footer>
-    
-</body>
+
+    <script src="app.js"></script>
+  </body>
 </html>

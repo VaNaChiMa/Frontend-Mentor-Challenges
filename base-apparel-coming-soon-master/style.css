@@ -8,17 +8,12 @@ html {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-body {
-    font-size: 16px;
-}
-
-main {
-    max-width: 1440px;
-}
-
 .container {
+    max-width: 1440px;
+    margin: auto;
     height: 100vh;
     display: flex;
+    margin: auto;
 }
 
 .imageSide {

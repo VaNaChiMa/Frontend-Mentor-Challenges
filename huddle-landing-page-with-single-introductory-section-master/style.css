@@ -8,30 +8,43 @@
 }
 
 body {
-    max-width: 1440px;
     font-family: 'Open Sans', sans-serif;
     background-image: url("images/bg-desktop.svg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     background-color: hsl(257, 40%, 49%);
+}
+
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
+    max-width: 1440px;
+    margin: auto;
+}
+
+header {
+    width: 100%;
 }
 
 nav img {
-    margin: 45px auto 75px 65px;
+    margin-bottom: 75px;
+    margin-left: 75px;
 }
 
 .container {
     display: flex;
     justify-content: center;
     max-width: 100%;
-    margin: 0 92px 0 72px;
 }
 
-.imageSection {
+/* .imageSection {
     width: 700px;
     height: auto;
-}
+} */
 
 .imageSection img {
     width: 100%;
@@ -135,32 +148,69 @@ nav img {
 }
 
 @media (max-width: 1024px) {
-    .registerSection h1 {
-        font-size: 1.8rem;
+    nav img {
+        margin: 75px auto 135px 65px;
+    }
+    .container {
+        max-width: 750px;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+    .imageSection {
+        width: 750px;
+    }
+    .imageSection img {
+        width: 100%;
+    }
+    .registerSection {
+        margin: 100px auto 80px auto;
+        color: #fff;
+        width: 700px;
+        position: relative;
     }
     .social {
         margin-top: 100px;
     }
+    .registerSection h1 {
+        font-size: 2.75rem;
+        text-align: center;
+        margin-bottom: 55px;
+    }
+
+    .registerSection p {
+        font-size: 1.5rem;
+        opacity: .9;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .registerBtn {
+        width: 400px;
+        height: 80px;
+        border-radius: 50px;
+        font-size: 1.5rem;
+        margin: 0 auto;
+        padding: 25px;
+    }
+    
 }
 
 @media (max-width: 750px) {
     body {
-        max-width: 750px;
+        max-width: 700px;
         background-image: url("images/bg-mobile.svg");
         background-size: cover;
         background-repeat: no-repeat;
         background-color: hsl(257, 40%, 49%);
     }
-
-    nav img {
-        margin: 75px auto 135px 65px;
-    }
-
     .container {
         max-width: 595px;
         flex-direction: column;
         align-items: center;
         margin: auto;
+    }
+    nav img {
+        margin: 70px auto 130px 50px;
     }
 
     .imageSection {
@@ -177,28 +227,6 @@ nav img {
         width: 510px;
         position: relative;
     }
-
-    .registerSection h1 {
-        font-size: 2.9rem;
-        text-align: center;
-        margin-bottom: 55px;
-    }
-
-    .registerSection p {
-        font-size: 1.7rem;
-        opacity: .9;
-        margin-bottom: 50px;
-        text-align: center;
-    }
-
-    .registerBtn {
-        width: 400px;
-        height: 80px;
-        border-radius: 50px;
-        font-size: 1.5rem;
-        margin: 0 auto;
-        padding: 25px;
-    }
     .social {
         margin: 125px auto 0 auto;
         justify-content: center;
@@ -207,40 +235,33 @@ nav img {
 }
 
 @media (max-width: 600px) {
-    nav img {
-        margin: 75px auto 135px 65px;
-    }
-
     .container {
-        max-width: 595px;
+        max-width: 540px;
         flex-direction: column;
         align-items: center;
         margin: auto;
     }
-
-    .imageSection {
-        width: 470px;
+    nav img {
+        margin: 70px auto 130px 30px;
     }
-
+    .imageSection {
+        width: 500px;
+    }
     .imageSection img {
         width: 100%;
     }
-
     .registerSection {
         margin: 100px auto 80px auto;
         color: #fff;
         width: 470px;
         position: relative;
     }
-
     .registerSection h1 {
         font-size: 2.5rem;
     }
-
     .registerSection p {
         font-size: 1.3rem;
     }
-
     .registerBtn {
         width: 400px;
         height: 80px;
@@ -249,36 +270,30 @@ nav img {
         margin: 0 auto;
         padding: 25px;
     }
-    
 }
 
 @media (max-width: 480px) {
     .container {
-        max-width: 440px;
+        max-width: 450px;
         flex-direction: column;
         align-items: center;
         margin: auto;
     }
-
     .imageSection {
-        width: 360px;
+        width: 440px;
     }
-
     .registerSection {
         margin: 80px auto;
         color: #fff;
-        width: 360px;
+        width: 400px;
         position: relative;
     }
-
     .registerSection h1 {
         font-size: 2rem;
     }
-
     .registerSection p {
         font-size: 1rem;
     }
-
     .registerBtn {
         width: 300px;
         height: 60px;
@@ -290,9 +305,9 @@ nav img {
     
 }
 
-@media (max-width: 480px) {
+@media (max-width: 375px) {
     nav img {
-        margin: 55px auto 100px auto;
+        margin: 70px auto 130px auto;
     }
 
     .container {

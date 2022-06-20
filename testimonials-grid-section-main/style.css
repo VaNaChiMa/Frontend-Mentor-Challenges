@@ -10,14 +10,14 @@ html {
 }
 
 body {
-    max-width: 1440px;
-    min-height: 100vh;
     background-color: hsl(210, 46%, 95%);
 }
 
 main {
     display: flex;
-    height: 100vh;
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: auto;
 }
 
 .container {

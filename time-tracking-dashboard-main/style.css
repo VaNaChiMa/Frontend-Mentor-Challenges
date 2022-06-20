@@ -19,11 +19,13 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
 }
 
 .container {
     max-height: 520px;
     max-width: 1200px;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(4, minmax(200px, 255px));
     /* grid-template-rows: repeat(2, 245px); */

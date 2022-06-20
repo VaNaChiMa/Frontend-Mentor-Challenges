@@ -12,12 +12,17 @@ html {
 }
 
 body {
-    max-width: 1440px;
-    min-height: 100vh;
     background-color: hsl(225, 100%, 94%);
     background-image: url("images/pattern-background-desktop.svg");
     background-repeat: no-repeat;
     background-size: 100% 435px;
+    
+}
+
+main {
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,14 +31,15 @@ body {
 .container {
     width: 450px;
     height: 700px;
+    margin: auto;
     border-radius: 20px;
-    margin: 100px auto;
     background-color: #fff;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     overflow: hidden;
+    
 }
 
 .imageSection {

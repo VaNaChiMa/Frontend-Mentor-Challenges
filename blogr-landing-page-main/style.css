@@ -19,7 +19,7 @@ body {
 }
 
 header {
-  background-color: #ff7a85;
+  background-color: hsl(355deg, 100%, 74%);
   background-image: url("images/bg-pattern-intro.svg");
   background-size: 150%;
   background-repeat: no-repeat;
@@ -49,20 +49,34 @@ header .navbar .logo_and_links .nav-links {
 }
 header .navbar .logo_and_links .nav-links .dropdown {
   position: relative;
+  display: flex;
+  align-items: center;
+  height: 70px;
   margin-right: 30px;
   background-color: inherit;
+  opacity: 0.8;
+  transition: all 0.2s ease;
 }
-header .navbar .logo_and_links .nav-links .dropdown .dropbtn {
+header .navbar .logo_and_links .nav-links .dropdown .dropdown_product .dropbtn, header .navbar .logo_and_links .nav-links .dropdown .dropdown_company .dropbtn, header .navbar .logo_and_links .nav-links .dropdown .dropdown_connect .dropbtn {
   background-color: inherit;
   border: none;
   color: #fff;
-  opacity: 0.9;
   cursor: pointer;
   font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
   letter-spacing: 0.3px;
 }
-header .navbar .logo_and_links .nav-links .dropdown .dropbtn img {
-  margin-left: 5px;
+header .navbar .logo_and_links .nav-links .dropdown .dropdown_product .dropbtn:hover, header .navbar .logo_and_links .nav-links .dropdown .dropdown_company .dropbtn:hover, header .navbar .logo_and_links .nav-links .dropdown .dropdown_connect .dropbtn:hover {
+  border-bottom: 2px solid #fff;
+}
+header .navbar .logo_and_links .nav-links .dropdown .dropdown_product img, header .navbar .logo_and_links .nav-links .dropdown .dropdown_company img, header .navbar .logo_and_links .nav-links .dropdown .dropdown_connect img {
+  transition: all 0.2s ease;
+}
+header .navbar .logo_and_links .nav-links .dropdown:hover img {
+  transform: rotate(180deg);
+}
+header .navbar .logo_and_links .nav-links .dropdown:hover {
+  opacity: 1;
 }
 header .navbar .logo_and_links .nav-links .dropdown:last-child {
   margin-right: 0;
@@ -73,7 +87,8 @@ header .navbar .logo_and_links .nav-links .dropdown:hover .dropdown_content {
 header .navbar .logo_and_links .nav-links .dropdown_content {
   display: none;
   position: absolute;
-  left: -30px;
+  left: -20px;
+  top: 70px;
   background-color: #fff;
   min-width: 170px;
   flex-direction: column;
@@ -111,7 +126,7 @@ header .navbar .authentication .login_link:hover {
 }
 header .navbar .authentication .sign_up {
   background-color: #fff;
-  color: #ff525d;
+  color: hsl(356deg, 100%, 66%);
   font-family: "Overpass", sans-serif;
   font-weight: 700;
   font-size: 1rem;
@@ -123,7 +138,7 @@ header .navbar .authentication .sign_up {
   transition: 0.2s ease;
 }
 header .navbar .authentication .sign_up:hover {
-  background-color: #ff7a85;
+  background-color: hsl(355deg, 100%, 74%);
   color: #fff;
 }
 header .hero-section {
@@ -157,7 +172,7 @@ header .hero-section .hero-text p {
 }
 header .hero-section .hero-buttons .start {
   background-color: #fff;
-  color: #ff525d;
+  color: hsl(356deg, 100%, 66%);
   font-family: "Overpass", sans-serif;
   font-weight: 700;
   font-size: 1rem;
@@ -170,11 +185,11 @@ header .hero-section .hero-buttons .start {
   transition: 0.2s ease;
 }
 header .hero-section .hero-buttons .start:hover {
-  background-color: #ff7a85;
+  background-color: hsl(355deg, 100%, 74%);
   color: #fff;
 }
 header .hero-section .hero-buttons .learn {
-  background-color: #ff525d;
+  background-color: hsl(356deg, 100%, 66%);
   color: #fff;
   font-family: "Overpass", sans-serif;
   font-weight: 700;
@@ -189,16 +204,16 @@ header .hero-section .hero-buttons .learn {
 }
 header .hero-section .hero-buttons .learn:hover {
   background-color: #fff;
-  color: #ff525d;
+  color: hsl(356deg, 100%, 66%);
   border: 1px solid transparent;
 }
 
 .infrastructure {
   height: 400px;
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 50% 50%;
   align-items: center;
-  background-color: #2c2d3f;
+  background-color: hsl(237deg, 17%, 21%);
   background-image: url("images/bg-pattern-circles.svg");
   background-repeat: no-repeat;
   background-position: center left;
@@ -236,39 +251,39 @@ header .hero-section .hero-buttons .learn:hover {
 
 .features {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 50% 50%;
   margin: 60px auto 120px auto;
   align-items: center;
 }
 .features .features-image {
-  margin-left: -215px;
+  position: relative;
 }
 .features .features-image img {
+  position: absolute;
+  top: 0;
+  left: 100px;
   width: 100%;
-  height: auto;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: left;
-     object-position: left;
 }
 .features .features-text {
-  max-width: 530px;
-  margin-left: 60px;
+  max-width: 550px;
+  padding: 20px;
 }
 .features .features-text h4 {
   font-family: "Overpass", sans-serif;
   font-size: 1.575rem;
   font-weight: 600;
-  color: #1f3f5b;
+  color: hsl(208deg, 49%, 24%);
   padding-bottom: 30px;
 }
 .features .features-text p {
   font-family: "Ubuntu", sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  color: #4b5862;
+  color: hsl(207deg, 13%, 34%);
   line-height: 1.7;
-  letter-spacing: 0.025rem;
 }
 .features .features-text p:nth-child(2) {
   padding-bottom: 80px;
@@ -276,7 +291,7 @@ header .hero-section .hero-buttons .learn:hover {
 
 footer {
   width: 100%;
-  background-color: #25252d;
+  background-color: hsl(240deg, 10%, 16%);
   border-radius: 0 100px 0 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -288,14 +303,14 @@ footer div {
   align-items: flex-start;
 }
 footer h5 {
-  color: white;
+  color: hsl(0deg, 0%, 100%);
   padding-bottom: 30px;
   padding-top: 10px;
   font-family: "Overpass", sans-serif;
 }
 footer a {
   text-decoration: none;
-  color: #c8c8cb;
+  color: hsl(240deg, 2%, 79%);
   font-family: "Overpass", sans-serif;
   padding-bottom: 15px;
   transition: 0.2s ease;

@@ -11,20 +11,15 @@ body {
 .container {
   max-width: 1440px;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   margin: auto;
 }
 
 header {
-  background-color: hsl(355deg, 100%, 74%);
-  background-image: url("images/bg-pattern-intro.svg");
-  background-size: 150%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 100vh;
+  background-image: url("images/bg-pattern-intro.svg"), linear-gradient(135deg, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
+  background-size: 220%, 100%;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 25% 52%, 0% 0%;
+  height: 600px;
   width: 100%;
   border-radius: 0 0 0 90px;
 }
@@ -146,7 +141,7 @@ header .hero-section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 100px);
+  height: 500px;
 }
 header .hero-section .hero-text {
   display: flex;
@@ -208,82 +203,121 @@ header .hero-section .hero-buttons .learn:hover {
   border: 1px solid transparent;
 }
 
-.infrastructure {
-  height: 400px;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  align-items: center;
-  background-color: hsl(237deg, 17%, 21%);
-  background-image: url("images/bg-pattern-circles.svg");
-  background-repeat: no-repeat;
-  background-position: center left;
-  border-radius: 0 100px 0 100px;
-  position: relative;
-}
-.infrastructure .infrastructure-image {
-  position: absolute;
-  top: -70px;
-  left: 120px;
-}
-.infrastructure .infrastructure-image .infrastructure-image img {
-  width: 100%;
-  height: auto;
-}
-.infrastructure .infrastructure-text {
-  max-width: 530px;
-  margin-left: 60px;
-}
-.infrastructure .infrastructure-text h3 {
+h2 {
   font-family: "Overpass", sans-serif;
   font-size: 2rem;
   font-weight: 600;
   color: #fff;
   padding-bottom: 30px;
 }
-.infrastructure .infrastructure-text p {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #fff;
-  line-height: 1.7;
-  letter-spacing: 0.025rem;
-}
 
-.features {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  margin: 60px auto 120px auto;
-  align-items: center;
-}
-.features .features-image {
-  position: relative;
-}
-.features .features-image img {
-  position: absolute;
-  top: 0;
-  left: 100px;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.features .features-text {
-  max-width: 550px;
-  padding: 20px;
-}
-.features .features-text h4 {
+h3 {
   font-family: "Overpass", sans-serif;
   font-size: 1.575rem;
   font-weight: 600;
   color: hsl(208deg, 49%, 24%);
   padding-bottom: 30px;
 }
-.features .features-text p {
+
+p {
   font-family: "Ubuntu", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   color: hsl(207deg, 13%, 34%);
   line-height: 1.7;
+  letter-spacing: 0.025rem;
+}
+
+.future {
+  margin: 150px auto 300px auto;
+  width: 100%;
+  height: auto;
+}
+.future .future-content {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  position: relative;
+}
+.future h2 {
+  color: hsl(208deg, 49%, 24%);
+  text-align: center;
+  font-size: 2.5rem;
+}
+.future .future-image {
+  width: 50%;
+  height: auto;
+}
+.future .future-image img {
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  top: -230px;
+  right: -280px;
+}
+.future .future-text {
+  width: 50%;
+  max-width: 550px;
+  margin-left: 160px;
+}
+.future .future-text p:nth-child(2) {
+  padding-bottom: 80px;
+}
+
+.infrastructure {
+  display: flex;
+  margin: 300px auto 300px auto;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  height: 400px;
+  background-color: hsl(237deg, 17%, 21%);
+  background-image: url("images/bg-pattern-circles.svg"), linear-gradient(to bottom right, hsl(237deg, 17%, 21%), hsl(237deg, 23%, 32%));
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom -100px left -215px, 0% 0%;
+  border-radius: 0 100px 0 100px;
+}
+.infrastructure .infrastructure-image {
+  width: 50%;
+  height: auto;
+}
+.infrastructure img {
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  top: -70px;
+  left: 120px;
+}
+.infrastructure .infrastructure-text {
+  width: 50%;
+  max-width: 550px;
+}
+.infrastructure .infrastructure-text p {
+  color: #fff;
+}
+
+.features {
+  display: flex;
+  margin: 300px auto 300px auto;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.features .features-image {
+  width: 50%;
+  height: auto;
+}
+.features .features-image img {
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  top: -180px;
+  left: -280px;
+}
+.features .features-text {
+  width: 50%;
+  max-width: 550px;
 }
 .features .features-text p:nth-child(2) {
   padding-bottom: 80px;
@@ -317,4 +351,36 @@ footer a {
 }
 footer a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 1350px) {
+  .future, .infrastructure, .features {
+    margin: 150px auto;
+  }
+
+  .future .future-text, .infrastructure .infrastructure-text, .features .features-text {
+    margin-right: 20px;
+    max-width: 500px;
+  }
+
+  .future .future-text {
+    margin-left: 120px;
+  }
+
+  .future .future-image img, .infrastructure .infrastructure-image img, .features .features-image img {
+    position: static;
+  }
+}
+@media (max-width: 992px) {
+  .future {
+    margin-top: 100px;
+  }
+
+  .future .future-content {
+    margin-top: 50px;
+  }
+
+  .future .future-text {
+    margin-left: 100px;
+  }
 }/*# sourceMappingURL=style.css.map */

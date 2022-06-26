@@ -24,12 +24,3 @@ for (let i = 0; i < accordion.length; i++) {
     })
 
 }
-
-// let currentIsActive = this.hasClass('active');
-//     this.parent(accordion).find('> *').removeClass('active');
-//     if (currentIsActive != 1) {
-//         this.addClass('active');
-//         this.next('.panel').addClass('active');
-//     }
-
-// document.querySelector('h1').style.color = "Royalblue";

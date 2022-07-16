@@ -1,5 +1,5 @@
 # Frontend Mentor Challenges
-[All projects in one page](https://happy-swanson-6b9ae4.netlify.app/)
+[All projects on one page](https://happy-swanson-6b9ae4.netlify.app/)
 
 ---
 
@@ -23,4 +23,4 @@
 16. [Interactive pricing component](https://happy-swanson-6b9ae4.netlify.app/interactive-pricing-component-main/index.html) (Html, Css, JS)
 17. [Social media dashboard with theme switcher](https://happy-swanson-6b9ae4.netlify.app/social-media-dashboard-with-theme-switcher-master/index.html) (Html, Css, JS)
 18. [Time tracking dashboard](https://happy-swanson-6b9ae4.netlify.app/time-tracking-dashboard-main/index.html) (Html, Css, JS)
-19. [Blogr landing page](https://happy-swanson-6b9ae4.netlify.app/blogr-landing-page-main/index.html) (Html, Css, JS)
+19. [Blogr landing page](https://happy-swanson-6b9ae4.netlify.app/blogr-landing-page-main/index.html) (Html, Css, Grid, Sass, JS)

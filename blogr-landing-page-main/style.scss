@@ -31,14 +31,15 @@ header {
         height: 100px;
         padding: 50px 160px 0 160px;
 
-        .logo_and_links {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            .logo {
+        .logo {
                 margin-right: 60px;
             }
+
+        .links {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
     
             .nav-links {
                 display: flex;
@@ -66,7 +67,7 @@ header {
                         }
     
                         .dropbtn:hover {
-                            border-bottom: 2px solid #fff;
+                            color: hsl(207, 13%, 34%) !important;
                         }
 
                         img {
@@ -153,6 +154,20 @@ header {
                 color: #fff;
             }
         }
+
+            .hamburger {
+                display: none;
+                color: #fff;
+                cursor: pointer;
+            }
+        
+            .line {
+                height: 4px;
+                background-color: #fff;
+                width: 60px;
+                margin-bottom: 10px;
+                transition: all 0.5s ease;
+            }
     }
 
     .hero-section {
@@ -174,6 +189,7 @@ header {
                 font-size: 4rem;
                 font-weight: 600;
                 margin-bottom: 10px;
+                text-align: center;
             }
 
             p {
@@ -191,7 +207,7 @@ header {
             .start {
                 background-color: #fff;
                 color: hsl(356, 100%, 66%);
-                font-family: 'Overpass', sans-serif;
+                font-family: 'Ubuntu', sans-serif;
                 font-weight: 700;
                 font-size: 1rem;
                 border: none;
@@ -209,12 +225,11 @@ header {
             }
 
             .learn {
-                background-color: hsl(356, 100%, 66%);
+                background-color: transparent;
                 color: #fff;
                 font-family: 'Overpass', sans-serif;
                 font-weight: 700;
                 font-size: 1rem;
-                border: none;
                 padding: 13px 20px 11px 20px;
                 border: 1px solid #fff;
                 border-radius: 33px;
@@ -258,51 +273,50 @@ p {
 }
 
 .future {
-    margin: 150px auto 300px auto;
-    width: 100%;
-    height: auto;
-    
-
-    .future-content {
-        display: flex;
-        align-items: center;
-        margin-top: 100px;
-        position: relative;
-    }
-
-    h2 {
-        color: hsl(208, 49%, 24%);
-        text-align: center;
-        font-size: 2.5rem;
-    }
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    height: 1000px;
+    position: relative; 
+    overflow: hidden;
 
     .future-image {
-        width: 50%;
-        height: auto;
-
-        img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
-            position: absolute;
-            top: -230px;
-            right: -280px;
+            
+            img {
+                max-width: 100%;
+                height: auto;
+                position: absolute;
+                    top: 70px;
+                    right: -280px;
+            }
         }
-    }
-
-    .future-text {
-        width: 50%;
-        max-width: 550px;
-        margin-left: 160px;
-
-        p:nth-child(2) {
-            padding-bottom: 80px;
+    
+        .future-text {
+            max-width: 550px;
+            margin-left: 160px;
+    
+            p:nth-child(2) {
+                padding-bottom: 80px;
+            }
         }
-    } 
+                .future-title {
+                    position: absolute;
+                    top: 130px;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    color: hsl(208deg, 49%, 24%);
+                    text-align: center;
+                    font-size: 2.5rem;
+                }
 }
+
+
 
 .infrastructure {
     display: flex;
-    margin: 300px auto 300px auto;
+    margin: auto;
     align-items: center;
     width: 100%;
     position: relative;
@@ -335,33 +349,32 @@ p {
               color: #fff;
             }
     }
-
 }
 
 .features {
     display: flex;
-    margin: 300px auto 300px auto;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 1000px;
     position: relative;
+    overflow: hidden;
 
     .features-image {
-        width: 50%;
+        width: 100%;
         height: auto;
 
         img {
             max-width: 100%;      
             height: auto;
             position: absolute;
-            top: -180px;
+            top: 70px;
             left: -280px;
         }
     }
 
     .features-text {
-        width: 50%;
         max-width: 550px;
+        margin-right: 160px;
 
         p:nth-child(2) {
             padding-bottom: 80px;
@@ -376,7 +389,6 @@ footer {
     border-radius: 0 100px 0 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    // justify-content: start;
     padding: 70px 140px 70px 160px;
 
     div {
@@ -408,10 +420,10 @@ footer {
 
 @media (max-width: 1350px) {
     .future, .infrastructure, .features {
-        margin: 150px auto;
+        margin: auto;
     }
 
-    .future .future-text, .infrastructure .infrastructure-text, .features .features-text {
+    .future .future-text, .infrastructure-text, .features-text {
        margin-right: 20px;
         max-width: 500px;
     }
@@ -419,15 +431,16 @@ footer {
     .future .future-text {
         margin-left: 120px;
     }
-    
 
-
-    .future .future-image img, .infrastructure .infrastructure-image img, .features .features-image img {
+    .future-image img, .infrastructure-image img, .features-image img {
         position: static;
     }
 }
 
 @media (max-width: 992px) {
+    header .navbar {
+        padding: 50px 50px 0 50px;
+    }
     .future {
         margin-top: 100px;
     }
@@ -440,9 +453,161 @@ footer {
         margin-left: 100px;
     }
 }
+
 @media (max-width: 768px) {
 
+    header {
+        height: 1200px;
+    
+        .navbar {
+            position: relative;
+            height: 180px;
+            padding: 110px 50px 0px 50px;
+
+            .logo img {
+                    width: 170px;
+                }
+
+            .links.active {
+                    display: flex;
+                }
+    
+            .links {
+                display: none;
+                position: absolute;
+                top: 250px;
+                left: 5%;
+                width: 90%;
+                height: auto;
+                flex-direction: column;
+                justify-content: center;
+                background-color: #fff;
+                border-radius: 10px;
+                padding-bottom: 60px;
+
+                .nav-links {
+                        flex-direction: column;
+                        justify-content: center;
+                        width: 100%;
+                        padding-top: 40px;
+
+                    .dropdown {
+                            margin: auto !important;
+
+                             picture img {
+                                  width: 15px;  
+                                  margin: 0 0 3px 5px;
+                            } 
+
+                        .dropbtn {
+                                color: hsl(208, 49%, 24%) !important;
+                                margin-right: 0;
+                                font-weight: 700;
+                                font-size: 1.7rem;
+                                z-index: 2;
+                            }
+                        
+                            .dropbtn:hover {
+                                border-bottom: none;
+                            }
+
+                        .dropdown_content {
+                            display: none;
+                                background-color: #efeff1 !important;
+                                left: 50%;
+                                transform: translate(-50%, 0);
+                                width: 150%;
+                                margin: auto;
+                            }
+                        }
+                    }    
+                }
+
+                .authentication {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    .login_link {
+                            margin: 0 !important;
+                            text-align: center;
+                            color: hsl(208, 49%, 24%) !important;
+                            padding-bottom: 40px;
+                            font-size: 1.7rem;
+                        }
+                    
+                    .authentication .sign_up {
+                            background-image: linear-gradient(135deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+                            color: #fff;
+                        }
+                    }
+                }
+
+            .navbar .hamburger {
+                display: block;
+                transition: transform 0.25s ease;
+
+                .active .line_1 {
+                        transform: rotate(-45deg) translateY(20px);
+                        background-color: #fff;
+                    }              
+                    .active .line_2 {
+                        opacity: 0;
+                    }               
+                    .active .line_3 {
+                        transform: rotate(45deg) translateY(-20px);
+                        background-color: #fff;
+                    }
+                }
+    
+            .hero-section {
+                margin-top: 210px;
+    
+                .hero-text h1 {
+                    margin: 0 14% 40px 14%;
+                    font-size: 3.5rem;
+                    line-height: 1.5;
+                }
+    
+                .hero-text p {
+                    margin: 0 15% 100px 15%;
+                    font-size: 1.875rem;
+                    text-align: center;
+                }
+    
+                .hero-buttons .start {
+                    margin-right: 30px;
+                    font-size: 1.875rem;
+                    padding: 33px 40px 30px 40px;
+                    border-radius: 50px;
+                }
+                .hero-buttons .learn {
+                    font-size: 1.875rem;
+                    padding: 33px 40px 30px 40px;
+                    border-radius: 50px;
+                }
+            }
+        }
+
+    .future {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+
+        .future-title {
+            position: static;
+            justify-content: center;
+            transform: none;
+        }
+
+        .future-text {
+            width: 100%;
+        }
+    }
 }
+
+
+
 @media (max-width: 600px) {
 
 }

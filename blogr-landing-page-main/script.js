@@ -1,28 +1,24 @@
+/* Hamburger */
 const hamburger = document.querySelector(".hamburger");
 const navigation = document.querySelector(".links");
-const header = document.querySelector("header");
+const buttons = document.querySelectorAll(".dropbtn");
 
 hamburger.addEventListener("click", () => {
   navigation.classList.toggle("active");
   hamburger.classList.toggle("active");
 });
 
-// const myAcordion = document.querySelectorAll(".dropbtn");
+/* Accordion */
 
-// for (var i = 0; i < myAcordion.length; i++) {
-//   myAcordion[i].addEventListener("click", function () {
-//     this.classList.toggle("active");
-//     var panel = this.nextElementSibling;
-//     if (panel.style.display === "block") {
-//       panel.style.display = "none";
-//     } else {
-//       panel.style.display = "block";
-//     }
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", function () {
+    let sibling = this.nextElementSibling;
+    sibling.classList.toggle("active");
 
-//     if (panel.style.maxHeight) {
-//       panel.style.maxHeight = null;
-//     } else {
-//       panel.style.maxHeight = panel.scrollHeight + "px";
-//     }
-//   });
-// }
+    // if (this.firstElementChild.innerText === "+") {
+    //   this.firstElementChild.innerText = "-";
+    // } else {
+    //   this.firstElementChild.innerText = "+";
+    // }
+  });
+}

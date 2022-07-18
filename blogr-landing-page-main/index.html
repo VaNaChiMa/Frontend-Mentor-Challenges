@@ -26,14 +26,12 @@
         <div class="links">
           <div class="nav-links">
             <div class="dropdown">
-              <div class="dropdown_product">
-                <button class="dropbtn">Product</button>
-                <picture>
+
+              <button class="dropbtn">Product<picture>
                   <source media="(min-width:768px)" srcset="images/icon-arrow-light.svg">
                   <source media="(max-width:768px)" srcset="images/icon-arrow-dark.svg">
                   <img src="images/icon-arrow-light.svg" alt="arrow" />
-                </picture>
-              </div>
+                </picture></button>
 
               <div class="dropdown_content">
                 <a href="#">Overview</a>
@@ -44,14 +42,12 @@
               </div>
             </div>
             <div class="dropdown">
-              <div class="dropdown_company">
-                <button class="dropbtn">Company</button>
-                <picture>
+
+              <button class="dropbtn">Company<picture>
                   <source media="(min-width:768px)" srcset="images/icon-arrow-light.svg">
                   <source media="(max-width:768px)" srcset="images/icon-arrow-dark.svg">
                   <img src="images/icon-arrow-light.svg" alt="arrow" />
-                </picture>
-              </div>
+                </picture></button>
 
               <div class="dropdown_content">
                 <a href="#">About</a>
@@ -61,14 +57,11 @@
               </div>
             </div>
             <div class="dropdown">
-              <div class="dropdown_connect">
-                <button class="dropbtn">Connect</button>
-                <picture>
+              <button class="dropbtn">Connect<picture>
                   <source media="(min-width:768px)" srcset="images/icon-arrow-light.svg">
                   <source media="(max-width:768px)" srcset="images/icon-arrow-dark.svg">
                   <img src="images/icon-arrow-light.svg" alt="arrow" />
-                </picture>
-              </div>
+                </picture></button>
 
               <div class="dropdown_content">
                 <a href="#">Contact</a>
@@ -77,6 +70,7 @@
               </div>
             </div>
           </div>
+          <hr />
           <div class="authentication">
             <a href="#" class="login_link">Login</a>
             <button class="sign_up">Sign Up</button>
@@ -109,65 +103,77 @@
 
     <main>
       <section class="future">
-        <h2 class="future-title">Designed for the future</h2>
 
-        <div class="future-text">
-          <h3>Introducing an extensible editor</h3>
-          <p>
-            Blogr features an exceedingly intuitive interface which lets you
-            focus on one thing: creating content. The editor supports
-            management of multiple blogs and allows easy manipulation of
-            embeds such as images, videos, and Markdown. Extensibility with
-            plugins and themes provide easy ways to add functionality or
-            change the looks of a blog.
-          </p>
-          <h3>Robust content management</h3>
-          <p>
-            Flexible content management enables users to easily move through
-            posts. Increase the usability of your blog by adding customized
-            categories, sections, format, or flow. With this functionality,
-            you’re in full control.
-          </p>
-        </div>
-
-        <div class="future-image">
-          <img src="images/illustration-editor-desktop.svg" alt="editor-desktop" />
+        <div class="future-content">
+          <h2 class="future-title">Designed for the future</h2>
+          <picture class="future-image">
+            <source media="(min-width:768px)" srcset="images/illustration-editor-desktop.svg">
+            <source media="(max-width:768px)" srcset="images/illustration-editor-mobile.svg">
+            <img src="images/illustration-editor-mobile.svg" alt="editor-desktop" />
+          </picture>
+          <div class="future-text">
+            <h3>Introducing an extensible editor</h3>
+            <p>
+              Blogr features an exceedingly intuitive interface which lets you
+              focus on one thing: creating content. The editor supports
+              management of multiple blogs and allows easy manipulation of
+              embeds such as images, videos, and Markdown. Extensibility with
+              plugins and themes provide easy ways to add functionality or
+              change the looks of a blog.
+            </p>
+            <h3>Robust content management</h3>
+            <p>
+              Flexible content management enables users to easily move through
+              posts. Increase the usability of your blog by adding customized
+              categories, sections, format, or flow. With this functionality,
+              you’re in full control.
+            </p>
+          </div>
         </div>
       </section>
+
       <section class="infrastructure">
-        <div class="infrastructure-image">
-          <img src="images/illustration-phones.svg" alt="phones" />
-        </div>
-        <div class="infrastructure-text">
-          <h2>State of the Art Infrastructure</h2>
-          <p>
-            With reliability and speed in mind, worldwide data centers provide
-            the backbone for ultra-fast connectivity. This ensures your site
-            will load instantly, no matter where your readers are, keeping
-            your site competitive.
-          </p>
+        <div class="infrastructure-content">
+          <div class="infrastructure-image">
+            <img src="images/illustration-phones.svg" alt="phones" />
+          </div>
+          <div class="second-img"></div>
+
+          <div class="infrastructure-text">
+            <h2>State of the Art Infrastructure</h2>
+            <p>
+              With reliability and speed in mind, worldwide data centers provide
+              the backbone for ultra-fast connectivity. This ensures your site
+              will load instantly, no matter where your readers are, keeping
+              your site competitive.
+            </p>
+          </div>
         </div>
       </section>
+
       <section class="features">
-        <div class="features-image">
-          <img src="images/illustration-laptop-desktop.svg" alt="laptop_desktop" />
-        </div>
-        <div class="features-text">
-          <h3>Free, open, simple</h3>
-          <p>
-            Blogr is a free and open source application backed by a large
-            community of helpful developers. It supports features such as code
-            syntax highlighting, RSS feeds, social media integration,
-            third-party commenting tools, and works seamlessly with Google
-            Analytics. The architecture is clean and is relatively easy to
-            learn.
-          </p>
-          <h3>Powerful tooling</h3>
-          <p>
-            Batteries included. We built a simple and straightforward CLI tool
-            that makes customization and deployment a breeze, but capable of
-            producing even the most complicated sites.
-          </p>
+        <div class="features-content">
+          <picture class="features-image">
+            <source srcset="images/illustration-laptop-desktop.svg" alt="laptop_desktop">
+            <img src="images/illustration-laptop-mobile.svg" alt="laptop_mobile" />
+          </picture>
+          <div class="features-text">
+            <h3>Free, open, simple</h3>
+            <p>
+              Blogr is a free and open source application backed by a large
+              community of helpful developers. It supports features such as code
+              syntax highlighting, RSS feeds, social media integration,
+              third-party commenting tools, and works seamlessly with Google
+              Analytics. The architecture is clean and is relatively easy to
+              learn.
+            </p>
+            <h3>Powerful tooling</h3>
+            <p>
+              Batteries included. We built a simple and straightforward CLI tool
+              that makes customization and deployment a breeze, but capable of
+              producing even the most complicated sites.
+            </p>
+          </div>
         </div>
       </section>
     </main>

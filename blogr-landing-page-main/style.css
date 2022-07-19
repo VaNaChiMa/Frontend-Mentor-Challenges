@@ -64,66 +64,38 @@ header .navbar {
 header .navbar .logo {
   margin-right: 60px;
 }
-header .navbar .links {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-header .navbar .links hr {
-  display: none;
-}
-header .navbar .links .nav-links {
-  display: flex;
-}
-header .navbar .links .nav-links .dropdown {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 70px;
-  margin-right: 30px;
-  background-color: inherit;
-  opacity: 0.8;
-  transition: all 0.2s ease;
-}
-header .navbar .links .nav-links .dropdown .dropbtn {
-  background-color: transparent;
+header .navbar button {
   border: none;
+  background-color: transparent;
   color: #fff;
   cursor: pointer;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
-  letter-spacing: 0.3px;
 }
-header .navbar .links .nav-links .dropdown img {
-  transition: all 0.2s ease;
+header .navbar .links {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  align-items: center;
+  justify-content: space-around;
+  justify-items: start;
+  width: 100%;
+  position: relative;
 }
-header .navbar .links .nav-links .dropdown:hover img {
-  transform: rotate(180deg);
-}
-header .navbar .links .nav-links .dropdown:hover {
-  opacity: 1;
-}
-header .navbar .links .nav-links .dropdown:last-child {
-  margin-right: 0;
-}
-header .navbar .links .nav-links .active.dropdown_content {
+header .navbar .links .active.dropdown_content {
   display: flex;
 }
-header .navbar .links .nav-links .dropdown_content {
+header .navbar .links .dropdown_content {
   display: none;
   position: absolute;
   left: -20px;
-  top: 70px;
+  top: 60px;
   background-color: #fff;
-  min-width: 170px;
+  min-width: 160px;
   flex-direction: column;
   border-radius: 5px;
   padding: 30px 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 7px 10px rgba(0, 0, 0, 0.15);
   transition: 0.2s ease;
 }
-header .navbar .links .nav-links .dropdown_content a {
+header .navbar .links .dropdown_content a {
   padding-bottom: 20px;
   color: #000;
   text-decoration: none;
@@ -131,13 +103,47 @@ header .navbar .links .nav-links .dropdown_content a {
   font-weight: 400;
   transition: 0.2s ease;
 }
-header .navbar .links .nav-links .dropdown_content a:hover {
+header .navbar .links .dropdown_content a:hover {
   font-weight: 700;
 }
-header .navbar .links .nav-links .dropdown_content a:last-child {
+header .navbar .links .dropdown_content a:last-child {
   padding-bottom: 0;
 }
-header .navbar .links .authentication .login_link {
+header .navbar .links .active.arrow {
+  transform: rotate(180deg);
+}
+header .navbar .links .company {
+  left: 5rem;
+}
+header .navbar .links .connect {
+  left: 12rem;
+}
+header .navbar .links .uName {
+  border-bottom: 2px solid transparent;
+  transition: 0.2s ease;
+  opacity: 0.8;
+}
+header .navbar .links .active.uName {
+  border-bottom: 2px solid #fff;
+  opacity: 1;
+}
+header .navbar .links .dropbtn {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  font-size: 1rem;
+  min-width: 100px;
+  text-align: center;
+}
+header .navbar .links .dropbtn img {
+  transition: all 0.3s ease;
+}
+header .navbar .links .login_link {
+  grid-area: 1/7/1/8;
   color: #fff;
   margin-right: 30px;
   font-family: "Overpass", sans-serif;
@@ -147,10 +153,12 @@ header .navbar .links .authentication .login_link {
   opacity: 0.9;
   transition: 0.2s ease;
 }
-header .navbar .links .authentication .login_link:hover {
+header .navbar .links .login_link:hover {
   text-decoration: underline;
 }
-header .navbar .links .authentication .sign_up {
+header .navbar .links .sign_up {
+  grid-area: 1/8/-1/-1;
+  width: 140px;
   background-color: #fff;
   color: hsl(356deg, 100%, 66%);
   font-family: "Overpass", sans-serif;
@@ -163,7 +171,7 @@ header .navbar .links .authentication .sign_up {
   cursor: pointer;
   transition: 0.2s ease;
 }
-header .navbar .links .authentication .sign_up:hover {
+header .navbar .links .sign_up:hover {
   background-color: hsl(355deg, 100%, 74%);
   color: #fff;
 }
@@ -257,12 +265,12 @@ header .hero-section .hero-buttons .learn:hover {
   align-items: center;
 }
 .future .future-title {
-  grid-area: 1/1/2/-1;
+  grid-area: 1/1/1/-1;
   padding: 1rem 0px;
   color: hsl(208deg, 49%, 24%);
 }
 .future .future-image {
-  grid-area: 1/2/-1/-1;
+  grid-area: 2/2/3/-1;
   width: 150%;
 }
 .future .future-image img {
@@ -270,7 +278,7 @@ header .hero-section .hero-buttons .learn:hover {
   height: auto;
 }
 .future .future-text {
-  grid-area: 2/1/-1/2;
+  grid-area: 2/1/2/2;
   padding: 0 1.8vw 0 10vw;
 }
 .future .future-text p:first-of-type {
@@ -398,14 +406,12 @@ footer a:hover {
     position: relative;
     height: 180px;
     padding: 110px 50px 0px 50px;
-    z-index: 5;
   }
   header .navbar .logo img {
     width: 170px;
   }
   header .navbar .links.active {
     display: flex;
-    z-index: 5;
   }
   header .navbar .links {
     display: none;
@@ -418,7 +424,32 @@ footer a:hover {
     justify-content: center;
     background-color: #fff;
     border-radius: 10px;
-    padding-bottom: 60px;
+    padding: 60px 0;
+    z-index: 3;
+  }
+  header .navbar .links .dropbtn {
+    color: hsl(208deg, 49%, 24%) !important;
+    margin-right: 0;
+    font-weight: 700;
+    font-size: 1.7rem;
+    border: none;
+    padding-bottom: 70px;
+  }
+  header .navbar .links .dropbtn .arrow {
+    width: 15px;
+    vertical-align: middle;
+  }
+  header .navbar .links .active.dropdown_content {
+    display: flex;
+    position: static;
+    z-index: 5;
+  }
+  header .navbar .links .dropdown_content {
+    display: none;
+    background-color: #efeff1 !important;
+    margin-bottom: 50px;
+    width: 85%;
+    text-align: center;
   }
   header .navbar .links hr {
     display: block;
@@ -426,52 +457,14 @@ footer a:hover {
     height: 2px;
     border: 1px solid red;
   }
-  header .navbar .links .nav-links {
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    padding-top: 40px;
-    z-index: 5;
-  }
-  header .navbar .links .nav-links .dropdown {
-    margin: auto !important;
-    content: normal;
-    flex-direction: column;
-    z-index: 5;
-  }
-  header .navbar .links .nav-links .dropdown picture img {
-    width: 15px;
-    margin: 0 0 3px 5px;
-  }
-  header .navbar .links .nav-links .dropdown .dropbtn {
-    color: hsl(208deg, 49%, 24%) !important;
-    margin-right: 0;
-    font-weight: 700;
-    font-size: 1.7rem;
-    border: none;
-  }
-  header .navbar .links .nav-links .dropdown .active.dropdown_content {
-    display: flex;
-    flex-direction: column;
-    content: normal;
-  }
-  header .navbar .links .nav-links .dropdown .dropdown_content {
-    display: none;
-    background-color: #efeff1 !important;
-  }
-  header .navbar .authentication {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  header .navbar .authentication .login_link {
+  header .navbar .links .login_link {
     margin: 0 !important;
     text-align: center;
     color: hsl(208deg, 49%, 24%) !important;
     padding-bottom: 40px;
     font-size: 1.7rem;
   }
-  header .navbar .authentication .authentication .sign_up {
+  header .navbar .links .authentication .sign_up {
     background-image: linear-gradient(135deg, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
     color: #fff;
   }
@@ -490,42 +483,46 @@ footer a:hover {
     transform: rotate(42deg) translateY(-18px);
     background-color: #fff;
   }
-  header .hero-section {
-    margin-top: 210px;
-  }
-  header .hero-section .hero-text h1 {
+  .hero-section .hero-text h1 {
     margin: 0 14% 40px 14%;
     font-size: 3.5rem;
     line-height: 1.5;
   }
-  header .hero-section .hero-text p {
+  .hero-section .hero-text p {
     margin: 0 15% 100px 15%;
     font-size: 1.875rem;
     text-align: center;
   }
-  header .hero-section .hero-buttons .start {
+  .hero-section .hero-buttons .start {
     margin-right: 30px;
     font-size: 1.875rem;
     padding: 33px 40px 30px 40px;
     border-radius: 50px;
   }
-  header .hero-section .hero-buttons .learn {
+  .hero-section .hero-buttons .learn {
     font-size: 1.875rem;
     padding: 33px 40px 30px 40px;
     border-radius: 50px;
   }
-  .future {
-    flex-direction: column;
-    height: auto;
-    width: 100%;
+  .future .future-content .future-title {
+    grid-area: 1/1/1/3;
+    font-size: 2.825rem;
   }
-  .future .future-title {
-    position: static;
-    justify-content: center;
-    transform: none;
+  .future .future-content .future-image {
+    grid-area: 2/1/4/-2;
+    padding: 6.25rem 10% 6.25rem 10%;
   }
-  .future .future-text {
-    width: 100%;
+  .future .future-content .future-text {
+    grid-area: 4/1/-1/-1;
+    padding: 6.25rem 10% 6.25rem 10%;
+    text-align: center;
+  }
+  .future .future-content .future-text h3 {
+    font-size: 2.825rem;
+    letter-spacing: 1px;
+  }
+  .future .future-content .future-text p {
+    font-size: 1.5rem;
   }
   footer {
     grid-template-columns: repeat(1, 1fr);

@@ -83,6 +83,10 @@ header {
         width: 100%;
         position: relative;
 
+        hr {
+            visibility: hidden;
+        }
+
         .active.dropdown_content {
                 display: flex;
             }
@@ -559,6 +563,7 @@ footer {
                     }
 
                 hr {
+                    visibility: visible;
                     display: block;
                     width: 85%;
                     height: 2px;

@@ -79,6 +79,9 @@ header .navbar .links {
   width: 100%;
   position: relative;
 }
+header .navbar .links hr {
+  visibility: hidden;
+}
 header .navbar .links .active.dropdown_content {
   display: flex;
 }
@@ -475,6 +478,7 @@ footer a:hover {
     padding-bottom: 50px;
   }
   header .navbar .links hr {
+    visibility: visible;
     display: block;
     width: 85%;
     height: 2px;

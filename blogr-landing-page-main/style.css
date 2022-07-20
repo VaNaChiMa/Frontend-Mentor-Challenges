@@ -404,8 +404,8 @@ footer a:hover {
   }
   header .navbar {
     position: relative;
-    height: 180px;
-    padding: 110px 50px 0px 50px;
+    height: auto;
+    padding: 110px 50px;
   }
   header .navbar .logo img {
     width: 170px;
@@ -428,16 +428,25 @@ footer a:hover {
     z-index: 3;
   }
   header .navbar .links .dropbtn {
-    color: hsl(208deg, 49%, 24%) !important;
     margin-right: 0;
     font-weight: 700;
     font-size: 1.7rem;
     border: none;
-    padding-bottom: 70px;
+    padding-bottom: 60px;
   }
   header .navbar .links .dropbtn .arrow {
     width: 15px;
     vertical-align: middle;
+  }
+  header .navbar .links .dropbtn .active.uName {
+    opacity: 0.8;
+  }
+  header .navbar .links .dropbtn .uName {
+    color: hsl(208deg, 49%, 24%);
+    font-family: "Overpass", sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    opacity: 1;
   }
   header .navbar .links .active.dropdown_content {
     display: flex;
@@ -447,15 +456,30 @@ footer a:hover {
   header .navbar .links .dropdown_content {
     display: none;
     background-color: #efeff1 !important;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     width: 85%;
     text-align: center;
+    box-shadow: none;
+    border-radius: 10px;
+    padding: 50px 0 0 0;
+  }
+  header .navbar .links .dropdown_content a:last-child {
+    padding-bottom: 50px;
+  }
+  header .navbar .links .dropdown_content a {
+    font-family: "Overpass", sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: hsl(208deg, 49%, 24%);
+    opacity: 0.8;
+    padding-bottom: 50px;
   }
   header .navbar .links hr {
     display: block;
-    width: 80%;
+    width: 85%;
     height: 2px;
-    border: 1px solid red;
+    border: 1px solid #efeff1;
+    margin-bottom: 70px;
   }
   header .navbar .links .login_link {
     margin: 0 !important;
@@ -464,9 +488,16 @@ footer a:hover {
     padding-bottom: 40px;
     font-size: 1.7rem;
   }
-  header .navbar .links .authentication .sign_up {
+  header .navbar .links .sign_up {
     background-image: linear-gradient(135deg, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
     color: #fff;
+    padding: 30px 75px;
+    font-size: 2rem;
+    font-family: "Ubuntu", sans-serif;
+    text-align: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   header .navbar .hamburger {
     display: block;
@@ -483,37 +514,46 @@ footer a:hover {
     transform: rotate(42deg) translateY(-18px);
     background-color: #fff;
   }
-  .hero-section .hero-text h1 {
-    margin: 0 14% 40px 14%;
+  header .hero-section {
+    margin: 100px 0;
+  }
+  header .hero-section .hero-text h1 {
+    margin: 0 10% 40px 10%;
     font-size: 3.5rem;
     line-height: 1.5;
   }
-  .hero-section .hero-text p {
+  header .hero-section .hero-text p {
     margin: 0 15% 100px 15%;
     font-size: 1.875rem;
     text-align: center;
   }
-  .hero-section .hero-buttons .start {
+  header .hero-section .hero-buttons .start {
     margin-right: 30px;
     font-size: 1.875rem;
-    padding: 33px 40px 30px 40px;
+    padding: 30px 40px 27px 40px;
     border-radius: 50px;
   }
-  .hero-section .hero-buttons .learn {
+  header .hero-section .hero-buttons .learn {
     font-size: 1.875rem;
-    padding: 33px 40px 30px 40px;
+    padding: 30px 40px 27px 40px;
     border-radius: 50px;
+  }
+  .future .future-content {
+    width: 100%;
   }
   .future .future-content .future-title {
     grid-area: 1/1/1/3;
     font-size: 2.825rem;
+    padding: 7.5rem 0px 6.25rem;
   }
   .future .future-content .future-image {
-    grid-area: 2/1/4/-2;
-    padding: 6.25rem 10% 6.25rem 10%;
+    height: auto;
+    width: 100%;
+    grid-area: 2/1/3/3;
+    text-align: center;
   }
   .future .future-content .future-text {
-    grid-area: 4/1/-1/-1;
+    grid-area: 3/1/-1/-1;
     padding: 6.25rem 10% 6.25rem 10%;
     text-align: center;
   }
@@ -522,7 +562,59 @@ footer a:hover {
     letter-spacing: 1px;
   }
   .future .future-content .future-text p {
-    font-size: 1.5rem;
+    font-size: 1.875rem;
+  }
+  .infrastructure .infrastructure-content {
+    grid-template-rows: repeat(8, 1fr);
+  }
+  .infrastructure .infrastructure-content .infrastructure-image {
+    grid-area: 1/1/4/3;
+    text-align: center;
+  }
+  .infrastructure .infrastructure-content .second-img {
+    grid-area: 2/1/9/-1;
+    height: 1200px;
+    background-position: center top -250%;
+    background-size: 200%;
+    border-radius: 0 250px;
+  }
+  .infrastructure .infrastructure-content .infrastructure-text {
+    text-align: center;
+    grid-area: 2/1/9/-1;
+    padding: 6.25rem 10%;
+  }
+  .infrastructure .infrastructure-content .infrastructure-text h2 {
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 100px 0 70px 0;
+  }
+  .infrastructure .infrastructure-content .infrastructure-text p {
+    font-size: 1.875rem;
+    font-weight: 400;
+    font-family: "Overpass", sans-serif;
+  }
+  .features .features-content {
+    width: 100%;
+  }
+  .features .features-content .features-image {
+    grid-area: 1/1/2/3;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 0 5%;
+  }
+  .features .features-content .features-text {
+    grid-area: 2/1/3/-1;
+    text-align: center;
+    padding: 6.25rem 10% 4.25rem 10%;
+    margin: auto;
+  }
+  .features .features-content .features-text h3 {
+    font-size: 2.825rem;
+    letter-spacing: 1px;
+  }
+  .features .features-content .features-text p {
+    font-size: 1.875rem;
   }
   footer {
     grid-template-columns: repeat(1, 1fr);
@@ -553,5 +645,44 @@ footer a:hover {
   footer .product-footer,
 footer .company-footer {
     margin-bottom: 3rem;
+  }
+}
+@media (max-width: 600px) {
+  header .hero-section .hero-buttons .start {
+    font-size: 1.375rem;
+    padding: 20px 30px 18px 30px;
+    border-radius: 50px;
+  }
+  header .hero-section .hero-buttons .learn {
+    font-size: 1.375rem;
+    padding: 20px 30px 18px 30px;
+    border-radius: 50px;
+  }
+}
+@media (max-width: 480px) {
+  header .hero-section .hero-buttons .start {
+    margin-right: 30px;
+    font-size: 0.975rem;
+    padding: 15px 20px 14px 20px;
+    border-radius: 33px;
+  }
+  header .hero-section .hero-buttons .learn {
+    font-size: 0.975rem;
+    padding: 15px 20px 14px 20px;
+    border-radius: 50px;
+  }
+  .infrastructure .infrastructure-content .second-img {
+    background-position: center top 150%;
+    background-size: 200%;
+    border-radius: 0 250px;
+  }
+  h2 {
+    font-size: 2.5rem !important;
+  }
+  h3 {
+    font-size: 2rem !important;
+  }
+  p {
+    font-size: 1.375rem !important;
   }
 }/*# sourceMappingURL=style.css.map */

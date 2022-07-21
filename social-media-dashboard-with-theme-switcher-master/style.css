@@ -1,30 +1,115 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+  --body-bg: hsl(230, 17%, 14%);
+  --card-bg: hsl(228, 28%, 20%);
+  --text-white: hsl(0, 0%, 100%);
+  --blue-desaturated-text: hsl(228, 34%, 66%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 body {
-    font-size: 14px;
-    font-family: 'Inter', sans-serif;
-}
-
-main {
-    max-width: 1440px;
-    min-height: 100vh;
-    margin: auto;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  line-height: 1.5;
+  background-color: var(--body-bg);
 }
 
 .container {
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: auto;
+  margin: 0 9%;
+}
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.main_board {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(255px, 1fr));
+  grid-template-rows: repeat(1, minmax(215px, 1fr));
+  gap: 30px;
+  margin: 0 9%;
 }
 
 .overview_board {
-    display: grid;
-    grid-template-columns: repeat(4, 255px);
-    grid-template-rows: repeat(3, 125px);
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(255px, 1fr));
+  grid-template-rows: repeat(2, minmax(130px, 1fr));
+  gap: 30px;
+}
+
+.board {
+  background-color: var(--card-bg);
 }
 
 .overview {
-    background-color: hsl(228, 34%, 66%);
+  background-color: var(--card-bg);
+}
+
+.title h1 {
+  color: var(--text-white);
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+
+.overview_title h2 {
+  color: var(--text-white);
+  font-weight: 700;
+  font-size: 1.75rem;
 }

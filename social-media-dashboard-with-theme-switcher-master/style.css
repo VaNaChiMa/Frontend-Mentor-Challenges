@@ -1,8 +1,10 @@
 :root {
   --body-bg: hsl(230, 17%, 14%);
-  --card-bg: hsl(228, 28%, 20%);
+  --blueDark-card-bg: hsl(228, 28%, 20%);
   --text-white: hsl(0, 0%, 100%);
   --blue-desaturated-text: hsl(228, 34%, 66%);
+  --limeGreen-color: hsl(163, 72%, 41%);
+  --brightRed-color: hsl(356, 69%, 56%);
 }
 
 *,
@@ -22,13 +24,6 @@ p,
 figure,
 picture {
   margin: 0;
-}
-
-/* make images easier to work with */
-img,
-picutre {
-  max-width: 100%;
-  display: block;
 }
 
 /* make form elements easier to work with */
@@ -59,6 +54,14 @@ body {
   background-color: var(--body-bg);
 }
 
+body.light {
+  background-color: var(--text-white);
+}
+
+main {
+  margin: auto;
+}
+
 .container {
   max-width: 1440px;
   display: flex;
@@ -67,7 +70,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: auto;
-  margin: 0 9%;
 }
 
 header {
@@ -75,31 +77,16 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  padding: 0 10%;
 }
 
-.main_board {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(255px, 1fr));
-  grid-template-rows: repeat(1, minmax(215px, 1fr));
-  gap: 30px;
-  margin: 0 9%;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.overview_board {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(255px, 1fr));
-  grid-template-rows: repeat(2, minmax(130px, 1fr));
-  gap: 30px;
-}
-
-.board {
-  background-color: var(--card-bg);
-}
-
-.overview {
-  background-color: var(--card-bg);
+.title {
+  padding-bottom: 40px;
 }
 
 .title h1 {
@@ -108,8 +95,218 @@ header {
   font-size: 1.75rem;
 }
 
-.overview_title h2 {
+.title .total_followers {
+  color: var(--blue-desaturated-text);
+  font-weight: 700;
+}
+
+.main_board {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 30px;
+  padding: 0 10% 40px 10%;
+}
+
+.overview_board {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+  padding: 0 10%;
+}
+
+.facebook_info {
+  border-top: 5px solid hsl(207, 91%, 52%);
+}
+.twitter_info {
+  border-top: 5px solid hsl(203, 89%, 53%);
+}
+
+.instagram_info {
+  position: relative;
+}
+
+.instagram_info::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  top: 0px;
+  left: 0;
+}
+.youtube_info {
+  border-top: 5px solid hsl(348, 97%, 39%);
+}
+
+.board {
+  background-color: var(--blueDark-card-bg);
+  text-align: center;
+  border-radius: 5px;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.board:hover {
+  background-color: hsl(228, 28%, 25%);
+}
+
+.board .user-account {
+  color: var(--blue-desaturated-text);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-account span {
+  padding: 7px 7px 0 0;
+}
+
+.board .Followers {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--text-white);
+}
+
+.board .sub-title {
+  color: var(--blue-desaturated-text);
+  letter-spacing: 7px;
+  padding-bottom: 25px;
+  margin-top: -15px;
+  text-transform: capitalize;
+}
+
+.board .today {
+  color: var(--limeGreen-color);
+  font-weight: 700;
+}
+
+.today img,
+.downRed img,
+.upGreen img {
+  padding: 0 3px 2px 0;
+}
+
+.overview {
+  background-color: var(--blueDark-card-bg);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+  align-items: center;
+  justify-content: end;
+  padding: 25px 30px 25px 25px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border-radius: 5px;
+}
+
+.overview:hover {
+  background-color: hsl(228, 28%, 25%);
+}
+
+.overview p:nth-child(1) {
+  color: var(--blue-desaturated-text);
+  font-weight: 700;
+}
+.overview img {
+  justify-self: end;
+}
+.overview p:nth-child(3) {
   color: var(--text-white);
   font-weight: 700;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.overview p:nth-child(4) {
+  justify-self: end;
+  color: var(--limeGreen-color);
+  font-weight: 700;
+}
+
+.youtube_info .today,
+.overview .downRed {
+  color: var(--brightRed-color) !important;
+}
+
+.overview_title {
+  width: 100%;
+  padding: 0 0 20px 10%;
+}
+
+.overview_title h2 {
+  width: 100%;
+  color: var(--text-white);
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+/*   Checkbox   */
+
+.toggle {
+  position: relative;
+  display: flex;
+  color: var(--blue-desaturated-text);
+  font-weight: 700;
+}
+
+.toggle p {
+  padding-right: 15px;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  position: relative;
+  width: 50px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  border-radius: 50px;
+  margin-bottom: 50px;
+}
+
+.ball {
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  background-color: var(--blueDark-card-bg);
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(22px);
+}
+
+/*  Theme switcher  */
+
+body.light {
+  background-color: var(--text-white);
+}
+
+.title h1.light {
+  color: hsl(230, 17%, 14%);
+}
+
+.totalNumber.light {
+  color: hsl(230, 17%, 14%);
 }

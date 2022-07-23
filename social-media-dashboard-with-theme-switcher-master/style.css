@@ -72,6 +72,16 @@ main {
   margin: auto;
 }
 
+.bg-top {
+  position: absolute;
+  top: 0;
+  z-index: -10;
+  width: 100%;
+  height: 300px;
+  border-radius: 0 0 20px 20px;
+  background: hsl(232, 19%, 15%);
+}
+
 header {
   display: flex;
   align-items: center;
@@ -98,6 +108,10 @@ img {
 .title .total_followers {
   color: var(--blue-desaturated-text);
   font-weight: 700;
+}
+
+hr {
+  visibility: hidden;
 }
 
 .main_board {
@@ -219,11 +233,12 @@ img {
 .overview img {
   justify-self: end;
 }
-.overview p:nth-child(3) {
+.overview .totalNumber {
   color: var(--text-white);
   font-weight: 700;
   font-size: 1.5rem;
   letter-spacing: 2px;
+  transition: 0.2s ease;
 }
 
 .overview p:nth-child(4) {
@@ -279,6 +294,7 @@ img {
   background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
   border-radius: 50px;
   margin-bottom: 50px;
+  cursor: pointer;
 }
 
 .ball {
@@ -307,6 +323,88 @@ body.light {
   color: hsl(230, 17%, 14%);
 }
 
-.totalNumber.light {
+.overview_title h2.light {
   color: hsl(230, 17%, 14%);
+}
+
+.Followers.light {
+  color: hsl(230, 17%, 14%);
+}
+
+.totalNumber.light {
+  color: hsl(230, 17%, 14%) !important;
+}
+
+.board.light,
+.overview.light {
+  background-color: hsl(227, 47%, 96%);
+}
+
+.ball.light {
+  background-color: #f2f3f8;
+}
+.label.light {
+  background: hsl(230, 22%, 74%);
+}
+.label:hover.light {
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+.bg-top.light {
+  background: hsl(225, 100%, 98%);
+}
+
+/*   Media   */
+
+@media (max-width: 1200px) {
+  .container {
+    margin: 40px auto;
+  }
+  .main_board {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .overview_board {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    margin: 40px auto;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .title {
+    padding-bottom: 0;
+  }
+
+  hr {
+    visibility: visible;
+    width: 100%;
+    height: 2px;
+    margin: 25px 0;
+  }
+
+  .main_board {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .overview_board {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .toggle {
+    width: 100%;
+    justify-content: space-between;
+  }
 }

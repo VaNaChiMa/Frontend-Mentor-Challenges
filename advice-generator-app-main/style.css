@@ -1,0 +1,90 @@
+:root {
+  --lightCyan: hsl(193, 38%, 86%);
+  --neonGreen: hsl(150, 100%, 66%);
+  --bgDarkBlue: hsl(218, 23%, 16%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--bgDarkBlue);
+}
+
+.container {
+  max-width: 1440px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.card {
+  border-radius: 33px;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: hsl(217, 19%, 24%);
+  position: relative;
+}
+
+.dice {
+  border-radius: 50%;
+  background-color: var(--neonGreen);
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -33px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: box-shadow 0.25s ease-in-out, scale 0.3s ease-in-out;
+}
+
+.dice:hover {
+  box-shadow: 0 0 20px 7px rgba(82, 255, 168, 0.7);
+}
+
+.dice:active {
+  transform: scale(0.98);
+}
+
+.titleAdvice {
+  color: var(--neonGreen);
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  padding-bottom: 30px;
+  letter-spacing: 3px;
+}
+
+.titleAdviceWord {
+  margin-right: 10px;
+}
+
+.divider {
+  padding: 35px 0 15px;
+}
+
+#advice {
+  font-size: 1.875rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--lightCyan);
+  max-width: 430px;
+  font-family: "Manrope", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

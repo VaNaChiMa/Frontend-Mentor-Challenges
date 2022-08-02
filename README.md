@@ -24,3 +24,4 @@
 17. [Social media dashboard with theme switcher](https://happy-swanson-6b9ae4.netlify.app/social-media-dashboard-with-theme-switcher-master/index.html) (Html, Css, JS)
 18. [Time tracking dashboard](https://happy-swanson-6b9ae4.netlify.app/time-tracking-dashboard-main/index.html) (Html, Css, JS)
 19. [Blogr landing page](https://happy-swanson-6b9ae4.netlify.app/blogr-landing-page-main/index.html) (Html, Css, Grid, Sass, JS)
+20. [Advice generator app](https://happy-swanson-6b9ae4.netlify.app/advice-generator-app-main/index.html) (First API project)

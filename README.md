@@ -25,3 +25,6 @@
 18. [Time tracking dashboard](https://happy-swanson-6b9ae4.netlify.app/time-tracking-dashboard-main/index.html) (Html, Css, JS)
 19. [Blogr landing page](https://happy-swanson-6b9ae4.netlify.app/blogr-landing-page-main/index.html) (Html, Css, Grid, Sass, JS)
 20. [Advice generator app](https://happy-swanson-6b9ae4.netlify.app/advice-generator-app-main/index.html) (First API project)
+21. [Launch countdown timer]
+22. [Todo app]
+23. [Calculator app]

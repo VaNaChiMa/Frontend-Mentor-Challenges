@@ -1,92 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet" />
 
-    <title>Frontend Mentor | Interactive pricing component</title>
-  </head>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="style.css" />
 
-  <body>
-    <main>
-      <div class="container">
-        <header>
-          <h1>Simple, traffic-based pricing</h1>
-          <p>Sign-up for our 30-day trial. No credit card required.</p>
-        </header>
+  <title>Frontend Mentor | Interactive pricing component</title>
+</head>
 
-        <div class="pricingCard">
-          <div class="displayInfo">
-            <div class="views">
-              <span>100K Pageviews</span>
-            </div>
-            <div class="pricePer">
-              <span class="price">$16.00</span>
-              <span>/ month</span>
-            </div>
+<body>
+  <main>
+    <div class="container">
+      <header>
+        <h1>Simple, traffic-based pricing</h1>
+        <p>Sign-up for our 30-day trial. No credit card required.</p>
+      </header>
+
+      <div class="pricingCard">
+        <div class="displayInfo">
+          <div class="views">
+            <p><span class="pageviews">100K</span>Pageviews</p>
           </div>
-          <div class="rangeSlider">
-            <input
-              type="range"
-              name="range"
-              id="range"
-              min="1"
-              max="100"
-              value="50"
-            />
+          <div class="pricePer">
+            <p>$<span class="price">16.00</span></p>
+            <span>/ month</span>
           </div>
-          <div class="billingInfo">
-            <p>Monthly Billing</p>
-            <div class="toggler">
-              <input type="checkbox" class="checkbox" id="checkbox" />
-              <label for="checkbox" class="label">
-                <div class="ball"></div>
-              </label>
-            </div>
-
-            <p>Yearly Billing</p>
-            <small>25% discount</small>
+        </div>
+        <div class="rangeSlider">
+          <input type="range" name="range" id="range" min="0" max="4" value="2" />
+        </div>
+        <div class="billingInfo">
+          <p>Monthly Billing</p>
+          <div class="toggler">
+            <input type="checkbox" class="checkbox" id="checkbox" />
+            <label for="checkbox" class="label">
+              <div class="ball"></div>
+            </label>
           </div>
 
-          <hr class="line" />
+          <p>Yearly Billing</p>
+          <small>25% discount</small>
+        </div>
 
-          <div class="trialSection">
-            <div class="features">
-              <p>
-                <img src="images/icon-check.svg" alt="check" />Unlimited
-                websites
-              </p>
-              <p>
-                <img src="images/icon-check.svg" alt="check" />100% data
-                ownership
-              </p>
-              <p>
-                <img src="images/icon-check.svg" alt="check" />Email reports
-              </p>
-            </div>
-            <div class="btn">
-              <button class="trial">Start my trial</button>
-            </div>
+        <hr class="line" />
+
+        <div class="trialSection">
+          <div class="features">
+            <p>
+              <img src="images/icon-check.svg" alt="check" />Unlimited
+              websites
+            </p>
+            <p>
+              <img src="images/icon-check.svg" alt="check" />100% data
+              ownership
+            </p>
+            <p>
+              <img src="images/icon-check.svg" alt="check" />Email reports
+            </p>
+          </div>
+          <div class="btn">
+            <button class="trial">Start my trial</button>
           </div>
         </div>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>

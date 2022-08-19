@@ -18,6 +18,7 @@ main {
   min-height: 100vh;
   margin: auto;
   background-image: url("images/bg-pattern.svg");
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: center top;
 }
@@ -67,13 +68,15 @@ header p {
 }
 
 .displayInfo {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   align-items: center;
   margin-bottom: 30px;
 }
 
 .views {
+  grid-area: 1 /1 / 2 / 2;
   color: hsl(225, 20%, 60%);
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -92,6 +95,7 @@ header p {
 }
 
 .pricePer {
+  grid-area: 1 / 2 / 2 / -1;
   display: flex;
   align-items: center;
   color: hsl(225, 20%, 60%);
@@ -108,6 +112,7 @@ header p {
 .rangeSlider {
   width: 100%;
   cursor: pointer;
+  grid-area: 2 / 1 / 3 / 3;
 }
 
 input[type="range"] {
@@ -119,8 +124,19 @@ input[type="range"]:focus {
   outline: none;
 }
 
+/*  progress support  */
+
+input[type="range"].styled-slider.slider-progress {
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--value) - var(--min)) / var(--range));
+  --sx: calc(0.5 * 2em + var(--ratio) * (100% - 2em));
+}
+
 input[type="range"]::-webkit-slider-runnable-track {
-  background-color: hsl(174, 77%, 80%);
+  /* background-color: hsl(174, 77%, 80%); */
+  background: linear-gradient(hsl(174, 77%, 80%), hsl(174, 77%, 80%)) 0 /
+      var(--sx) 100% no-repeat,
+    hsl(223, 50%, 87%);
   border-radius: 25px;
   width: 100%;
   cursor: pointer;
@@ -149,21 +165,6 @@ input[type="range"]::-webkit-slider-thumb:active {
 input[type="range"]::-webkit-slider-thumb:hover {
   box-shadow: 0 10px 15px hsl(175, 93%, 88%), 0 20px 30px hsl(175, 95%, 77%);
 }
-
-/* input[type='range']::-webkit-slider-thumb {} */
-
-/* input[type='range']::-webkit-slider-thumb::after{
-    content: "";
-    background-image: url('images/icon-slider.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-} */
 
 /*     Toggle    */
 
@@ -273,4 +274,39 @@ input[type="range"]::-webkit-slider-thumb:hover {
 
 .btn .trial:active {
   transform: scale(0.97);
+}
+
+@media (max-width: 600px) {
+  main {
+    background-size: 200%;
+  }
+  .pricingCard {
+    height: auto;
+    padding: 60px 0;
+  }
+
+  /* .views {}
+
+  .pricePer {}
+
+  .rangeSlider {} */
+
+  .trialSection {
+    flex-direction: column;
+  }
+
+  .features {
+    margin: 20px auto 60px auto;
+  }
+
+  .features p {
+    text-align: center;
+    font-size: 1.35rem;
+  }
+
+  .btn .trial {
+    padding: 25px 80px;
+    font-size: 2rem;
+    border-radius: 50px;
+  }
 }

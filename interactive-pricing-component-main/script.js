@@ -7,10 +7,8 @@ const pageViews = ["10K", "50K", "100K", "500K", "1M"];
 const perMonth = [8, 12, 16, 24, 36];
 let isYearly = false;
 
-range.addEventListener("input", (e) => {
-  // let valueRange = +e.target.value;
+range.addEventListener("input", () => {
   updatePrice();
-  // price.innerHTML = valueRange.toFixed(2);
   views.innerHTML = pageViews[range.value];
 });
 
@@ -29,4 +27,13 @@ function updatePrice() {
   } else {
     price.innerHTML = perMonth[range.value].toFixed(2);
   }
+}
+
+for (let e of document.querySelectorAll(
+  'input[type="range"].slider-progress'
+)) {
+  e.style.setProperty("--value", e.value);
+  e.style.setProperty("--min", e.min == "" ? "0" : e.min);
+  e.style.setProperty("--max", e.max == "" ? "100" : e.max);
+  e.addEventListener("input", () => e.style.setProperty("--value", e.value));
 }

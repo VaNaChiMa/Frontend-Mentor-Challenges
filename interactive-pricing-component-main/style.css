@@ -46,33 +46,32 @@ header {
 
 header h1 {
   color: hsl(227, 35%, 25%);
+  text-align: center;
 }
 
 header p {
   color: hsl(225, 20%, 60%);
+  text-align: center;
 }
 
 .pricingCard {
   background-color: #fff;
   width: 540px;
   border-radius: 10px;
-  padding: 50px 0 30px 0;
+  padding: 40px 0 30px 0;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07), 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.pricingCard .displayInfo,
-.pricingCard .rangeSlider,
-.pricingCard .billingInfo,
-.pricingCard .trialSection {
+.displayInfo,
+.trialSection {
   padding: 0 40px;
 }
 
 .displayInfo {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
   align-items: center;
-  margin-bottom: 30px;
 }
 
 .views {
@@ -80,6 +79,7 @@ header p {
   color: hsl(225, 20%, 60%);
   text-transform: uppercase;
   letter-spacing: 2px;
+  padding-bottom: 25px;
 }
 
 .views span {
@@ -87,14 +87,15 @@ header p {
 }
 
 .price {
+  align-items: center;
   font-size: 2.575rem;
   font-weight: 800;
   margin-right: 5px;
-  padding-bottom: 50px;
   color: hsl(227, 35%, 25%);
 }
 
 .pricePer {
+  padding-bottom: 25px;
   grid-area: 1 / 2 / 2 / -1;
   display: flex;
   align-items: center;
@@ -157,13 +158,11 @@ input[type="range"]::-webkit-slider-thumb {
   cursor: pointer;
   position: relative;
   transition: 0.25s ease;
+  box-shadow: 0 10px 15px hsl(175, 93%, 88%), 0 20px 30px hsl(175, 95%, 77%);
 }
 
 input[type="range"]::-webkit-slider-thumb:active {
   background-color: hsl(174, 86%, 45%);
-}
-input[type="range"]::-webkit-slider-thumb:hover {
-  box-shadow: 0 10px 15px hsl(175, 93%, 88%), 0 20px 30px hsl(175, 95%, 77%);
 }
 
 /*     Toggle    */
@@ -276,20 +275,105 @@ input[type="range"]::-webkit-slider-thumb:hover {
   transform: scale(0.97);
 }
 
-@media (max-width: 600px) {
+.minus {
+  display: none;
+}
+
+@media (max-width: 750px) {
   main {
-    background-size: 200%;
+    background-position: top left;
+    background-size: 250%;
   }
+
   .pricingCard {
     height: auto;
+    width: 90%;
     padding: 60px 0;
   }
 
-  /* .views {}
+  header {
+    background-size: 37%;
+  }
 
-  .pricePer {}
+  header h1 {
+    font-size: 2.625rem;
+    padding-bottom: 30px;
+  }
 
-  .rangeSlider {} */
+  header p {
+    font-size: 1.625rem;
+    width: 55%;
+    padding-bottom: 70px;
+  }
+
+  .displayInfo {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "views"
+      "rangeSlider"
+      "pricePer";
+    place-items: center;
+  }
+
+  .views {
+    grid-area: views;
+  }
+
+  .views p {
+    font-size: 1.375rem;
+  }
+
+  .rangeSlider {
+    grid-area: rangeSlider;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 15px;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    background-size: 60%;
+    width: 70px;
+    height: 70px;
+    margin-top: -30px;
+  }
+
+  .pricePer {
+    grid-area: pricePer;
+  }
+
+  .pricePer p {
+    font-size: 4rem;
+  }
+
+  .price {
+    font-size: 3.8rem;
+  }
+
+  .month {
+    font-size: 1.375rem;
+  }
+
+  .billingInfo {
+    font-size: 1.5rem;
+  }
+
+  .label {
+    width: 80px;
+    height: 42px;
+  }
+
+  .ball {
+    top: 10px;
+    left: 9px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .checkbox:checked + .label .ball {
+    transform: translateX(36px);
+  }
 
   .trialSection {
     flex-direction: column;
@@ -308,5 +392,13 @@ input[type="range"]::-webkit-slider-thumb:hover {
     padding: 25px 80px;
     font-size: 2rem;
     border-radius: 50px;
+  }
+
+  .disc {
+    display: none;
+  }
+
+  .minus {
+    display: inline;
   }
 }

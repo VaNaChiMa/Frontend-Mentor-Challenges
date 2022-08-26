@@ -722,14 +722,25 @@ body {
 .grid-container--technology .dot-indicators > * {
   cursor: pointer;
   border: 0;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
-  padding: 2em;
+  padding: 1em;
+  margin: 0 10px 20px 0;
+  font-family: var(--ff-serif);
+  font-size: var(--fs-700);
   background-color: hsl(var(--clr-white) / 0.25);
+  color: #fff;
+  transition: 0.25s ease;
 }
 
-.grid-container--technology.dot-indicators > *:hover,
-.grid-container--technology.dot-indicators > *:focus {
-  background-color: hsl(var(--clr-white) / 0.5);
+.grid-container--technology .dot-indicators > *:hover,
+.grid-container--technology .dot-indicators > *:focus {
+  background-color: hsl(var(--clr-white) / 1);
+  color: hsl(var(--clr-dark));
 }
 
 .grid-container--technology.dot-indicators > [aria-selected="true"] {
@@ -765,7 +776,11 @@ body {
 
   .technology-details h2 {
     font-size: 1rem;
-    padding-inline: 1rem;
+    padding-inline: 1rem 0;
+  }
+
+  .grid-container--technology .dot-indicators > * {
+    font-size: var(--fs-500);
   }
 
   .grid-container--technology {
@@ -780,13 +795,13 @@ body {
 
 @media (min-width: 45em) {
   .grid-container--technology {
-    grid-template-columns: minmax(2rem, 1fr) minmax(2rem, 1fr) repeat(
-        2,
-        minmax(0, 30rem)
-      );
+    grid-template-columns:
+      minmax(2rem, 1fr) minmax(2rem, 1fr) repeat(2, minmax(0, 35rem))
+      minmax(2rem, 1fr);
     grid-template-areas:
-      ". title title title"
-      ". tabs content image";
+      ". title title title ."
+      ". tabs content image image"
+      "span span span span .";
   }
 
   .grid-container--technology > picture {

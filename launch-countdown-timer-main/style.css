@@ -1,0 +1,218 @@
+/*=============== 
+    Fonts
+===============*/
+
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+
+/*
+        =============== 
+            Variables
+        ===============
+*/
+:root {
+  --clr-grayish-blue: hsl(237, 18%, 59%);
+  --clr-soft-red: hsl(345, 95%, 68%);
+  --ff-primary: "Red Hat Text", sans-serif;
+}
+
+/*
+        =============== 
+        Global Styles
+        ===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*      Global classes      */
+
+body {
+  font-size: 14px;
+  font-family: var(--ff-primary);
+  font-weight: 700;
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  background: linear-gradient(to top, #211a29 100%, hsl(234, 17%, 12%) 25%);
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("images/bg-stars.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+body * {
+  z-index: 1;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url("images/bg-stars.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin: 0 20px 150px 20px;
+  max-width: 1440px;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*  Elements  */
+
+h1 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 1.25rem;
+  margin-bottom: 6.3rem;
+  text-align: center;
+}
+
+.countdown h2 {
+  color: var(--clr-soft-red);
+  font-size: 4rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
+  background: hsl(236, 21%, 26%);
+  border-radius: 10px;
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-right: 30px;
+  text-align: center;
+}
+
+.time:last-child {
+  margin-right: 0;
+}
+
+small {
+  text-transform: capitalize;
+  color: var(--clr-grayish-blue);
+  text-align: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+footer {
+  width: 100%;
+  background: url("images/pattern-hills.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+footer .social a + a {
+  margin-left: 30px;
+}
+
+footer .social a i {
+  transition: 0.25s ease;
+  color: var(--clr-grayish-blue);
+  font-size: 1.75rem;
+}
+
+footer .social a i:hover {
+  color: var(--clr-soft-red);
+}
+
+/*  Media  */
+
+@media (max-width: 768px) {
+  .countdown h2 {
+    font-size: 3.5rem;
+  }
+
+  .card {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .countdown h2 {
+    font-size: 2.5rem;
+  }
+  .countdown small {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+  }
+  .card {
+    width: 80px;
+    height: 80px;
+  }
+
+  .time {
+    margin-right: 20px;
+  }
+
+  .time:last-child {
+    margin-right: 0;
+  }
+}
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1rem;
+  }
+
+  .countdown small {
+    font-size: 0.6rem;
+  }
+
+  .card {
+    width: 65px;
+    height: 65px;
+  }
+
+  .time {
+    margin-right: 12px;
+  }
+
+  .time:last-child {
+    margin-right: 0;
+  }
+}

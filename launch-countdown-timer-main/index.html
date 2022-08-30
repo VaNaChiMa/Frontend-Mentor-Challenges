@@ -1,31 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css">
+
   <title>Frontend Mentor | Launch countdown timer</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
 </head>
+
 <body>
+  <main class="container">
+    <h1>We're launching soon</h1>
+    <div id="countdown" class="countdown">
 
-  We're launching soon
+      <div class="time">
+        <div class="card">
+          <h2 id="days">00</h2>
+        </div>
+        <small>days</small>
+      </div>
 
-  Days
-  Hours
-  Minutes
-  Seconds
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <div class="time">
+        <div class="card">
+          <h2 id="hours">00</h2>
+        </div>
+        <small>hours</small>
+      </div>
+
+      <div class="time">
+        <div class="card">
+          <h2 id="minutes">00</h2>
+        </div>
+        <small>minutes</small>
+      </div>
+
+      <div class="time">
+        <div class="card">
+          <h2 id="seconds">00</h2>
+        </div>
+        <small>seconds</small>
+      </div>
+
+    </div>
+  </main>
+  <footer>
+    <div class="social">
+      <a href="https://www.facebook.com/">
+        <i class="fa-brands fa-square-facebook"></i>
+      </a>
+      <a href="https://www.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a>
+      <a href="https://www.instagram.com/">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>

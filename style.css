@@ -11,6 +11,7 @@
 body {
   font-family: "Poppins", sans-serif;
   position: relative;
+  margin: 0 auto;
 }
 
 /*   Header   */
@@ -92,23 +93,29 @@ nav {
 
 .cards {
   background-color: #fafafa;
+  margin: auto;
 }
 
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  gap: 20px;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  padding: 50px 20px;
-  margin: auto;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; */
+  padding: 50px 0;
+  margin: 20px;
   margin-bottom: 150px;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .card {
+  min-width: 350px;
   background-color: #fff;
-  min-height: 450px;
-  margin: 20px;
+  height: 500px;
   border: 1px solid rgb(219, 229, 230);
   border-radius: 10px;
   /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.2); */
@@ -146,11 +153,13 @@ nav {
   padding: 25px;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  height: 50%;
 }
 
 .text-content a {
   color: rgb(28, 32, 34);
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   text-decoration: none;
@@ -166,6 +175,7 @@ nav {
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 .technology {
@@ -247,6 +257,38 @@ nav {
   background-color: transparent;
   padding: 0 0.5rem;
   color: rgb(241, 182, 4);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons a {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  margin: 0;
+  background: #1565c0;
+  color: #fff;
+  border: 1px solid transparent;
+  transition: 0.3s ease;
+}
+
+.buttons a:hover {
+  background: #fff;
+  color: #1565c0;
+  border: 1px solid #1565c0;
+  text-decoration: none;
+  transform: translateY(-0.2rem);
+}
+
+.buttons a:active {
+  transform: scale(0.98);
 }
 
 /*   Footer   */
@@ -461,13 +503,10 @@ footer {
 
 /*   Media Queries   */
 
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
   .container {
     margin-bottom: 100px;
-    width: calc(100% + 2.5rem);
-  }
-  .card {
-    width: calc(33.33% - 25px);
+    grid-template-columns: repeat(2, 350px);
   }
 }
 
@@ -502,6 +541,7 @@ footer {
   }
   .container {
     margin-bottom: 70px;
+    grid-template-columns: repeat(1, 350px);
   }
 }
 
@@ -540,11 +580,8 @@ footer {
     font-size: 0.9rem;
   }
   .container {
-    flex-direction: column;
-    width: 100%;
-    padding: 50px 10px;
+    grid-template-columns: repeat(1, 320px);
     margin-bottom: 40px;
-    flex-wrap: nowrap;
   }
   .card {
     width: 300px;

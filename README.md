@@ -1,5 +1,5 @@
 # Frontend Mentor Challenges
-[All projects on one page](https://happy-swanson-6b9ae4.netlify.app/)
+[All projects on one page](https://vadim-frontend-mentor-projects.netlify.app/)
 
 ---
 

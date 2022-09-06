@@ -1,164 +1,128 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300;400;700&display=swap");
 
-html {
-    font-size: 13px;
-    font-family: 'Barlow Semi Condensed', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: hsl(210, 46%, 95%);
+  font-family: "Barlow Semi Condesed", sans-serif;
+  font-size: 13px;
+  line-height: 1.7;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: hsl(210, 46%, 95%);
 }
 
-main {
-    display: flex;
-    max-width: 1440px;
-    min-height: 100vh;
-    margin: auto;
-}
-
-.container {
-    display: flex;
-    margin: auto;
-}
-
-.mainSection {
-    flex-wrap: wrap;
-}
-
-.row {
-    display: flex;
-    flex-wrap: nowrap;
+.testimonials {
+  max-width: 1440px;
+  margin: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
 }
 
 .card {
-    padding: 25px 35px 35px 30px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  margin-bottom: 10px;
 }
 
-
-.card h1 {
-    font-weight: 600;
-    font-size: 1.5rem;
-    margin-bottom: 25px;
-    opacity: .9;
+.card__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.card p {
-    font-size: 1rem;
-    opacity: .7;
-    line-height: 20px;
+.card__header h3 {
+  font-size: 15px;
 }
 
-.user {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 20px;
+.card__header p {
+  opacity: 50%;
 }
 
-.user .user__details {
-    display: flex;
-    flex-direction: column;
+.card__img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #5c12ca;
+  margin-right: 10px;
 }
 
-.user .user__name {
-    font-size: 1rem;
-    opacity: .9;
+.card__lead {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 20px;
 }
 
-.user .user__stat {
-    font-size: .825rem;
-    opacity: .5;
+.card__quote {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  opacity: 70%;
 }
 
-.user span {
-    font-size: 1rem;
-    opacity: .9;
+.card--bg-purple {
+  background-color: hsl(263, 50%, 52%);
+  color: #fff;
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top 10px right 100px;
 }
 
-.user p {
-    font-size: .825rem;
-    opacity: .6;
+.card--bg-gray-blue {
+  background-color: hsl(217, 19%, 35%);
+  color: #fff;
 }
 
-.user img {
-    border-radius: 50%;
-    height: 30px;
-    margin-right: 15px;
+.card--bg-black-blue {
+  background-color: hsl(219, 29%, 14%);
+  color: #fff;
 }
 
-.shortCard {
-    max-width: 255px;
-    
+.card:nth-of-type(1) {
+  grid-column: 1/3;
 }
 
-.longCard {
-    max-width: 540px;
+.card:nth-of-type(4) {
+  grid-column: 2/4;
+  grid-row: 2;
 }
 
-.violetCard {
-    background-color: hsl(263, 55%, 52%);
-    background-image: url('images/bg-pattern-quotation.svg');
-    background-repeat: no-repeat;
-    background-position: 79% 0;
-    margin: 0 30px 30px 0;
-    color: hsl(0, 0%, 100%);
+.card:nth-of-type(5) {
+  grid-column: 4/5;
+  grid-row: 1/3;
 }
 
-.grayishBlueCard {
-   margin: 0 30px 30px 0;
-   background-color: hsl(217, 19%, 35%);
-   color: #fff;
+footer {
+  text-align: center;
 }
 
-.whiteCard {
-    background-color: hsl(0, 0%, 100%);
-    color: hsl(217, 19%, 35%);
-    margin: 0 30px 0 0;
-}
+@media (max-width: 768px) {
+  .testimonials {
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: 70px auto;
+  }
 
-.blackishBlueCard {
-    background-color: hsl(219, 29%, 14%);
-    margin: 0 30px 0 0;
-    color: hsl(0, 0%, 100%);
-}
+  .card:nth-of-type(1) {
+    grid-column: 1;
+  }
 
-.tallCard {
-    background-color: hsl(0, 0%, 100%);
-    color: hsl(217, 19%, 35%);
-}
+  .card:nth-of-type(4) {
+    grid-column: 1;
+    grid-row: 4;
+  }
 
-.longCard .user img {
-    border: 2px solid #9570c9;
-}
-
-
-
-@media screen and (max-width: 768px) {
-    main {
-        height: auto;
-    }
-    .container {
-        flex-direction: column;
-        margin: 70px auto;
-    }
-
-    .row {
-        flex-direction: column;
-    }
-
-    .card {
-        max-width: 326px;
-        margin: 0 25px;
-        margin-bottom: 25px;
-    }
-
-    .tallCard {
-        margin-bottom: 0;
-    }
+  .card:nth-of-type(5) {
+    grid-column: 1;
+    grid-row: 5;
+  }
 }

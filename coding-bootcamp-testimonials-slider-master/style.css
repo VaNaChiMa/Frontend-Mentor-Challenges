@@ -28,8 +28,7 @@ main {
   background-position: right 70px center;
 }
 
-.slider_1,
-.slider_2 {
+.slider {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,36 +39,12 @@ main {
   position: relative;
 }
 
-.slider_1.active {
+.slider.active {
   display: flex;
 }
 
-.slider_2 {
-  display: none;
-}
-
-.slider_2.active {
-  display: flex;
-}
-
-.slider_1__image {
+.slider__image {
   border-radius: 10px;
-  background-image: url("images/image-tanya.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 540px;
-  width: 46%;
-  position: absolute;
-  margin-top: 10px;
-  right: 0;
-  box-shadow: 0 10px 20px rgba(32, 32, 70, 0.1);
-}
-
-.slider_2__image {
-  border-radius: 10px;
-  background-image: url("images/image-john.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 540px;
   width: 46%;
   position: absolute;
@@ -88,7 +63,7 @@ main {
   bottom: -5%;
   right: 67%;
   box-shadow: 0 10px 20px rgba(32, 32, 70, 0.2);
-  z-index: 10;
+  z-index: 100;
 }
 
 .controls .left-arrow {
@@ -115,8 +90,7 @@ main {
   align-items: center;
 }
 
-.slider_1__text,
-.slider_2__text {
+.slider__text {
   width: 60%;
   z-index: 3;
   position: absolute;
@@ -124,37 +98,25 @@ main {
   margin-top: 20px;
   height: 540px;
   padding-top: 150px;
-}
-
-.slider_1__text {
   background-image: url("images/pattern-quotes.svg");
   background-repeat: no-repeat;
   background-position: top 19% left 20%;
 }
 
-.slider_2__text {
-  background-image: url("images/pattern-quotes.svg");
-  background-repeat: no-repeat;
-  background-position: top 19% left 20%;
-}
-
-.slider_1__text p,
-.slider_2__text p {
+.slider__text p {
   font-weight: 300;
   line-height: 40px;
   margin-bottom: 50px;
   font-size: 1rem;
 }
 
-.slider_1__text strong,
-.slider_2__text strong {
+.slider__text strong {
   font-weight: 700;
   margin-right: 10px;
   font-size: 0.65rem;
 }
 
-.slider_1__text span,
-.slider_2__text span {
+.slider__text span {
   font-weight: 500;
   color: hsl(240, 18%, 77%);
   font-size: 0.625rem;
@@ -171,46 +133,33 @@ main {
     background-size: 325px 307px;
     background-position: center top;
   }
-  .slider_1,
-  .slider_2 {
+  .slider {
     flex-direction: column-reverse;
     max-width: 100%;
     height: auto;
   }
 
-  .slider_1__text,
-  .slider_2__text {
+  .slider__text {
     position: static;
   }
 
-  .slider_1__image,
-  .slider_2__image {
+  .slider__image {
     position: static;
+  }
+
+  .slider__image {
+    width: 255px;
+    height: 255px;
+    margin-top: 30px;
     border-radius: 5px;
   }
 
-  .slider_1__image {
-    background-image: url("images/image-tanya.jpg");
-    background-repeat: no-repeat, no-repeat;
-    background-position: center center;
-    background-size: 255px;
-    width: 255px;
-    height: 255px;
-    margin-top: 30px;
+  .slider__image .image {
+    width: 100%;
+    height: auto;
   }
 
-  .slider_2__image {
-    background-image: url("images/image-john.jpg");
-    background-repeat: no-repeat, no-repeat;
-    background-position: center center;
-    background-size: 255px;
-    width: 255px;
-    height: 255px;
-    margin-top: 30px;
-  }
-
-  .slider_1__text,
-  .slider_2__text {
+  .slider__text {
     width: 100%;
     background-position: top 30px center;
     background-size: 20%;
@@ -218,31 +167,23 @@ main {
     padding-top: 60px;
   }
 
-  .slider_1__text p,
-  .slider_2__text p {
+  .slider__text p {
     font-size: 0.575rem;
     line-height: 25px;
     text-align: center;
     margin-bottom: 25px;
   }
 
-  .slider_1__text p:last-child {
+  .slider__text p:last-child {
     display: flex;
     flex-direction: column;
   }
 
-  .slider_2__text p:last-child {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .slider_1__text strong,
-  .slider_2__text strong {
+  .slider__text strong {
     font-size: 0.475rem;
   }
 
-  .slider_1__text span,
-  .slider_2__text span {
+  .slider__text span {
     font-size: 0.525rem;
   }
 

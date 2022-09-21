@@ -1,0 +1,88 @@
+/*=============== 
+    Fonts
+===============*/
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+/*
+        =============== 
+            Variables
+        ===============
+*/
+:root {
+  --ff-primary: "Josefin Sans", sans-serif;
+}
+
+/*
+        =============== 
+        Global Styles
+        ===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*      Global classes      */
+
+body {
+  font-size: 18px;
+  font-family: var(--ff-primary);
+  min-height: 100vh;
+  margin: auto;
+  background: hsl(235, 21%, 11%);
+}
+
+main {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  background-image: url("images/bg-desktop-dark.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 540px;
+  max-width: 80%;
+  margin: auto;
+  padding-top: 75px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: var(--ff-primary);
+  letter-spacing: 5px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  max-height: 300px;
+}
+
+header img {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+
+form {
+  width: 100%;
+}
+
+form input {
+  width: 100%;
+}

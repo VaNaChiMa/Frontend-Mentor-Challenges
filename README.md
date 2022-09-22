@@ -27,5 +27,5 @@
 20. [Advice generator app](https://vadim-frontend-mentor-projects.netlify.app/advice-generator-app-main/index.html) (First API project)
 21. [Space tourism multi-page website](https://vadim-frontend-mentor-projects.netlify.app/space-tourism-website-main/index.html) (Html, Css, JS, Attribute, TAB)
 22. [Launch countdown timer](https://vadim-frontend-mentor-projects.netlify.app/launch-countdown-timer-main/index.html) (Html, Css, JS, Date & Time)
-23. [Todo app](https://vadim-frontend-mentor-projects.netlify.app/todo-app-main/index.html)
-24. [Calculator app]
+23. [Todo app](https://vadim-frontend-mentor-projects.netlify.app/todo-app-main/index.html) (Html, Css, JS)
+24. [Calculator app](https://vadim-frontend-mentor-projects.netlify.app/calculator-app-main/index.html) (Html, Css, JS)

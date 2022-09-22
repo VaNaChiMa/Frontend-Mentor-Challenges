@@ -14,34 +14,59 @@
 
 <body>
 
-  <main>
+  <main class="main">
 
-    <header>
-      <div class="container">
-        <h1>Todo</h1>
-        <img src="images/icon-sun.svg" alt="dark theme">
+    <div class="container">
+
+      <div class="top_row">
+        <div class="title">
+          <h1>Todo</h1>
+          <img class="dark_theme" src="images/icon-sun.svg" alt="dark theme">
+        </div>
       </div>
-    </header>
 
-    <form class="form">
+      <div class="form-control">
+        <div class="main_item item">
+          <div class="custom_checkbox">
+            <img class="check" src="images/icon-check.svg" alt="check">
+          </div>
+          <input type="text" placeholder="Create a new todo...">
+        </div>
 
-      <input type="text" placeholder="Create a new todo...">
-      <ul></ul>
-    </form>
+        <ul class="todo_items">
+          <li class="todo_item item">
+            <div class="custom_checkbox">
+              <img class="check" src="images/icon-check.svg" alt="check">
+            </div>
+            <p class="todo_text">Love and smile</p>
+            <div class="clear_image">
+              <img src="images/icon-cross.svg" alt="delete">
+            </div>
+          </li>
+          <li class="todo_item item">
+            <div class="items_info">
+              <div class="items_left"><span class="dinamic_number">
+                  <!-- Add dynamic number -->
+                </span><small>items left</small></div>
+              <div class="clear_completed"><small>Clear Completed</small></div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="selection item">
+          <span class="all">All</span>
+          <span class="active">Active</span>
+          <span class="completed">Completed</span>
+        </div>
+        <small class="dragAndDrop">Drag and drop to reorder list</small>
+      </div>
+
+
+    </div>
+
 
   </main>
 
-  Todo
-
-  <!-- Add dynamic number --> items left
-
-  All
-  Active
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
   <script src="app.js"></script>
 </body>
 

@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+
+:root {
+  --clr-primary-bg: hsl(222, 26%, 31%);
+  --clr-screen-bg: hsl(224, 36%, 15%);
+  --clr-primary-key: hsl(30, 25%, 89%);
+  --clr-second-key: hsl(225, 21%, 49%);
+  --clr-third-key: hsl(6, 63%, 50%);
+  --ff-primary: "League Spartan";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  font-family: var(--ff-primary);
+  font-size: 2rem;
+  background-color: var(--clr-primary-bg);
+}
+
+.calculator_container {
+  display: grid;
+  place-content: center;
+}
+
+.logo h2 {
+  color: #fff;
+  font-size: 1.525rem;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  grid-template-rows: repeat(5, 60px);
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px;
+  font-family: var(--ff-primary);
+  font-size: 2rem;
+  background-color: var(--clr-primary-key);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #fff;
+}
+
+.delete {
+  background-color: var(--clr-second-key);
+  color: #fff;
+}
+.delete:hover {
+  background-color: #a2b3e1;
+}
+
+.reset {
+  grid-column: span 2;
+  background-color: var(--clr-second-key);
+  color: #fff;
+}
+
+.reset:hover {
+  background-color: #a2b3e1;
+}
+
+.total {
+  grid-column: span 2;
+  background-color: var(--clr-third-key);
+  color: #fff;
+}
+
+.total:hover {
+  background-color: #f96c5b;
+  color: #fff;
+}
+
+#display_input {
+  font-family: var(--ff-primary);
+  font-size: 2.475rem;
+  padding: 20px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-align: right;
+  background-color: var(--clr-screen-bg);
+  color: #fff;
+  border: none;
+}
+
+#display_input:focus {
+  outline: none;
+}
+
+/*  Media  */
+
+@media (min-width: 480px) {
+  .keyboard {
+    grid-template-columns: repeat(4, 100px);
+    gap: 20px;
+  }
+}

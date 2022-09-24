@@ -573,24 +573,25 @@ footer {
   .fa-chess {
     font-size: 1.2rem;
   }
-  .rightSide {
+  /* .rightSide {
     margin-right: 30px;
   }
   .rightSide a {
     font-size: 0.9rem;
-  }
+  } */
   .container {
-    grid-template-columns: repeat(1, 320px);
-    margin-bottom: 40px;
+    grid-template-columns: minmax(300px, 1fr);
+    margin: auto;
+    /* justify-content: stretch; */
   }
   .card {
-    width: 300px;
+    min-width: 300px;
     background-color: #cacaca;
-    height: 200px;
-    margin: 10px 10px 20px 10px;
+    height: auto;
+    margin: 10px 10px 0;
   }
   .card img {
-    width: 300px;
+    min-width: 300px;
     height: 200px;
   }
   .card p {
@@ -621,5 +622,22 @@ footer {
   }
   .quote p {
     font-size: 0.7rem;
+  }
+
+  .modalBtn {
+    font-size: 0.8rem;
+  }
+
+  .text-content {
+    background-color: #fff;
+    padding: 20px 10px;
+  }
+
+  .technology span + span {
+    margin-left: 0.2rem;
+  }
+
+  .buttons a {
+    font-size: 0.8rem;
   }
 }

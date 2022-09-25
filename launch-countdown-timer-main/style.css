@@ -130,6 +130,19 @@ small {
   letter-spacing: 5px;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  margin: auto;
+}
+
 footer {
   width: 100%;
   background: url("images/pattern-hills.svg");

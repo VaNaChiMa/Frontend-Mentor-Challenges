@@ -102,14 +102,9 @@ nav {
   gap: 20px;
   justify-content: center;
   align-items: center;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; */
   padding: 50px 0;
   margin: 20px;
   margin-bottom: 150px;
-  /* width: 100%; */
 }
 
 .card {
@@ -118,7 +113,6 @@ nav {
   height: 500px;
   border: 1px solid rgb(219, 229, 230);
   border-radius: 10px;
-  /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.2); */
 }
 
 .card-content {
@@ -357,6 +351,7 @@ footer {
 }
 
 /*   Modal   */
+
 .modalBtn {
   background: #1565c0;
   padding: 0.7rem 1.2rem;
@@ -573,16 +568,9 @@ footer {
   .fa-chess {
     font-size: 1.2rem;
   }
-  /* .rightSide {
-    margin-right: 30px;
-  }
-  .rightSide a {
-    font-size: 0.9rem;
-  } */
   .container {
     grid-template-columns: minmax(300px, 1fr);
     margin: auto;
-    /* justify-content: stretch; */
   }
   .card {
     min-width: 300px;
@@ -623,11 +611,13 @@ footer {
   .quote p {
     font-size: 0.7rem;
   }
-
+  .modal-content {
+    width: 90%;
+    height: auto;
+  }
   .modalBtn {
     font-size: 0.8rem;
   }
-
   .text-content {
     background-color: #fff;
     padding: 20px 10px;
